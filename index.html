@@ -8,49 +8,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body" class="bright">
-    <nav class="topNavBar p-outerFrame">
-        <!-- Vänster sida -->
-        <div class="leftSide">
-            <img src="/svg/SiliconLogo.svg" alt="Silicon logo">
-            <h1>Silicon</h1>
-            <div class="navBarLinks">
-                <a href="#"><p>Home</p></a>
-                <a href="#"><p>Features</p></a>
-                <a href="#"><p>FAQ</p></a>
-                <a href="#"><p>Contact</p></a>
-            </div>
-        </div>
-        <!-- Höger sida -->
-        <div class="rightSide">
-            <!-- DarkMode text -->
-            <p class="darkModeText">Dark Mode</p>
-            <!-- Toggle knapp -->
-            <button class="toggleSwitch" onclick="changeTheme()">
-                <div id="toggleSwitch-bg" class="toggleSwitch-bg">
-                <span id="toggleSwitch-dot" class="toggleSwitch-dot" ></span>
+    <!-- Top navbar samt första sidan -->
+    <section class="first-page-bg">
+        <nav class="topNavBar p-outerFrame">
+            <!-- Vänster sida -->
+            <div class="leftSide">
+                <img src="/svg/SiliconLogo.svg" alt="Silicon logo">
+                <h1>Silicon</h1>
+                <div class="navBarLinks">
+                    <a href="#"><p>Home</p></a>
+                    <a href="#"><p>Features</p></a>
+                    <a href="#"><p>FAQ</p></a>
+                    <a href="#"><p>Contact</p></a>
                 </div>
-            </button>
-            
-
-            <!-- Meny knapp -->
-            <div class="navButton-container">
-                <span class="navButton"></span>
-                <span class="navButton"></span>
-                <span class="navButton"></span>
             </div>
-            
-            <button class='signInButton'>
-                <img src="./svg/Subtract.svg" alt="" />
-                <span class=''>Sign in / up</span>
-            </button>
-        </div>
-    </nav>
+            <!-- Höger sida -->
+            <div class="rightSide">
+                <!-- DarkMode text -->
+                <p class="darkModeText">Dark Mode</p>
+                <!-- Toggle knapp -->
+                <button class="toggleSwitch" onclick="changeTheme()">
+                    <div id="toggleSwitch-bg" class="toggleSwitch-bg">
+                    <span id="toggleSwitch-dot" class="toggleSwitch-dot" ></span>
+                    </div>
+                </button>
+                
+    
+                <!-- Meny knapp -->
+                <div class="navButton-container">
+                    <span class="navButton"></span>
+                    <span class="navButton"></span>
+                    <span class="navButton"></span>
+                </div>
+                <!-- Sign in knapp -->
+                <button class='signInButton'>
+                    <img src="./svg/Subtract.svg" alt="" />
+                    <span class=''>Sign in / up</span>
+                </button>
+            </div>
+        </nav>
+        <!-- Money management sidan (1) -->
+        <main>
+            <div class="manageMoney-container">
+                <div class="manageMoney-header"></div>
+                <div class="manageMoney-info"></div>
+                <div class="manageMoney-info"></div>
+                <div class="manageMoney-phones"></div>
+            </div>
+        </main>
+    </section>
 
-    <main>
-        <div class="manageMoney-container">
-
+    <!-- Subscribe -->
+     <section class="subscribe-container">
+        <div class="subscribe-notification-container">
+            <img src="svg/notification-icon-1.svg" alt="Notifikations Ikon">
+            <h2 id="sm">Subscribe to our newsletter</h2>
+            <h2 id="lg">Subscribe to our newsletter to stay informed about latest updates</h2>
         </div>
-    </main>
+        
+        <div class="subscribe-input-container">
+            <div>
+                <img src="svg/mail-svgrepo-com-gray.svg" alt="Mail ikon">
+                <input type="email" placeholder="Your email">
+            </div>
+            <button>Subscribe</button>
+        </div>
+
+     </section>
+
+    <!-- Footer med credits -->
+    <footer class="">
+        <p>© 2024 Silicon. All rights reserved.</p>
+        <p>Credit MadrasThemes</p>
+    </footer>
+    <p style="text-align: end; padding-inline-end: 8px;">Re-made by R.Carlsson</p>
+    
 
     <script src="index.js"></script>
 </body>

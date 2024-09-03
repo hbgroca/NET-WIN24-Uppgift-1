@@ -7,7 +7,7 @@
   --background-color-fade: rgb(244, 241, 254);
   --background-color-alt: rgb(250, 250, 252);
   --background-color-subscribe: rgb(239, 242, 252);
-  --button-border-color: rgb(23, 27, 37);
+  --button-border-color: #B4B7C9;
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
   --button-discovery-color: #FFFFFF; /* Same color on arrow as nav-color */
@@ -46,15 +46,25 @@ a {
   text-decoration: none;
 }
 
-.topNavBar {
+.first-page-bg {
+  width: 100vw;
+  height: 100svh;
+  background: linear-gradient(transparent, var(--background-color-fade));
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.first-page-bg .topNavBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 6rem;
   max-width: 1366px;
+  border: 1px solid blueviolet;
 }
-.topNavBar .leftSide {
+.first-page-bg .topNavBar .leftSide {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -62,36 +72,36 @@ a {
   margin: 0.5rem 0.25rem;
   gap: 0.75rem;
 }
-.topNavBar .leftSide h1 {
+.first-page-bg .topNavBar .leftSide h1 {
   font-size: 2.08rem;
   font-weight: 900;
   color: var(--text-header);
 }
-.topNavBar .leftSide .navBarLinks {
+.first-page-bg .topNavBar .leftSide .navBarLinks {
   padding-inline-start: 3rem;
   display: none;
   gap: 2rem;
 }
-.topNavBar .leftSide .navBarLinks p {
+.first-page-bg .topNavBar .leftSide .navBarLinks p {
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--text-paragraph);
 }
-.topNavBar .rightSide {
+.first-page-bg .topNavBar .rightSide {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0rem 0rem;
   gap: 1rem;
 }
-.topNavBar .rightSide .darkModeText {
+.first-page-bg .topNavBar .rightSide .darkModeText {
   display: none;
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.5rem;
   color: var(--text-paragraph);
 }
-.topNavBar .rightSide .toggleSwitch {
+.first-page-bg .topNavBar .rightSide .toggleSwitch {
   position: relative;
   display: flex;
   align-items: center;
@@ -100,17 +110,17 @@ a {
   border: none;
   background-color: transparent;
 }
-.topNavBar .rightSide .toggleSwitch .toggleSwitch-bg {
+.first-page-bg .topNavBar .rightSide .toggleSwitch .toggleSwitch-bg {
   width: 4.6rem;
   height: 2.4rem;
   border-radius: 1.2rem;
   background-color: var(--button-toggle-bg);
   box-shadow: 0px 8px 12px 0px rgba(131, 135, 255, 0.4);
 }
-.topNavBar .rightSide .toggleSwitch .toggleSwitch-bg-dark {
+.first-page-bg .topNavBar .rightSide .toggleSwitch .toggleSwitch-bg-dark {
   background-color: var(--button-toggle-bg-dark);
 }
-.topNavBar .rightSide .toggleSwitch .toggleSwitch-dot {
+.first-page-bg .topNavBar .rightSide .toggleSwitch .toggleSwitch-dot {
   position: absolute;
   width: 1.8rem;
   height: 1.8rem;
@@ -119,10 +129,10 @@ a {
   left: 0.45rem;
   background-color: white;
 }
-.topNavBar .rightSide .toggleSwitch .toggleSwitch-dot-dark {
+.first-page-bg .topNavBar .rightSide .toggleSwitch .toggleSwitch-dot-dark {
   left: 2.45rem;
 }
-.topNavBar .rightSide .navButton-container {
+.first-page-bg .topNavBar .rightSide .navButton-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,12 +141,12 @@ a {
   padding: 0.75rem;
   cursor: pointer;
 }
-.topNavBar .rightSide .navButton-container .navButton {
+.first-page-bg .topNavBar .rightSide .navButton-container .navButton {
   background-color: var(--button-nav-color);
   width: 2.2rem;
   height: 0.235rem;
 }
-.topNavBar .rightSide .signInButton {
+.first-page-bg .topNavBar .rightSide .signInButton {
   display: none;
   justify-content: center;
   align-items: center;
@@ -148,12 +158,83 @@ a {
   border-radius: 0.5rem;
   color: white;
 }
-
-.manageMoney-container {
-  width: 100vw;
-  height: 100svh;
-  background: linear-gradient(transparent, var(--background-color-fade));
+.first-page-bg .manageMoney-container {
+  height: 100%;
+  width: 100%;
   border: 1px solid lime;
+}
+
+.subscribe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--background-color-subscribe);
+  margin-inline: 1.5rem;
+  margin-top: 3rem;
+  border: 1px solid orange;
+  border-radius: 1rem;
+  max-width: 1280;
+}
+.subscribe-container .subscribe-notification-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid yellow;
+}
+.subscribe-container .subscribe-notification-container #lg {
+  display: none;
+}
+.subscribe-container .subscribe-notification-container h2 {
+  font-size: 2.16rem;
+}
+.subscribe-container .subscribe-notification-container img {
+  width: 7.8rem;
+  animation: jump 1s infinite;
+}
+.subscribe-container .subscribe-input-container {
+  display: flex;
+  margin: 2rem;
+  border: 1px solid var(--button-border-color);
+  border-radius: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+}
+.subscribe-container .subscribe-input-container img {
+  width: 1.8rem;
+  margin-left: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.subscribe-container .subscribe-input-container input {
+  border: none;
+  font-size: 1.6rem;
+  padding: 1rem;
+  width: 150px;
+}
+.subscribe-container .subscribe-input-container button {
+  border: none;
+  background-color: var(--button-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+  padding: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hotpink;
+}
+footer p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--text-paragraph);
 }
 
 .dark {
@@ -178,36 +259,122 @@ a {
   .p-outerFrame {
     padding-inline: 2rem;
   }
-  .leftSide {
+  .first-page-bg .topNavBar .leftSide {
     margin: 0.51rem 1.5rem;
   }
-  .topNavBar .rightSide .darkModeText {
+  .first-page-bg .topNavBar .rightSide .darkModeText {
     display: flex;
   }
-  .topNavBar .rightSide .toggleSwitch {
+  .first-page-bg .topNavBar .rightSide .toggleSwitch {
     margin-right: 4.5rem;
   }
-  .topNavBar .rightSide .navButton-container {
+  .first-page-bg .topNavBar .rightSide .navButton-container {
     margin-inline: 0rem;
+  }
+  .subscribe-container {
+    flex-direction: row;
+    gap: 2rem;
+    padding-inline: 3rem;
+    padding-block: 5rem;
+  }
+  .subscribe-container .subscribe-notification-container {
+    width: 50%;
+    padding: 0rem;
+    text-wrap: wrap;
+  }
+  .subscribe-container .subscribe-notification-container h2 {
+    font-size: 2.27rem;
+    font-weight: 800;
+  }
+  .subscribe-container .subscribe-input-container {
+    margin: 0;
+  }
+  .subscribe-container .subscribe-input-container img {
+    margin-left: 2rem;
+  }
+  .subscribe-container .subscribe-input-container input {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+  }
+  .subscribe-container .subscribe-input-container button {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+  }
+  footer {
+    flex-direction: row;
+    gap: 0.5rem;
   }
 }
 @media (min-width: 1280px) {
   .p-outerFrame {
     padding-inline: 3.5rem;
   }
-  .topNavBar .leftSide .navBarLinks {
+  .first-page-bg .topNavBar .leftSide .navBarLinks {
     display: flex;
   }
-  .topNavBar .rightSide .darkModeText {
+  .first-page-bg .topNavBar .rightSide .darkModeText {
     display: flex;
   }
-  .topNavBar .rightSide .toggleSwitch {
+  .first-page-bg .topNavBar .rightSide .toggleSwitch {
     margin-right: 3.5rem;
   }
-  .topNavBar .rightSide .navButton-container {
+  .first-page-bg .topNavBar .rightSide .navButton-container {
     display: none;
   }
-  .topNavBar .rightSide .signInButton {
+  .first-page-bg .topNavBar .rightSide .signInButton {
     display: flex;
   }
+  .subscribe-container {
+    flex-direction: row;
+    gap: 4rem;
+    padding-inline: 8rem;
+    padding-block: 5rem;
+    width: 100%;
+    max-width: 1240px;
+  }
+  .subscribe-container .subscribe-notification-container {
+    width: 50%;
+    padding: 0rem;
+    text-wrap: wrap;
+  }
+  .subscribe-container .subscribe-notification-container #sm {
+    display: none;
+  }
+  .subscribe-container .subscribe-notification-container #lg {
+    display: flex;
+  }
+  .subscribe-container .subscribe-notification-container h2 {
+    font-size: 2.27rem;
+    font-weight: 800;
+  }
+  .subscribe-container .subscribe-input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 472px;
+    margin: 0;
+  }
+  .subscribe-container .subscribe-input-container img {
+    margin-left: 2rem;
+  }
+  .subscribe-container .subscribe-input-container input {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+  }
+  .subscribe-container .subscribe-input-container button {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+  }
+}
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-jump {
+  animation: bounce 1s infinite;
 }/*# sourceMappingURL=style.css.map */
