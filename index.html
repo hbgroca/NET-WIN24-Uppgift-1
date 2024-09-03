@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min fantastiska hemsida</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" class="bright">
+    <nav class="topNavBar p-outerFrame">
+        <!-- Vänster sida -->
+        <div class="leftSide">
+            <img src="/svg/SiliconLogo.svg" alt="Silicon logo">
+            <h1>Silicon</h1>
+            <div class="navBarLinks">
+                <a href="#"><p>Home</p></a>
+                <a href="#"><p>Features</p></a>
+                <a href="#"><p>FAQ</p></a>
+                <a href="#"><p>Contact</p></a>
+            </div>
+        </div>
+        <!-- Höger sida -->
+        <div class="rightSide">
+            <!-- DarkMode text -->
+            <p class="darkModeText">Dark Mode</p>
+            <!-- Toggle knapp -->
+            <button class="toggleSwitch" onclick="changeTheme()">
+                <div id="toggleSwitch-bg" class="toggleSwitch-bg">
+                <span id="toggleSwitch-dot" class="toggleSwitch-dot" ></span>
+                </div>
+            </button>
+            
+
+            <!-- Meny knapp -->
+            <div class="navButton-container">
+                <span class="navButton"></span>
+                <span class="navButton"></span>
+                <span class="navButton"></span>
+            </div>
+            
+            <button class='signInButton'>
+                <img src="./svg/Subtract.svg" alt="" />
+                <span class=''>Sign in / up</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="manageMoney-container">
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
