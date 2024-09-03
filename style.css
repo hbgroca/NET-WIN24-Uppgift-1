@@ -164,6 +164,18 @@ a {
   border: 1px solid lime;
 }
 
+.faq-contact-section .contact-container button {
+  display: block;
+  margin: 3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--button-color);
+  color: white;
+}
+
 .subscribe-container {
   display: flex;
   flex-direction: column;
@@ -237,6 +249,10 @@ footer p {
   color: var(--text-paragraph);
 }
 
+.border {
+  border: 1px solid red;
+}
+
 .dark {
   --background-color: #000000;
   --background-color-fade: rgb(244, 241, 254);
@@ -270,6 +286,9 @@ footer p {
   }
   .first-page-bg .topNavBar .rightSide .navButton-container {
     margin-inline: 0rem;
+  }
+  .faq-contact-section .contact-container .contact-button {
+    display: none;
   }
   .subscribe-container {
     flex-direction: row;

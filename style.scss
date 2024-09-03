@@ -1,11 +1,14 @@
 /* Importera font från fonts.google.com */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+// Deklarerade variabler SCSS
 $padding-outer:1.18rem;
-:root{
-    font-size: 62.5%; // Yes, jag vet att detta kan påverka utseendet på vissa äldre webläsare.
 
-    // Deklarerade variabler (Bright)
+:root{
+    // Manipulera font storlkene till 10px för enkelhets skull.
+    font-size: 62.5%; // Yes, jag vet att detta kan påverka utseendet på vissa äldre webläsare. Men det underlättade återskapandet av denna sidan.
+
+    // Deklarerade variabler CSS (Bright)
     --background-color: #ffffff;
     --background-color-fade: rgb(244, 241, 254);
     --background-color-alt: rgb(250, 250, 252);
@@ -54,6 +57,7 @@ a{
     text-decoration: none;
 }
 
+// Navbar and first page section
 .first-page-bg{
     width: 100vw;
     height: 100svh;
@@ -187,6 +191,29 @@ a{
     }
 }
 
+// FAQ and Contact section
+.faq-contact-section{
+    //FAQ section
+    .border faq-container{
+
+    }
+
+
+    //Contact section
+    .contact-container{
+        button{
+            display: block;
+            margin: 3rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 1.5rem 3rem;
+            border: none;
+            border-radius: .5rem;
+            background-color: var(--button-color);
+            color: white;
+        }
+    }
+}
 
 // Subscribe section
 .subscribe-container{
@@ -270,6 +297,13 @@ footer{
     border: 1px solid hotpink;
 }
 
+
+
+// Border 
+.border{
+    border: 1px solid red;
+}
+
 .dark{
     // Deklarerade variabler (Dark)
     --background-color: #000000;
@@ -316,6 +350,22 @@ footer{
             }
         }
     }
+    
+    // FAQ and Contact section
+    .faq-contact-section{
+        //FAQ section
+        .border faq-container{
+
+        }
+
+        //Contact section
+        .contact-container{
+            .contact-button{
+                display: none;
+            }
+        }
+    }
+
 
     // Subscribe section
     .subscribe-container{
