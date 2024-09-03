@@ -65,6 +65,7 @@ h1 h2 h3{
 
 // Navbar and first page section
 .first-page-bg{
+
     width: 100vw;
     height: 100svh;
     background: linear-gradient(transparent, var(--background-color-fade));
@@ -196,6 +197,68 @@ h1 h2 h3{
         border: 1px solid lime;    
     }
 }
+
+
+// Reviews
+.reviews-section-bg{
+    width: 100vw;
+    background-color: var(--background-color-subscribe);
+    display: none;
+    justify-content: center;
+    padding: 8rem;
+    // border: 1px solid blue;
+
+    .reviews-section{
+        // border: 1px solid red;
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        max-width: 1260px;
+        h2{
+            font-size: 4rem;
+            font-weight: 900;
+        }
+        .reviews-card-section{
+            display: flex;
+            justify-content: end;
+            gap: 3rem;
+        
+            .reviews-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 2rem;
+                padding-top: 5rem;
+                background-color: white;
+                box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.212);
+                width: 415px;
+                
+                border: 1px solid var(--button-border-color);
+                border-radius: .5rem;
+                position: relative;
+                font-size: 1.8rem;
+                .reviews-card-quotes{
+                    position: absolute;
+                    width: 7rem;
+                    top: -35px;
+                    left: 0px;
+                    // box-shadow: 0px 3px 80px rgba(0, 0, 0, 0.222);
+                }
+                .reviews-card-user{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    h3{font-size: 1.6rem;}
+                    p{font-size: 1.4rem;}
+                }
+            }
+        }
+    }
+}
+
+
 
 // FAQ and Contact section
 .faq-contact-section{
@@ -376,7 +439,7 @@ h1 h2 h3{
     background-color: var(--background-color-subscribe);
     margin-inline: $padding-outer;
     margin-top: 3rem;
-    border: 1px solid orange;
+    // border: 1px solid orange;
     border-radius: 1rem;
 
     max-width: 1280px;
@@ -397,7 +460,7 @@ h1 h2 h3{
             width: 7.8rem;
             animation: jump 1s infinite;
         }
-        border: 1px solid yellow;
+        // border: 1px solid yellow;
     }
     .subscribe-input-container{
         display: flex;
@@ -444,7 +507,7 @@ footer{
         // text-shadow: 0px 3px 5px #3E4265;
     }
 
-    border: 1px solid hotpink;
+    // border: 1px solid hotpink;
 }
 
 
@@ -588,6 +651,12 @@ footer{
                 }
             }
         }
+    }
+
+
+    // Reviews
+    .reviews-section-bg{
+        display: flex;
     }
 
     // FAQ and Contact section
