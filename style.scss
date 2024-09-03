@@ -259,7 +259,6 @@ h1 h2 h3{
 }
 
 
-
 // FAQ and Contact section
 .faq-contact-section{
     display: flex;
@@ -410,11 +409,13 @@ h1 h2 h3{
                     align-items: center;
                     justify-content: start;
                     p{
+                        color: var(--button-color);
                         margin-block: auto;
                         font-size: 1.4rem;
                         font-weight: 600;
                     }
                     span{
+                        color: var(--button-color);
                         margin-block: auto;
                         font-size: 1.6rem;
                     }
@@ -422,7 +423,12 @@ h1 h2 h3{
             }
             .box-2{
                 .contact-contactText{
-                    color: rgb(0, 190, 0);
+                    p{
+                        color: rgb(0, 190, 0);
+                    }
+                    span{
+                        color: rgb(0, 190, 0);
+                    }
                 }
                 
             }

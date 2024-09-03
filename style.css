@@ -377,15 +377,20 @@ h1 h2 h3 {
   justify-content: start;
 }
 .faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText p {
+  color: var(--button-color);
   margin-block: auto;
   font-size: 1.4rem;
   font-weight: 600;
 }
 .faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText span {
+  color: var(--button-color);
   margin-block: auto;
   font-size: 1.6rem;
 }
-.faq-contact-section .contact-container .contract-boxes .box-2 .contact-contactText {
+.faq-contact-section .contact-container .contract-boxes .box-2 .contact-contactText p {
+  color: rgb(0, 190, 0);
+}
+.faq-contact-section .contact-container .contract-boxes .box-2 .contact-contactText span {
   color: rgb(0, 190, 0);
 }
 
