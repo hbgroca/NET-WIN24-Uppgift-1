@@ -193,14 +193,25 @@ a{
 
 // FAQ and Contact section
 .faq-contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: $padding-outer;
+    max-width: 1260px;
     //FAQ section
     .border faq-container{
 
     }
 
-
     //Contact section
     .contact-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        width: 100%;
         button{
             display: block;
             margin: 3rem;
@@ -212,6 +223,50 @@ a{
             background-color: var(--button-color);
             color: white;
         }
+        .contract-boxes{
+            display: none;
+            gap: 3rem;
+            width: 100%;
+            .contact-box{
+                display: flex;
+                flex-direction: column;
+                
+                border: 1px solid var(--button-border-color);
+                border-radius: 0.5rem;
+                padding: 2rem;
+                width: 100%;
+                img{width: 2.8rem;}
+                font-size: 1.4rem;
+                color: var(--text-paragraph);
+                p{
+                    margin-top:1.5rem;
+                }
+            }
+            .box-1{
+                .contact-contactText{
+                    margin-top: 2rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: start;
+                    p{
+                        margin-block: auto;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                    }
+                    span{
+                        margin-block: auto;
+                        font-size: 1.6rem;
+                    }
+                } 
+            }
+            .box-2{
+                .contact-contactText{
+                    color: rgb(0, 190, 0);
+                }
+                
+            }
+        }
     }
 }
 
@@ -222,12 +277,12 @@ a{
     align-items: center;
     justify-items: center;
     background-color: var(--background-color-subscribe);
-    margin-inline: 1.5rem;
+    margin-inline: $padding-outer;
     margin-top: 3rem;
     border: 1px solid orange;
     border-radius: 1rem;
 
-    max-width: 1280;
+    max-width: 1280px;
 
     .subscribe-notification-container{
         display: flex;
@@ -362,6 +417,9 @@ footer{
         .contact-container{
             .contact-button{
                 display: none;
+            }
+            .contract-boxes{
+                display: flex;
             }
         }
     }

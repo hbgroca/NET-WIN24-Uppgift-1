@@ -164,6 +164,22 @@ a {
   border: 1px solid lime;
 }
 
+.faq-contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.18rem;
+  max-width: 1260px;
+}
+.faq-contact-section .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
+}
 .faq-contact-section .contact-container button {
   display: block;
   margin: 3rem;
@@ -175,6 +191,46 @@ a {
   background-color: var(--button-color);
   color: white;
 }
+.faq-contact-section .contact-container .contract-boxes {
+  display: none;
+  gap: 3rem;
+  width: 100%;
+}
+.faq-contact-section .contact-container .contract-boxes .contact-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--button-border-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 100%;
+  font-size: 1.4rem;
+  color: var(--text-paragraph);
+}
+.faq-contact-section .contact-container .contract-boxes .contact-box img {
+  width: 2.8rem;
+}
+.faq-contact-section .contact-container .contract-boxes .contact-box p {
+  margin-top: 1.5rem;
+}
+.faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText p {
+  margin-block: auto;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText span {
+  margin-block: auto;
+  font-size: 1.6rem;
+}
+.faq-contact-section .contact-container .contract-boxes .box-2 .contact-contactText {
+  color: rgb(0, 190, 0);
+}
 
 .subscribe-container {
   display: flex;
@@ -182,11 +238,11 @@ a {
   align-items: center;
   justify-items: center;
   background-color: var(--background-color-subscribe);
-  margin-inline: 1.5rem;
+  margin-inline: 1.18rem;
   margin-top: 3rem;
   border: 1px solid orange;
   border-radius: 1rem;
-  max-width: 1280;
+  max-width: 1280px;
 }
 .subscribe-container .subscribe-notification-container {
   display: flex;
@@ -289,6 +345,9 @@ footer p {
   }
   .faq-contact-section .contact-container .contact-button {
     display: none;
+  }
+  .faq-contact-section .contact-container .contract-boxes {
+    display: flex;
   }
   .subscribe-container {
     flex-direction: row;
