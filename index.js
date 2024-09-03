@@ -1,15 +1,16 @@
 let darkMode = false;
 
 function faqExpand(faqQuestion){
+  console.log(faqQuestion);
     const faqClassList = document.getElementById(faqQuestion);
     const faqBtn = document.getElementById(faqQuestion + "Btn");
     if(faqClassList.classList == "faqColapsed"){
-        faqClassList.classList = "faqExpanded";
-        faqBtn.classList = "faqBtnExpanded";
+        faqClassList.classList = "faqNotColapsed b-bottom";
+        // faqBtn.classList = "faqBtnExpanded";
     }else
     {
         faqClassList.classList = "faqColapsed";
-        faqBtn.classList = "faqBtnColapsed";
+        // faqBtn.classList = "faqBtnColapsed";
     }
 }
 
