@@ -11,7 +11,7 @@ $padding-outer:1.18rem;
     // Deklarerade variabler CSS (Bright)
     --background-color: #FFFFFF;
     --background-color-fade: #f4f1fe;
-    --background-color-alt: #FFFFFF;
+    --background-color-alt: #F3F6FF;
     --background-color-subscribe: #F3F6FF;
     --background-color-review: #F3F6FF;
 
@@ -316,6 +316,61 @@ h1 h2 h3{
     }
     
 }
+
+// App features
+.appFeatures{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $padding-outer;
+    max-width: 800px;
+    .phoneSide{
+        display: none;
+    }
+    .headerAndText{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-block:3rem;
+        text-align: center;
+        h2{
+            font-size: 2.8rem;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+    }
+
+    .features{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+        
+        .feature{
+            max-width: 350px;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            .img-container{
+                padding: 1.6rem;
+                border-radius: 0.5rem;
+                background-color: var(--background-color-alt);
+                img{
+                    width: 2.8rem;
+                }
+            }
+        }
+    }
+}
+
 
 // Reviews
 .reviews-section-bg{
@@ -872,6 +927,32 @@ footer{
         }
         .logo5{
             display: flex;
+        }
+    }
+
+    //App features section
+    .appFeatures{
+        max-width: 1240px;
+        flex-direction: row;
+        .phoneSide{
+            display: flex;
+            margin-block: 6rem;
+        }
+        .restSide{
+            margin-left: 10rem;
+            .features{
+                justify-content: start;
+            }
+        }
+        .headerAndText{
+            text-align: start;
+            h2{
+                font-size: 3.1rem;
+                font-weight: 800;
+            }
+            p{
+                font-size: 1.8rem;
+            }
         }
     }
 

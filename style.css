@@ -5,7 +5,7 @@
   font-size: 62.5%;
   --background-color: #FFFFFF;
   --background-color-fade: #f4f1fe;
-  --background-color-alt: #FFFFFF;
+  --background-color-alt: #F3F6FF;
   --background-color-subscribe: #F3F6FF;
   --background-color-review: #F3F6FF;
   --button-border-color: #B4B7C9;
@@ -274,6 +274,57 @@ h1 h2 h3 {
 }
 .logoSection .logo5 {
   display: none;
+}
+
+.appFeatures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.18rem;
+  max-width: 800px;
+}
+.appFeatures .phoneSide {
+  display: none;
+}
+.appFeatures .headerAndText {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 3rem;
+  text-align: center;
+}
+.appFeatures .headerAndText h2 {
+  font-size: 2.8rem;
+}
+.appFeatures .headerAndText p {
+  font-size: 1.8rem;
+}
+.appFeatures .features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.appFeatures .features h3 {
+  font-size: 2rem;
+}
+.appFeatures .features p {
+  font-size: 1.6rem;
+}
+.appFeatures .features .feature {
+  max-width: 350px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.appFeatures .features .feature .img-container {
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color-alt);
+}
+.appFeatures .features .feature .img-container img {
+  width: 2.8rem;
 }
 
 .reviews-section-bg {
@@ -747,6 +798,30 @@ footer p {
   }
   .logoSection .logo5 {
     display: flex;
+  }
+  .appFeatures {
+    max-width: 1240px;
+    flex-direction: row;
+  }
+  .appFeatures .phoneSide {
+    display: flex;
+    margin-block: 6rem;
+  }
+  .appFeatures .restSide {
+    margin-left: 10rem;
+  }
+  .appFeatures .restSide .features {
+    justify-content: start;
+  }
+  .appFeatures .headerAndText {
+    text-align: start;
+  }
+  .appFeatures .headerAndText h2 {
+    font-size: 3.1rem;
+    font-weight: 800;
+  }
+  .appFeatures .headerAndText p {
+    font-size: 1.8rem;
   }
   .reviews-section-bg {
     display: flex;
