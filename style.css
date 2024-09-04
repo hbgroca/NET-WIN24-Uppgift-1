@@ -11,7 +11,8 @@
   --button-border-color: #B4B7C9;
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
-  --button-discovery-color: #FFFFFF; /* Same color on arrow as nav-color */
+  --button-discovery-color: #FFFFFF;
+  --button-discovery-text-color: #33354D;
   --button-circle: rgb(225, 227, 235);
   --button-circle-expanded: rgb(99, 102, 241);
   --button-toggle-bg: #9397AD;
@@ -59,7 +60,6 @@ h1 h2 h3 {
 .first-page-bg {
   width: 100vw;
   height: 100svh;
-  min-height: 550px;
   background: linear-gradient(transparent, var(--background-color-fade));
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ h1 h2 h3 {
   align-items: center;
   width: 100%;
   height: 6rem;
-  max-width: 1366px;
+  max-width: 860px;
 }
 .first-page-bg .topNavBar .leftSide {
   display: flex;
@@ -168,44 +168,51 @@ h1 h2 h3 {
   color: white;
 }
 .first-page-bg .manageMoney-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 1366px;
-  display: grid;
+  max-width: 820px;
   width: 100%;
   height: 100%;
-  padding: 1rem;
-}
-.first-page-bg .manageMoney-container h2 {
-  font-size: 3.41rem;
-  font-weight: 900;
-  color: var(--text-header);
+  padding-inline: 1rem;
+  position: relative;
 }
 .first-page-bg .manageMoney-container .manageMoney-header {
+  display: grid;
+  place-items: center;
   text-align: center;
   margin-top: 3rem;
+  grid-area: header;
 }
-.first-page-bg .manageMoney-container .manageMoney-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  color: var(--text-paragraph);
-}
-.first-page-bg .manageMoney-container .manageMoney-text p {
+.first-page-bg .manageMoney-container .manageMoney-header h2 {
   font-size: 3.41rem;
   font-weight: 900;
+  max-width: 39rem;
+  color: var(--text-header);
+}
+.first-page-bg .manageMoney-container .manageMoney-text {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--text-paragraph);
+  grid-area: text;
 }
 .first-page-bg .manageMoney-container .manageMoney-text p {
   font-size: 1.8rem;
   font-weight: normal;
+  max-width: 44rem;
 }
-.first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper {
+.first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-sm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-md {
+  display: none;
+  flex-direction: row;
+  gap: 2rem;
+}
+.first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-lg {
+  display: none;
+  flex-direction: row;
+  gap: 2rem;
 }
 .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-discover-btn {
   display: flex;
@@ -216,10 +223,11 @@ h1 h2 h3 {
   width: 4.4rem;
   height: 4.4rem;
   margin: 2rem;
+  cursor: pointer;
   border: none;
   border-radius: 2.2rem;
-  background-color: white;
-  color: var(--text-paragraph);
+  background-color: var(--button-discovery-color);
+  color: var(--button-discovery-text-color);
   rotate: 180deg;
 }
 .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-discover-btn button p {
@@ -229,10 +237,42 @@ h1 h2 h3 {
   font-size: 2rem;
   font-weight: 600;
 }
-.first-page-bg .manageMoney-container .manageMoney-text .manageMoney-phones {
+.first-page-bg .manageMoney-container .manageMoney-phones {
+  display: none;
+  position: absolute;
+  grid-area: phones;
+  bottom: 0;
+  right: 0;
+}
+.first-page-bg .grid-template {
+  display: grid;
+  grid-auto-rows: minmax(0, auto);
+  grid-template-areas: "header" "text";
+}
+
+.logoSection {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  padding-block: 6rem;
+}
+.logoSection .logo {
+  display: flex;
+  background-color: var(--logo-icon-bg-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15.85rem;
+  height: 9.54rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.141);
+}
+.logoSection .logo4 {
   display: none;
 }
-.first-page-bg .manageMoney-container .manageMoney-phones {
+.logoSection .logo5 {
   display: none;
 }
 
@@ -538,6 +578,10 @@ footer p {
   .p-outerFrame {
     padding-inline: 2rem;
   }
+  .first-page-bg {
+    min-height: 650px;
+    max-height: 760px;
+  }
   .first-page-bg .topNavBar .leftSide {
     margin: 0.51rem 1.5rem;
   }
@@ -552,19 +596,36 @@ footer p {
   }
   .first-page-bg .manageMoney-container {
     display: grid;
-    border: 1px solid red;
   }
-  .first-page-bg .manageMoney-container .manageMoney-header {
-    border: 1px solid yellow;
+  .first-page-bg .manageMoney-container .manageMoney-header h2 {
+    font-size: 4.43rem;
+    max-width: 445px;
   }
   .first-page-bg .manageMoney-container .manageMoney-text {
-    border: 1px solid hotpink;
+    place-items: start;
+    text-align: start;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-text-top {
+    margin-top: 8rem;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-sm {
+    display: none;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-md {
+    display: flex;
   }
   .first-page-bg .manageMoney-container .manageMoney-phones {
+    display: grid;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phones-lg {
+    display: none;
+  }
+  .first-page-bg .grid-template {
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "header header" "text phones" "text phones";
+  }
+  .logoSection {
     display: flex;
-    position: relative;
-    bottom: 0;
-    border: 1px solid blue;
   }
   .faq-contact-section .contact-container .contact-button {
     display: none;
@@ -610,6 +671,13 @@ footer p {
   .p-outerFrame {
     padding-inline: 3.5rem;
   }
+  .first-page-bg {
+    min-height: 760px;
+    max-height: 1000px;
+  }
+  .first-page-bg .topNavBar {
+    max-width: 1296px;
+  }
   .first-page-bg .topNavBar .leftSide .navBarLinks {
     display: flex;
   }
@@ -623,6 +691,61 @@ footer p {
     display: none;
   }
   .first-page-bg .topNavBar .rightSide .signInButton {
+    display: flex;
+  }
+  .first-page-bg .manageMoney-container {
+    max-width: 1260px;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-header {
+    place-items: center;
+    text-align: start;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-header h2 {
+    font-size: 5.43rem;
+    max-width: 100%;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-text-top {
+    margin-top: 0rem;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-md {
+    display: none;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-lg {
+    display: flex;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-discover-btn {
+    margin-bottom: 3rem;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-phones {
+    display: grid;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phones-md {
+    display: none;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phones-lg {
+    display: block;
+  }
+  .first-page-bg .grid-template {
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "header phones" "text phones" "text phones";
+  }
+  .logoSection {
+    max-width: 1240px;
+    padding-block: 8rem;
+  }
+  .logoSection .logo {
+    width: 19.6rem;
+    height: 10rem;
+  }
+  .logoSection .logo4 {
+    display: flex;
+  }
+  .logoSection .logo5 {
     display: flex;
   }
   .reviews-section-bg {
@@ -700,15 +823,15 @@ footer p {
   --button-border-color: #42426D;
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
-  --button-discovery-color: #FFFFFF;
+  --button-discovery-color: hsla(0, 0%, 100%, 0.05);
+  --button-discovery-text-color: #ffffff;
   --button-circle: rgb(225, 227, 235);
   --button-circle-expanded: rgb(99, 102, 241);
   --button-toggle-bg: #6366F1;
   --text-header: #FFFFFF;
   --text-paragraph: #75777D;
   --text-navbar: #DDDDDF;
-  --logo-icon-color: #FFFFFF;
-  --logo-icon-bg-color: #FFFFFF;
+  --logo-icon-bg-color: #ffffff00;
 }
 
 @keyframes jump {
@@ -721,6 +844,19 @@ footer p {
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .animate-jump {
   animation: bounce 1s infinite;
+}
+
+.hover:hover {
+  scale: 1.05;
 }/*# sourceMappingURL=style.css.map */

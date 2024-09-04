@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min fantastiska hemsida</title>
+    <title>WIN24 HTML/CSS Inlämningsuppgift 1</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -48,28 +48,60 @@
             </div>
         </nav>
         <!-- Money management sidan (1) -->
-        <div class="manageMoney-container grid-structured">
+        <div class="manageMoney-container grid-template">
             <div class="manageMoney-header">
                 <h2>Manage All Your Money in One App</h2>
             </div>
-            <div class="manageMoney-text item">
-                <p>We offer you a new generation of the mobile
+            <div class="manageMoney-text">
+                <p class="manageMoney-text-top">We offer you a new generation of the mobile
                     banking. Save, spend & manage money in your pocket.</p>
-                <div class="manageMoney-link-wrapper">
-                    <a href=""><img src="svg/linkAppleStore.svg" alt="AppleStore länk"></a>
-                    <a href=""><img src="svg/linkGoogle.svg" alt="Google Store länk"></a>
+                <div class="manageMoney-link-wrapper-sm" id="manageMoney-link-wrapper-sm">
+                    <a href=""><img id="appleLink-sm" src="svg/linkAppleStore.svg" alt="AppleStore länk"></a>
+                    <a href=""><img id="googleLink-sm" src="svg/linkGoogle.svg" alt="Google Store länk"></a>
                 </div>
-
-                <div class="manageMoney-discover-btn item">
+                <div class="manageMoney-link-wrapper-md" id="manageMoney-link-wrapper-md">
+                    <a href=""><img id="appleLink-md" src="svg/linkAppleStore-md.svg" alt="AppleStore länk"></a>
+                    <a href=""><img id="googleLink-sm" src="svg/linkGoogleStore-md.svg" alt="Google Store länk"></a>
+                </div>
+                <div class="manageMoney-link-wrapper-lg" id="manageMoney-link-wrapper-lg">
+                    <a href=""><img id="appleLink-lg" src="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk"></a>
+                    <a href=""><img id="googleLink-lg" src="svg/linkGoogle-lg-Bright.svg" alt="Google Store länk"></a>
+                </div>
+                <a class="manageMoney-discover-btn animate-pulse hover" href="#P2">
                     <button><p>^</p></button>
                     <p>Discover more</p>
-                </div>
+                </a>
+                
             </div>
-            <div class="manageMoney-phones item">
-                <img src="svg/test.svg" alt="">
+            <div class="manageMoney-phones">
+                <img class="manageMoney-phones-md" src="svg/iPhonesSideBySide-md.svg" alt="Error">
+                <img class="manageMoney-phones-lg" src="svg/iPhonesSideBySide-lg2.svg" alt="Error">
             </div>
         </div>
     </section>
+
+
+    <!-- Logo section -->
+     <section class="logoSection">
+        <div class="logo hover">
+            <img src="svg/logoipsum.svg" alt="Logoipsum logo">
+        </div>
+        <div class="logo hover">
+            <img src="svg/logoipsum-1.svg" alt="Logoipsum logo">
+        </div>
+        <div class="logo hover">
+            <img src="svg/logoipsum-2.svg" alt="Logoipsum logo">
+        </div>
+        <div class="logo hover">
+            <img src="svg/logoipsum-3.svg" alt="Logoipsum logo">
+        </div>
+        <div class="logo logo4 hover">
+            <img src="svg/logoipsum-4.svg" alt="Logoipsum logo">
+        </div>
+        <div class="logo logo5 hover">
+            <img src="svg/logoipsum-5.svg" alt="Logoipsum logo">
+        </div>
+     </section>
     
 
     <!-- Make your money transfer simple and clear -->
@@ -87,7 +119,7 @@
             </div>
             
             <div class="reviews-card-section">
-                <div class="reviews-card">
+                <div class="reviews-card hover" >
                     <img class="reviews-card-quotes" src="svg/quotes.svg" alt="Betygs ikon">
                     <div class="reviews-card-stars">
                         <img src="svg/star.svg" alt="Blinka">
@@ -106,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews-card">
+                <div class="reviews-card hover">
                     <img class="reviews-card-quotes" src="svg/quotes.svg" alt="Betygs ikon">
                     <div class="reviews-card-stars">
                         <img src="svg/star.svg" alt="Blinka">
@@ -311,7 +343,7 @@
         <div class="contact-container">
             <button class="contact-button">Contact us now</button>
             <div class="contract-boxes">
-                <div class="contact-box box-1">
+                <div class="contact-box box-1 hover">
                     <img src="svg/phone.svg" alt="Telefon ikon">
                     <p>Still have questions?</p>
                     <a href="#" class="contact-contactText">
@@ -319,7 +351,7 @@
                         <span>→</span>
                     </a>
                 </div>
-                <div class="contact-box box-1 box-2">
+                <div class="contact-box box-1 box-2 hover">
                     <img src="svg/chat.svg" alt="Chat ikon">
                     <p>Don't like phone calls?</p>
                     <a href="#" class="contact-contactText">
