@@ -17,9 +17,9 @@
                 <h1>Silicon</h1>
                 <div class="navBarLinks">
                     <a href="#"><p>Home</p></a>
-                    <a href="#"><p>Features</p></a>
-                    <a href="#"><p>FAQ</p></a>
-                    <a href="#"><p>Contact</p></a>
+                    <a href="#AppFeatures"><p>Features</p></a>
+                    <a href="#FAQ"><p>FAQ</p></a>
+                    <a href="#Contact"><p>Contact</p></a>
                 </div>
             </div>
             <!-- Höger sida -->
@@ -67,7 +67,7 @@
                     <a href=""><img id="appleLink-lg" src="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk"></a>
                     <a href=""><img id="googleLink-lg" src="svg/linkGoogle-lg-Bright.svg" alt="Google Store länk"></a>
                 </div>
-                <a class="manageMoney-discover-btn animate-pulse hover" href="#P2">
+                <a class="manageMoney-discover-btn animate-pulse hover" href="#AppFeatures">
                     <button><p>^</p></button>
                     <p>Discover more</p>
                 </a>
@@ -81,7 +81,7 @@
     </section>
 
 
-    <!-- Logo section -->
+    <!-- Logo section -Tablet and Desktop only -->
      <section class="logoSection">
         <div class="logo hover">
             <img src="svg/logoipsum.svg" alt="Logoipsum logo">
@@ -105,7 +105,7 @@
 
 
      <!-- App Features -->
-     <section class="appFeatures">
+     <section id="AppFeatures" class="appFeatures">
         <div class="phoneSide">
             <img src="svg/appFeaturesPhone.svg" alt="Bild på en telefon">
         </div>
@@ -197,7 +197,9 @@
                     <img class="overlay" src="svg/iPhone-md-screens.svg" alt="">
                 </div>
                 <h3>Step 3. Transfers to people from your contact list</h3>
-                <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+                <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
+                    Pellentesque volutpat ligula est. Mattis fermentum, at nec
+                    lacus.</p>
             </div> 
 
             <div class="hdiw-lg">
@@ -239,13 +241,24 @@
       </section>
 
 
-    <!-- Make your money transfer simple and clear -->
+    <!-- Feature demo - Desktop only / Make your money transfer simple and clear -->
     <section class="features-demo">
         <div class="topLeft">
             <h2>Make your money transfer simple and clear</h2>
-            <p>Banking transactions are free for you</p>
-            <p>No monthly cash commission</p>
-            <p>Manage payments and transactions online</p>
+            <div class="text-container">
+                <div class="text-wrapper">
+                    <img src="svg/bx-check-circle.svg" alt="Checkmark icon">
+                    <p>Banking transactions are free for you</p>
+                </div>
+                <div class="text-wrapper">
+                    <img src="svg/bx-check-circle.svg" alt="Checkmark icon">
+                    <p>No monthly cash commission</p>
+                </div>
+                <div class="text-wrapper">
+                    <img src="svg/bx-check-circle.svg" alt="Checkmark icon">
+                    <p>Manage payments and transactions online</p>
+                </div>
+            </div>
             <button>Learn more -></button>
         </div>
             
@@ -276,7 +289,7 @@
     </section>
 
 
-    <!-- Reviews -->
+    <!-- Reviews - Desktop only --> 
     <section class="reviews-section-bg">
         <div class="reviews-section">
             <div>
@@ -329,13 +342,13 @@
 
 
     <!-- FAQ and Contact section -->
-    <section class="faq-contact-section">
-        <div .class="faq-title">
+    <section  class="faq-contact-section">
+        <div class="faq-title">
             <h2 class="">Any questions? Check out the FAQs</h2>
             <p class="">Still have unanswered questions and need to get in touch?</p>
         </div>
         <!-- FAQ section -->
-        <div class="faq-container">
+        <div id="FAQ" class="faq-container">
             
             <!-- FAQ Frågor -->
             <div class="faq-questions-container">
@@ -506,7 +519,7 @@
         </div>
 
         <!-- Contact section -->
-        <div class="contact-container">
+        <div id="Contact" class="contact-container">
             <button class="contact-button">Contact us now</button>
             <div class="contract-boxes">
                 <div class="contact-box box-1 hover">
@@ -529,7 +542,6 @@
             </div>
         </div>
      </section>
-
 
 
     <!-- Subscribe -->

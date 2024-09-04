@@ -40,6 +40,7 @@ body {
 
 * {
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont;
+  transition-duration: 0.2s;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -67,6 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
 }
 .first-page-bg .topNavBar {
   display: flex;
@@ -159,6 +161,7 @@ body {
   height: 0.235rem;
 }
 .first-page-bg .topNavBar .rightSide .signInButton {
+  cursor: pointer;
   display: none;
   justify-content: center;
   align-items: center;
@@ -258,7 +261,7 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 800px;
-  padding-block: 6rem;
+  margin-block: 3rem;
 }
 .logoSection .logo {
   display: flex;
@@ -285,6 +288,7 @@ body {
   align-items: center;
   padding: 1.18rem;
   max-width: 800px;
+  margin-block: 3rem;
 }
 .appFeatures .phoneSide {
   display: none;
@@ -293,14 +297,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-block: 3rem;
   text-align: center;
 }
 .appFeatures .headerAndText h2 {
   font-size: 2.8rem;
+  padding-bottom: 3rem;
 }
 .appFeatures .headerAndText p {
   font-size: 1.8rem;
+  padding-bottom: 3rem;
 }
 .appFeatures .features {
   display: flex;
@@ -328,6 +333,9 @@ body {
 }
 .appFeatures .features .feature .img-container img {
   width: 2.8rem;
+}
+.appFeatures .features .feature h3 {
+  margin-bottom: 1rem;
 }
 
 .howDoesItWork {
@@ -380,6 +388,7 @@ body {
   border-radius: 4rem;
 }
 .howDoesItWork .hdiw-bg .hdiw-md {
+  margin-block-end: 6rem;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -387,22 +396,23 @@ body {
 .howDoesItWork .hdiw-bg .hdiw-md p {
   font-size: 1.6rem;
   font-weight: normal;
-  margin-bottom: 5rem;
-  max-width: 600px;
+  max-width: 47rem;
 }
 .howDoesItWork .hdiw-bg .hdiw-md h2 {
   font-size: 3.35rem;
   font-weight: 900;
   margin-top: 5rem;
   padding-block: 2rem;
+  max-width: 50rem;
 }
 .howDoesItWork .hdiw-bg .hdiw-md h3 {
   font-size: 2.27rem;
   font-weight: 900;
   padding-block: 2rem;
-  text-wrap: balance;
+  max-width: 50rem;
 }
 .howDoesItWork .hdiw-bg .hdiw-md .image {
+  margin-block: 2rem;
   display: flex;
   justify-content: center;
   position: relative;
@@ -446,9 +456,10 @@ body {
 }
 
 .features-demo {
+  margin-block: 8rem;
   padding: 1.18rem;
-  max-width: 1280px;
-  display: grid;
+  max-width: 1080px;
+  display: none;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   height: -moz-fit-content;
@@ -464,6 +475,7 @@ body {
   font-weight: normal;
 }
 .features-demo button {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -474,6 +486,38 @@ body {
   border: none;
   border-radius: 0.5rem;
   color: white;
+}
+.features-demo .topLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+.features-demo .topLeft .text-container .text-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.features-demo .topLeft .image-containers {
+  display: flex;
+  gap: 2rem;
+}
+.features-demo .topLeft .image-containers .img-container {
+  max-width: 25rem;
+}
+.features-demo .topLeft .image-containers .img-container .img-bg {
+  width: 6rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color-alt);
+}
+.features-demo .topLeft .image-containers .img-container .img-bg img {
+  width: 2.8rem;
+}
+.features-demo .lowerRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
 }
 .features-demo .lowerRight .image-containers {
   display: flex;
@@ -658,6 +702,7 @@ body {
   width: 100%;
 }
 .faq-contact-section .contact-container button {
+  cursor: pointer;
   display: block;
   margin: 3rem;
   font-size: 1.4rem;
@@ -669,6 +714,7 @@ body {
   color: white;
 }
 .faq-contact-section .contact-container .contract-boxes {
+  cursor: pointer;
   display: none;
   gap: 3rem;
   width: 100%;
@@ -765,6 +811,7 @@ body {
   width: 150px;
 }
 .subscribe-container .subscribe-input-container button {
+  cursor: pointer;
   border: none;
   background-color: var(--button-color);
   font-size: 1.6rem;
@@ -840,14 +887,41 @@ footer p {
     grid-template-columns: 45% 55%;
     grid-template-areas: "header header" "text phones" "text phones";
   }
+  .appFeatures {
+    margin-block: 6rem;
+  }
+  .appFeatures .restSide .headerAndText h2 {
+    font-size: 3.35rem;
+    font-weight: 900;
+  }
+  .appFeatures .restSide .headerAndText p {
+    font-size: 1.8rem;
+  }
   .logoSection {
     display: flex;
+  }
+  .howDoesItWork .hdiw-bg {
+    margin-block: 2rem;
   }
   .howDoesItWork .hdiw-bg .hdiw-sm {
     display: none;
   }
   .howDoesItWork .hdiw-bg .hdiw-md {
     display: flex;
+  }
+  .faq-contact-section .faq-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 3rem;
+  }
+  .faq-contact-section .faq-title h2 {
+    max-width: 30rem;
+    font-size: 3rem;
+  }
+  .faq-contact-section .faq-title p {
+    max-width: 50rem;
+    font-size: 2rem;
   }
   .faq-contact-section .contact-container .contact-button {
     display: none;
@@ -973,16 +1047,19 @@ footer p {
   .appFeatures {
     max-width: 1240px;
     flex-direction: row;
+    margin-block: 6rem;
   }
   .appFeatures .phoneSide {
     display: flex;
-    margin-block: 6rem;
   }
   .appFeatures .restSide {
     margin-left: 10rem;
   }
   .appFeatures .restSide .features {
     justify-content: start;
+  }
+  .appFeatures .restSide .features .feature {
+    margin-block: 2rem;
   }
   .appFeatures .headerAndText {
     text-align: start;
@@ -1000,10 +1077,14 @@ footer p {
   .howDoesItWork .hdiw-bg .hdiw-lg {
     display: flex;
   }
+  .features-demo {
+    display: grid;
+  }
   .reviews-section-bg {
     display: flex;
   }
   .faq-contact-section {
+    margin-block: 6rem;
     max-width: 1260px;
     display: grid;
     gap: 3rem;
@@ -1086,6 +1167,10 @@ footer p {
   --logo-icon-bg-color: #ffffff00;
 }
 
+.hover:hover {
+  scale: 1.05;
+}
+
 @keyframes jump {
   0%, 100% {
     transform: translateY(-25%);
@@ -1107,8 +1192,4 @@ footer p {
 
 .animate-jump {
   animation: bounce 1s infinite;
-}
-
-.hover:hover {
-  scale: 1.05;
 }/*# sourceMappingURL=style.css.map */
