@@ -34,8 +34,7 @@ $padding-outer:1.18rem;
 
 body{
     display: flex;
-    flex-direction: column
-    ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
@@ -55,16 +54,24 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    a{
+        text-decoration: none;
+    }
+    p{
+        color: var(--text-paragraph);
+    }
+    h1{
+        color: var(--text-header);
+    }
+    h2{
+        color: var(--text-header);
+    }
+    h3{
+        color: var(--text-header);
+    }
 }
-a{
-    text-decoration: none;
-}
-p{
-    color: var(--text-paragraph);
-}
-h1 h2 h3{
-    color: var(--text-header);
-}
+
 
 // Navbar and first page section
 .first-page-bg{
@@ -287,7 +294,7 @@ h1 h2 h3{
     }
 }
 
-//Logo section
+//Logo section - Tablet and Desktop only - 
 .logoSection{
     display: none;
     justify-content: space-between;
@@ -450,7 +457,63 @@ h1 h2 h3{
     }
 }
 
-// Reviews
+
+// Features demo - Desktop only - Make your money transfer simple and clear
+.features-demo{
+    padding: $padding-outer;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: (1fr 1fr);
+
+    width: 100%;
+    height: fit-content;
+    h2{
+        font-size: 2.8rem;
+        font-weight: 900;
+        max-width: 450px;
+    }
+    p{
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        width: 14rem;
+        height: 3.6rem;
+        background-color: var(--button-color);
+        border: none;
+        border-radius: 0.5rem;
+        color: white;
+    }
+
+    .lowerRight{
+        
+        .image-containers{
+            display: flex;
+            gap: 2rem;
+            .img-container{
+                max-width: 25rem;
+                .img-bg{
+                    width: 6rem;
+                    padding: 1.6rem;
+                    border-radius: 0.5rem;
+                    background-color: var(--background-color-alt);
+                    img{
+                        width: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+// Reviews - Desktop only - 
 .reviews-section-bg{
     width: 100vw;
     background-color: var(--background-color-subscribe);

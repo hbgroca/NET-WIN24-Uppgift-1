@@ -44,16 +44,19 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-a {
+* a {
   text-decoration: none;
 }
-
-p {
+* p {
   color: var(--text-paragraph);
 }
-
-h1 h2 h3 {
+* h1 {
+  color: var(--text-header);
+}
+* h2 {
+  color: var(--text-header);
+}
+* h3 {
   color: var(--text-header);
 }
 
@@ -440,6 +443,53 @@ h1 h2 h3 {
 .howDoesItWork .hdiw-bg .hdiw-lg .image .overlay {
   position: absolute;
   scale: 1.01;
+}
+
+.features-demo {
+  padding: 1.18rem;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.features-demo h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  max-width: 450px;
+}
+.features-demo p {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.features-demo button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 14rem;
+  height: 3.6rem;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+.features-demo .lowerRight .image-containers {
+  display: flex;
+  gap: 2rem;
+}
+.features-demo .lowerRight .image-containers .img-container {
+  max-width: 25rem;
+}
+.features-demo .lowerRight .image-containers .img-container .img-bg {
+  width: 6rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-color-alt);
+}
+.features-demo .lowerRight .image-containers .img-container .img-bg img {
+  width: 2.8rem;
 }
 
 .reviews-section-bg {
