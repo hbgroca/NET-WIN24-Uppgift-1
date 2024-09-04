@@ -371,6 +371,84 @@ h1 h2 h3{
     }
 }
 
+// How does it work?
+.howDoesItWork{
+    width: 100%;
+    background-color: var(--background-color-alt);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .hdiw-bg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        max-width: 600px;
+        .hdiw-sm{   
+            display: flex;
+            flex-direction: column;
+            p{font-size: 1.6rem; font-weight: normal; margin-bottom: 5rem;}
+            h2{font-size: 2.8rem; font-weight: 900; margin-top: 5rem; padding-block: 2rem;}
+            h3{font-size: 2.16rem; font-weight: 900; padding-block: 2rem; text-wrap:balance;}
+            .image{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                .overlay{
+                    position: absolute;
+                    scale: 1;
+                    scale: 0.835;
+                    bottom: -4.25rem;
+                    border-radius: 4rem;
+                }
+                
+            }
+        }
+        .hdiw-md{   
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            p{font-size: 1.6rem; font-weight: normal; margin-bottom: 5rem;  max-width: 600px;}
+            h2{font-size: 3.35rem; font-weight: 900; margin-top: 5rem; padding-block: 2rem;}
+            h3{font-size: 2.27rem; font-weight: 900; padding-block: 2rem; text-wrap:balance;}
+            .image{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                // overflow: hidden;
+                .overlay{
+                    position: absolute;
+                    scale: 1.01;
+                }
+                
+            }
+        }
+        .hdiw-lg{   
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            p{font-size: 1.6rem; font-weight: normal; margin-bottom: 8rem; max-width: 800px;}
+            h2{font-size: 3.5rem; font-weight: 900; margin-top: 5rem; padding-block: 4rem;}
+            h3{font-size: 2.46rem; font-weight: 900; padding-block: 2rem; text-wrap:balance;}
+            .image{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                .frame{
+                    
+                }
+                .overlay{
+                    position: absolute;
+                    scale: 1.01;
+                }
+                
+            }
+        }
+    }
+}
 
 // Reviews
 .reviews-section-bg{
@@ -770,6 +848,14 @@ footer{
         display: flex;
     }
 
+    // How does it work section
+    .howDoesItWork{
+        .hdiw-bg{
+            .hdiw-sm{display: none;}
+            .hdiw-md{display: flex;}
+         }
+     }
+
     // FAQ and Contact section
     .faq-contact-section{
         //FAQ section
@@ -955,6 +1041,17 @@ footer{
             }
         }
     }
+
+
+     // How does it work section
+     .howDoesItWork{
+        .hdiw-bg{
+            .hdiw-md{display: none;}
+            .hdiw-lg{display: flex;}
+         }
+     }
+     
+     
 
     // Reviews section
     .reviews-section-bg{

@@ -327,6 +327,121 @@ h1 h2 h3 {
   width: 2.8rem;
 }
 
+.howDoesItWork {
+  width: 100%;
+  background-color: var(--background-color-alt);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.howDoesItWork .hdiw-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
+.howDoesItWork .hdiw-bg .hdiw-sm {
+  display: flex;
+  flex-direction: column;
+}
+.howDoesItWork .hdiw-bg .hdiw-sm p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 5rem;
+}
+.howDoesItWork .hdiw-bg .hdiw-sm h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-top: 5rem;
+  padding-block: 2rem;
+}
+.howDoesItWork .hdiw-bg .hdiw-sm h3 {
+  font-size: 2.16rem;
+  font-weight: 900;
+  padding-block: 2rem;
+  text-wrap: balance;
+}
+.howDoesItWork .hdiw-bg .hdiw-sm .image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.howDoesItWork .hdiw-bg .hdiw-sm .image .overlay {
+  position: absolute;
+  scale: 1;
+  scale: 0.835;
+  bottom: -4.25rem;
+  border-radius: 4rem;
+}
+.howDoesItWork .hdiw-bg .hdiw-md {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.howDoesItWork .hdiw-bg .hdiw-md p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 5rem;
+  max-width: 600px;
+}
+.howDoesItWork .hdiw-bg .hdiw-md h2 {
+  font-size: 3.35rem;
+  font-weight: 900;
+  margin-top: 5rem;
+  padding-block: 2rem;
+}
+.howDoesItWork .hdiw-bg .hdiw-md h3 {
+  font-size: 2.27rem;
+  font-weight: 900;
+  padding-block: 2rem;
+  text-wrap: balance;
+}
+.howDoesItWork .hdiw-bg .hdiw-md .image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.howDoesItWork .hdiw-bg .hdiw-md .image .overlay {
+  position: absolute;
+  scale: 1.01;
+}
+.howDoesItWork .hdiw-bg .hdiw-lg {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.howDoesItWork .hdiw-bg .hdiw-lg p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 8rem;
+  max-width: 800px;
+}
+.howDoesItWork .hdiw-bg .hdiw-lg h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-top: 5rem;
+  padding-block: 4rem;
+}
+.howDoesItWork .hdiw-bg .hdiw-lg h3 {
+  font-size: 2.46rem;
+  font-weight: 900;
+  padding-block: 2rem;
+  text-wrap: balance;
+}
+.howDoesItWork .hdiw-bg .hdiw-lg .image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.howDoesItWork .hdiw-bg .hdiw-lg .image .overlay {
+  position: absolute;
+  scale: 1.01;
+}
+
 .reviews-section-bg {
   width: 100vw;
   background-color: var(--background-color-subscribe);
@@ -678,6 +793,12 @@ footer p {
   .logoSection {
     display: flex;
   }
+  .howDoesItWork .hdiw-bg .hdiw-sm {
+    display: none;
+  }
+  .howDoesItWork .hdiw-bg .hdiw-md {
+    display: flex;
+  }
   .faq-contact-section .contact-container .contact-button {
     display: none;
   }
@@ -822,6 +943,12 @@ footer p {
   }
   .appFeatures .headerAndText p {
     font-size: 1.8rem;
+  }
+  .howDoesItWork .hdiw-bg .hdiw-md {
+    display: none;
+  }
+  .howDoesItWork .hdiw-bg .hdiw-lg {
+    display: flex;
   }
   .reviews-section-bg {
     display: flex;
