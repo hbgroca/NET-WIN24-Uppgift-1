@@ -72,7 +72,7 @@ h1 h2 h3{
     height: 100svh;
     min-height: 550px;
     background: linear-gradient(transparent, var(--background-color-fade));
-    border:1px red solid;
+    // border:1px red solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +85,7 @@ h1 h2 h3{
         height: 6rem;
         max-width: 1366px;
     
-        border: 1px solid blueviolet;
+        // border: 1px solid blueviolet;
     
         .leftSide{
             display: flex;
@@ -194,17 +194,17 @@ h1 h2 h3{
     .manageMoney-container{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         gap: 3rem;
         max-width: 1366px;
         display: grid;
         width: 100%;
         height: 100%;
         padding: 1rem;
-        border: 1px solid blue;
+        // border: 1px solid blue;
         h2{
             font-size: 3.41rem;
             font-weight: 900;
+            color: var(--text-header);
         }
         .manageMoney-header{
             text-align: center;
@@ -217,6 +217,7 @@ h1 h2 h3{
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
+            color: var(--text-paragraph);
             p{
                 font-size: 3.41rem;
                 font-weight: 900;
@@ -256,6 +257,10 @@ h1 h2 h3{
             .manageMoney-phones{
                 display: none;
             }
+        }
+
+        .manageMoney-phones{
+            display: none;
         }
     }
 }
@@ -613,6 +618,29 @@ footer{
                 }
             }
         }
+
+        .manageMoney-container{
+            display: grid;
+        
+            border: 1px solid red;
+            .manageMoney-header{
+                // display: flex;
+                // flex: 2;
+                border: 1px solid yellow;
+            }
+            .manageMoney-text{
+                // flex: 2;
+                border: 1px solid hotpink;
+            }
+
+            .manageMoney-phones{
+                display: flex;
+                position: relative;
+                bottom: 0;
+                border: 1px solid blue;
+            }
+        }
+
     }
     
     // FAQ and Contact section

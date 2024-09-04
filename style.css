@@ -61,7 +61,6 @@ h1 h2 h3 {
   height: 100svh;
   min-height: 550px;
   background: linear-gradient(transparent, var(--background-color-fade));
-  border: 1px red solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +72,6 @@ h1 h2 h3 {
   width: 100%;
   height: 6rem;
   max-width: 1366px;
-  border: 1px solid blueviolet;
 }
 .first-page-bg .topNavBar .leftSide {
   display: flex;
@@ -172,18 +170,17 @@ h1 h2 h3 {
 .first-page-bg .manageMoney-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 3rem;
   max-width: 1366px;
   display: grid;
   width: 100%;
   height: 100%;
   padding: 1rem;
-  border: 1px solid blue;
 }
 .first-page-bg .manageMoney-container h2 {
   font-size: 3.41rem;
   font-weight: 900;
+  color: var(--text-header);
 }
 .first-page-bg .manageMoney-container .manageMoney-header {
   text-align: center;
@@ -195,6 +192,7 @@ h1 h2 h3 {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  color: var(--text-paragraph);
 }
 .first-page-bg .manageMoney-container .manageMoney-text p {
   font-size: 3.41rem;
@@ -232,6 +230,9 @@ h1 h2 h3 {
   font-weight: 600;
 }
 .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-phones {
+  display: none;
+}
+.first-page-bg .manageMoney-container .manageMoney-phones {
   display: none;
 }
 
@@ -548,6 +549,22 @@ footer p {
   }
   .first-page-bg .topNavBar .rightSide .navButton-container {
     margin-inline: 0rem;
+  }
+  .first-page-bg .manageMoney-container {
+    display: grid;
+    border: 1px solid red;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-header {
+    border: 1px solid yellow;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-text {
+    border: 1px solid hotpink;
+  }
+  .first-page-bg .manageMoney-container .manageMoney-phones {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    border: 1px solid blue;
   }
   .faq-contact-section .contact-container .contact-button {
     display: none;
