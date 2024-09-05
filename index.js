@@ -4,13 +4,13 @@ function faqExpand(faqQuestion){
   console.log(faqQuestion);
     const faqClassList = document.getElementById(faqQuestion);
     const faqBtn = document.getElementById(faqQuestion + "Btn");
-    if(faqClassList.classList == "faqColapsed"){
-        faqClassList.classList = "faqNotColapsed b-bottom";
-        // faqBtn.classList = "faqBtnExpanded";
-    }else
-    {
+    if(faqBtn.classList == "faq-btn faqBtnExpanded"){
         faqClassList.classList = "faqColapsed";
-        // faqBtn.classList = "faqBtnColapsed";
+        faqBtn.classList = "faq-btn";
+    }else if(faqBtn.classList == "faq-btn")
+    {
+        faqClassList.classList = "faqNotColapsed b-bottom";
+        faqBtn.classList = "faq-btn faqBtnExpanded";
     }
 }
 
