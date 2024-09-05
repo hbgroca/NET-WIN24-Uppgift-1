@@ -8,6 +8,7 @@
   --background-color-alt: #F3F6FF;
   --background-color-subscribe: #F3F6FF;
   --background-color-review: #F3F6FF;
+  --background-color-faq: #ffffff;
   --button-border-color: #B4B7C9;
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
@@ -16,6 +17,7 @@
   --button-circle: rgb(225, 227, 235);
   --button-circle-expanded: rgb(99, 102, 241);
   --button-toggle-bg: #9397AD;
+  --button-faq-bg: #F3F6FF;
   --text-header: #131022;
   --text-paragraph: #585C7B;
   --text-navbar: #33354D;
@@ -644,7 +646,7 @@ body {
   align-items: center;
   padding: 2rem;
   justify-content: space-between;
-  background-color: var(--background-color-alt);
+  background-color: var(--background-color-faq);
   transition-duration: 0ms;
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-text {
@@ -660,6 +662,7 @@ body {
   position: relative;
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-btn-container .faq-btn {
+  transform: rotateZ(180deg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -668,18 +671,18 @@ body {
   padding: 2rem;
   border: none;
   border-radius: 100%;
-  background-color: var(--button-circle);
+  background-color: var(--button-faq-bg);
   position: relative;
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-btn-container .faq-btn .faq-btn-text {
   position: absolute;
-  top: 11px;
+  top: 9px;
   font-weight: 500;
   text-align: center;
   color: var(--button-discovery-text-color);
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-btn-container .faqBtnExpanded {
-  transform: rotateZ(180deg);
+  transform: rotateZ(0deg);
   background-color: #1b3b9c;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.31);
 }
@@ -696,7 +699,7 @@ body {
   display: none;
 }
 .faq-contact-section .faq-container .faq-questions-container .faqNotColapsed {
-  background-color: var(--background-color-alt);
+  background-color: var(--background-color-faq);
   height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
@@ -942,7 +945,8 @@ footer p {
     border-radius: 1rem;
   }
   .faq-contact-section .faq-container .faq-questions-container .colapsed {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+    border: 0;
     margin-bottom: 3rem;
   }
   .faq-contact-section .faq-container .faq-questions-container .notColapsed {
@@ -1194,6 +1198,7 @@ footer p {
   --background-color-alt: hsl(223, 25%, 13%);
   --background-color-subscribe: #151822;
   --background-color-review: #1E222B;
+  --background-color-faq: #ffffff04;
   --button-border-color: #42426D;
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
@@ -1202,6 +1207,7 @@ footer p {
   --button-circle: rgb(225, 227, 235);
   --button-circle-expanded: rgb(99, 102, 241);
   --button-toggle-bg: #6366F1;
+  --button-faq-bg: #ffffff04;
   --text-header: #FFFFFF;
   --text-paragraph: #75777D;
   --text-navbar: #DDDDDF;

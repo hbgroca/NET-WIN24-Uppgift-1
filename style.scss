@@ -14,6 +14,7 @@ $padding-outer:1.18rem;
     --background-color-alt: #F3F6FF;
     --background-color-subscribe: #F3F6FF;
     --background-color-review: #F3F6FF;
+    --background-color-faq: #ffffff;
 
     --button-border-color: #B4B7C9;
     --button-color: #6366F1;
@@ -23,6 +24,7 @@ $padding-outer:1.18rem;
     --button-circle: rgb(225, 227, 235);
     --button-circle-expanded: rgb(99, 102, 241);
     --button-toggle-bg: #9397AD;
+    --button-faq-bg: #F3F6FF;
 
     --text-header: #131022;
     --text-paragraph: #585C7B;
@@ -660,7 +662,7 @@ body{
                 align-items: center;
                 padding: 2rem;
                 justify-content: space-between;
-                background-color: var(--background-color-alt);
+                background-color: var(--background-color-faq);
                 transition-duration: 0ms;
                 .faq-question-text{
                     color:var(--text-header);
@@ -675,6 +677,7 @@ body{
                     justify-content: space-between;
                     position: relative;
                     .faq-btn{
+                        transform: rotateZ(180deg);
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -683,12 +686,11 @@ body{
                         padding: 2rem;
                         border: none;
                         border-radius:100%;
-                        background-color: var(--button-circle);
-                        // box-shadow: 0 0px 10px rgba(0, 0, 0, 0.21);
+                        background-color: var(--button-faq-bg);
                         position: relative;
                         .faq-btn-text{
                             position: absolute;
-                            top:11px;
+                            top:9px;
                             font-weight: 500;
                             text-align: center;
                             color: var(--button-discovery-text-color);
@@ -696,7 +698,7 @@ body{
                         
                     }
                     .faqBtnExpanded{
-                        transform: rotateZ(180deg);
+                        transform: rotateZ(0deg);
                         background-color: #1b3b9c;
                         box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.31);
                         .faq-btn-text{
@@ -719,7 +721,7 @@ body{
                 
             }
             .faqNotColapsed{
-                background-color: var(--background-color-alt);
+                background-color: var(--background-color-faq);
                 height: fit-content;
                 overflow: hidden;
                 text-align: start;
@@ -992,21 +994,6 @@ footer{
 
     // FAQ and Contact section  (OK MARGIN)
     .faq-contact-section{
-        //FAQ section
-        // .faq-title{
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     margin-block: 3rem;
-        //     h2{max-width: 30rem; font-size: 3rem;}
-        //     p{max-width: 50rem; font-size: 2rem;}
-        // }
-
-
-
-        // TEST
-
-
         .faq-container{
             display: flex;
             flex-direction: column;
@@ -1022,7 +1009,9 @@ footer{
                     border-radius: 1rem;
                 }
                 .colapsed{
-                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+                    // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+                    border: 0;
                     margin-bottom: 3rem;
                 }
                 .notColapsed{
@@ -1053,10 +1042,6 @@ footer{
             
             
         }
-
-
-        // TEST SLUT
-
 
         //Contact section  (OK MARGIN)
         .contact-container{
@@ -1343,6 +1328,7 @@ footer{
     --background-color-alt: hsl(223, 25%, 13%);
     --background-color-subscribe: #151822;
     --background-color-review: #1E222B;
+    --background-color-faq: #ffffff04;
 
     --button-border-color: #42426D;
     --button-color: #6366F1;
@@ -1352,6 +1338,7 @@ footer{
     --button-circle: rgb(225, 227, 235);
     --button-circle-expanded: rgb(99, 102, 241);
     --button-toggle-bg: #6366F1;
+    --button-faq-bg: #ffffff04;
 
     --text-header: #FFFFFF;
     --text-paragraph: #75777D;
