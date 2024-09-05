@@ -2,15 +2,18 @@ let darkMode = false;
 
 function faqExpand(faqQuestion){
   console.log(faqQuestion);
-    const faqClassList = document.getElementById(faqQuestion);
+  const faqClassList = document.getElementById(faqQuestion);
+  const faqClass = document.getElementById(faqQuestion + "Btn").parentElement.parentElement;
     const faqBtn = document.getElementById(faqQuestion + "Btn");
     if(faqBtn.classList == "faq-btn faqBtnExpanded"){
         faqClassList.classList = "faqColapsed";
         faqBtn.classList = "faq-btn";
+        faqClass.classList = "faq colapsed";
     }else if(faqBtn.classList == "faq-btn")
     {
-        faqClassList.classList = "faqNotColapsed b-bottom";
+        faqClassList.classList = "faqNotColapsed";
         faqBtn.classList = "faq-btn faqBtnExpanded";
+        faqClass.classList = "faq notColapsed";
     }
 }
 
@@ -30,7 +33,7 @@ function changeTheme(){
           <a href=""><img id="googleLink-md" class="hover" src="svg/linkGoogleStore-md.svg" alt="Google Store länk"></a>`;
                 
       document.getElementById("manageMoney-link-wrapper-lg").innerHTML = `
-          <a href=""><img id="appleLink-lg" sclass="hover" rc="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk"></a>
+          <a href=""><img id="appleLink-lg" sclass="hover" src="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk"></a>
           <a href=""><img id="googleLink-lg" class="hover" src="svg/linkGoogle-lg-Bright.svg" alt="Google Store länk"></a>`;
                 
     }
