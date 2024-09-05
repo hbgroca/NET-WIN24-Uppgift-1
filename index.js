@@ -25,16 +25,16 @@ function changeTheme(){
       document.getElementById("body").classList = "bright";
       document.getElementById("toggleSwitch-dot").classList = "toggleSwitch-dot";
       document.getElementById("manageMoney-link-wrapper-sm").innerHTML = `
-          <a href=""><img id="appleLink-sm" class="hover" src="svg/linkAppleStore.svg" alt="AppleStore länk"></a>
-          <a href=""><img id="googleLink-sm" class="hover" src="svg/linkGoogle.svg" alt="Google Store länk"></a>`;
+          <img id="appleLink-sm" class="hover" src="svg/linkAppleStore.svg" alt="AppleStore länk">
+          <img id="googleLink-sm" class="hover" src="svg/linkGoogle.svg" alt="Google Store länk">`;
       
       document.getElementById("manageMoney-link-wrapper-md").innerHTML = `
-          <a href=""><img id="appleLink-md" class="hover" src="svg/linkAppleStore-md.svg" alt="AppleStore länk"></a>
-          <a href=""><img id="googleLink-md" class="hover" src="svg/linkGoogleStore-md.svg" alt="Google Store länk"></a>`;
+          <img id="appleLink-md" class="hover" src="svg/linkAppleStore-md.svg" alt="AppleStore länk">
+          <img id="googleLink-md" class="hover" src="svg/linkGoogleStore-md.svg" alt="Google Store länk">`;
                 
       document.getElementById("manageMoney-link-wrapper-lg").innerHTML = `
-          <a href=""><img id="appleLink-lg" sclass="hover" src="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk"></a>
-          <a href=""><img id="googleLink-lg" class="hover" src="svg/linkGoogle-lg-Bright.svg" alt="Google Store länk"></a>`;
+          <img id="appleLink-lg" sclass="hover" src="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk">
+          <img id="googleLink-lg" class="hover" src="svg/linkGoogle-lg-Bright.svg" alt="Google Store länk">`;
                 
     }
     else{
@@ -45,15 +45,15 @@ function changeTheme(){
       document.getElementById("toggleSwitch-dot").classList = "toggleSwitch-dot toggleSwitch-dot-dark";
       
       document.getElementById("manageMoney-link-wrapper-sm").innerHTML = `
-          <a href=""><img id="appleLink-sm" class="hover" src="svg/linkAppleStore-Bright.svg" alt="AppleStore länk"></a>
-          <a href=""><img id="googleLink-sm" class="hover" src="svg/linkGoogle-bright.svg" alt="Google Store länk"></a>`;
+          <img id="appleLink-sm" class="hover" src="svg/linkAppleStore-Bright.svg" alt="AppleStore länk">
+          <img id="googleLink-sm" class="hover" src="svg/linkGoogle-bright.svg" alt="Google Store länk">`;
       
       document.getElementById("manageMoney-link-wrapper-md").innerHTML = `
-          <a href=""><img id="appleLink-md" class="hover" src="svg/appstore-md-dark.svg" alt="AppleStore länk"></a>
-          <a href=""><img id="googleLink-md" class="hover" src="svg/googleplay-md-dark.svg" alt="Google Store länk"></a>`;
+          <img id="appleLink-md" class="hover" src="svg/appstore-md-dark.svg" alt="AppleStore länk">
+          <img id="googleLink-md" class="hover" src="svg/googleplay-md-dark.svg" alt="Google Store länk">`;
                 
       document.getElementById("manageMoney-link-wrapper-lg").innerHTML = `
-          <a href=""><img id="appleLink-lg" class="hover" src="svg/appstore-lg-dark.svg" alt="AppleStore länk"></a>
-          <a href=""><img id="googleLink-lg" class="hover" src="svg/googleplay-lg-dark.svg" alt="Google Store länk"></a>`;
+          <img id="appleLink-lg" class="hover" src="svg/appstore-lg-dark.svg" alt="AppleStore länk">
+          <img id="googleLink-lg" class="hover" src="svg/googleplay-lg-dark.svg" alt="Google Store länk">`;
     }
 }

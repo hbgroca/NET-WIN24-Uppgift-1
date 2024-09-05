@@ -104,6 +104,9 @@ body {
   font-weight: 800;
   color: var(--text-navbar);
 }
+.first-page-bg .topNavBar .leftSide img:hover {
+  animation: spinn 1s infinite;
+}
 .first-page-bg .topNavBar .rightSide {
   display: flex;
   flex-direction: row;
@@ -1216,8 +1219,17 @@ footer p {
 
 .hover:hover {
   scale: 1.05;
+  cursor: pointer;
 }
 
+@keyframes spinn {
+  100% {
+    rotate: 360deg;
+  }
+  50% {
+    scale: 1.07;
+  }
+}
 @keyframes jump {
   0%, 100% {
     transform: translateY(-25%);

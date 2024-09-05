@@ -114,6 +114,9 @@ body{
                     color: var(--text-navbar);
                 }
             }
+            img:hover{
+                animation: spinn 1s infinite;
+            }
         }
     
         .rightSide{
@@ -1354,8 +1357,18 @@ footer{
 // psuedo
 .hover:hover{
     scale: 1.05;
+    cursor: pointer;
 }
 
+// Animeringar
+@keyframes spinn {
+    100%{
+        rotate: 360deg;
+    }
+    50%{
+        scale: 1.07;
+    }
+}
 
 
 // Animeringar (Lånat från TailWind koden)
@@ -1374,6 +1387,7 @@ footer{
         opacity: .5;
     }
 }
+
 .animate-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
