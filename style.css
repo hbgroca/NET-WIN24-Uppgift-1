@@ -31,7 +31,7 @@ body {
   background-color: var(--background-color);
   padding: 0;
   margin: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .p-outerFrame {
@@ -62,7 +62,7 @@ body {
 }
 
 .first-page-bg {
-  width: 100vw;
+  width: 100%;
   height: 100svh;
   background: linear-gradient(transparent, var(--background-color-fade));
   display: flex;
@@ -77,6 +77,7 @@ body {
   width: 100%;
   height: 6rem;
   max-width: 860px;
+  padding-inline: 1.18rem;
 }
 .first-page-bg .topNavBar .leftSide {
   display: flex;
@@ -177,7 +178,7 @@ body {
   max-width: 820px;
   width: 100%;
   height: 100%;
-  padding-inline: 1rem;
+  padding-inline: 1.18rem;
   position: relative;
 }
 .first-page-bg .manageMoney-container .manageMoney-header {
@@ -260,8 +261,9 @@ body {
   display: none;
   justify-content: space-between;
   width: 100%;
-  max-width: 800px;
+  max-width: 820px;
   margin-block: 3rem;
+  padding-inline: 1.18rem;
 }
 .logoSection .logo {
   display: flex;
@@ -351,9 +353,10 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  max-width: 600px;
+  max-width: 620px;
 }
 .howDoesItWork .hdiw-bg .hdiw-sm {
+  padding-inline: 1.18rem;
   display: flex;
   flex-direction: column;
 }
@@ -388,6 +391,7 @@ body {
   border-radius: 4rem;
 }
 .howDoesItWork .hdiw-bg .hdiw-md {
+  padding-inline: 1.18rem;
   margin-block-end: 6rem;
   display: none;
   flex-direction: column;
@@ -422,6 +426,7 @@ body {
   scale: 1.01;
 }
 .howDoesItWork .hdiw-bg .hdiw-lg {
+  padding-inline: 1.18rem;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -537,11 +542,11 @@ body {
 }
 
 .reviews-section-bg {
-  width: 100vw;
+  width: 100%;
   background-color: var(--background-color-subscribe);
   display: none;
   justify-content: center;
-  padding: 8rem;
+  padding-block: 8rem;
 }
 .reviews-section-bg .reviews-section {
   padding: 1rem;
@@ -549,7 +554,8 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  max-width: 1260px;
+  max-width: 1280px;
+  padding-inline: 1.18rem;
 }
 .reviews-section-bg .reviews-section h2 {
   color: var(--text-header);
@@ -831,10 +837,6 @@ footer p {
   font-size: 1.6rem;
   font-weight: 300;
   color: var(--text-paragraph);
-}
-
-.border {
-  border: 1px solid red;
 }
 
 @media (min-width: 768px) {
