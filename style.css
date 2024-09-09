@@ -9,7 +9,7 @@
   --background-color-subscribe: #F3F6FF;
   --background-color-review: #F3F6FF;
   --background-color-faq: #ffffff;
-  --button-border-color: #B4B7C9;
+  --button-border-color: hsla(0, 0%, 100%, 0.15);
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
   --button-discovery-color: #FFFFFF;
@@ -135,7 +135,7 @@ body {
   height: 2.4rem;
   border-radius: 1.2rem;
   background-color: var(--button-toggle-bg);
-  box-shadow: 0px 8px 12px 0px rgba(131, 135, 255, 0.4);
+  box-shadow: 0px 3px 5px 0px rgba(26, 33, 225, 0.426);
 }
 .first-page-bg .topNavBar .rightSide .toggleSwitch .toggleSwitch-bg-dark {
   background-color: var(--button-toggle-bg-dark);
@@ -569,7 +569,7 @@ body {
 }
 .reviews-section-bg .reviews-section .reviews-card-section {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 3rem;
 }
 .reviews-section-bg .reviews-section .reviews-card-section .reviews-card {
@@ -708,7 +708,7 @@ body {
   overflow: hidden;
   text-align: start;
   padding-inline: 2rem;
-  padding-block: 1rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--button-border-color);
 }
 .faq-contact-section .faq-container .faq-questions-container .faqNotColapsed p {
@@ -762,7 +762,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText p {
   color: var(--button-color);
@@ -817,19 +817,22 @@ body {
   border: 1px solid var(--button-border-color);
   border-radius: 0.5rem;
   background-color: white;
-  overflow: hidden;
 }
-.subscribe-container .subscribe-input-container img {
+.subscribe-container .subscribe-input-container .subscribe-input-box {
+  display: flex;
+}
+.subscribe-container .subscribe-input-container .subscribe-input-box img {
   width: 1.8rem;
   margin-left: 1rem;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
-.subscribe-container .subscribe-input-container input {
+.subscribe-container .subscribe-input-container .subscribe-input-box input {
   border: none;
   font-size: 1.6rem;
   padding: 1rem;
-  width: 150px;
+  display: block;
+  min-width: minmax(150px, 1fr);
 }
 .subscribe-container .subscribe-input-container button {
   cursor: pointer;
@@ -1020,7 +1023,7 @@ footer p {
     max-height: 1000px;
   }
   .first-page-bg .topNavBar {
-    max-width: 1296px;
+    max-width: 1440px;
   }
   .first-page-bg .topNavBar .leftSide .navBarLinks {
     display: flex;
@@ -1038,7 +1041,7 @@ footer p {
     display: flex;
   }
   .first-page-bg .manageMoney-container {
-    max-width: 1260px;
+    max-width: 1440px;
   }
   .first-page-bg .manageMoney-container .manageMoney-header {
     place-items: center;
@@ -1079,7 +1082,7 @@ footer p {
     grid-template-areas: "header phones" "text phones" "text phones";
   }
   .logoSection {
-    max-width: 1240px;
+    max-width: 1440px;
     padding-block: 8rem;
   }
   .logoSection .logo {
@@ -1093,7 +1096,7 @@ footer p {
     display: flex;
   }
   .appFeatures {
-    max-width: 1240px;
+    max-width: 1440px;
     flex-direction: row;
     margin-block: 6rem;
   }
@@ -1133,7 +1136,7 @@ footer p {
   }
   .faq-contact-section {
     margin-block: 6rem;
-    max-width: 1260px;
+    max-width: 1440px;
     display: grid;
     gap: 3rem;
     grid-template-columns: 30% 1fr;
@@ -1160,7 +1163,7 @@ footer p {
     padding-inline: 8rem;
     padding-block: 5rem;
     width: 100%;
-    max-width: 1240px;
+    max-width: 1440px;
   }
   .subscribe-container .subscribe-notification-container {
     width: 50%;
