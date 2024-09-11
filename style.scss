@@ -42,6 +42,11 @@ $padding-outer:1.18rem;
     }
 }
 
+// TEST
+// p {
+//     font-size: clamp(2rem, 5vw, 4rem);
+// }
+
 body{
     @include flex-center(column);
     background-color: var(--background-color);
@@ -49,7 +54,6 @@ body{
     margin: 0;
     width: 100%;
 }
-
 
 // Navbar side
 aside{
@@ -341,7 +345,7 @@ aside{
         display: none;
     }
     .headerAndText{
-        @include flex-center(column, baseline, baseline);
+        @include flex-center(column);
         gap: 2rem;
         text-align: center;
         h2{
@@ -1093,7 +1097,7 @@ footer{
             }
 
             .manageMoney-text{
-                @include flex-center(column, space-between, baseline);
+                @include flex-center(column, space-between, start);
                 .manageMoney-text-top{
                     margin-top: 0rem;
                 }
@@ -1165,12 +1169,14 @@ footer{
             }
         }
         .headerAndText{
+            align-items: start;
             text-align: start;
             h2{
                 font-size: 3.1rem;
                 font-weight: 800;
             }
             p{
+                text-wrap: balance;
                 font-size: 1.8rem;
             }
         }
@@ -1179,6 +1185,12 @@ footer{
 
      // How does it work section (OK MARGIN)
      .howDoesItWork{
+        h2{
+            margin-block: 4rem;
+        }
+        h3{
+            margin-block: 3rem;
+        }
         .hdiw-bg{
             .hdiw-md{display: none;}
             .hdiw-lg{display: flex;}

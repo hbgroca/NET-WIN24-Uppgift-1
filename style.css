@@ -337,8 +337,8 @@ aside ul li a {
 .appFeatures .headerAndText {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   text-align: center;
 }
@@ -1106,7 +1106,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: start;
   }
   .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-text-top {
     margin-top: 0rem;
@@ -1165,6 +1165,7 @@ footer p {
     margin-block: 2rem;
   }
   .appFeatures .headerAndText {
+    align-items: start;
     text-align: start;
   }
   .appFeatures .headerAndText h2 {
@@ -1172,7 +1173,14 @@ footer p {
     font-weight: 800;
   }
   .appFeatures .headerAndText p {
+    text-wrap: balance;
     font-size: 1.8rem;
+  }
+  .howDoesItWork h2 {
+    margin-block: 4rem;
+  }
+  .howDoesItWork h3 {
+    margin-block: 3rem;
   }
   .howDoesItWork .hdiw-bg .hdiw-md {
     display: none;
