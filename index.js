@@ -57,3 +57,11 @@ function changeTheme(){
           <img id="googleLink-lg" class="hover" src="svg/googleplay-lg-dark.svg" alt="Google Store länk">`;
     }
 }
+
+function closeNavbarSide(){
+    document.getElementById("aside").classList = "hidden";
+}
+
+function openNavbarSide(){
+    document.getElementById("aside").classList = "";
+}

@@ -8,22 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body" class="bright">
-<!-- 
-    <aside>
-        <nav class="navBar-side"></nav>
-            <ul>
-                <li><a href="#"><p>Home</p></a></li>
-                <li><a href="#AppFeatures"><p>Features</p></a></li>
-                <li><a href="#FAQ"><p>FAQ</p></a></li>
-                <li><a href="#Contact"><p>Contact</p></a></li>
-                <li><a href="./grid-layout/index.html"><p>Grid Layout</p></a></li>
-            </ul>
-        </nav>
-    </aside> -->
-
     <!-- Top navbar samt första sidan -->
     <section class="first-page-bg">
-        <nav class="topNavBar p-outerFrame">
+        <nav class="topNavBar">
             <!-- Vänster sida -->
             <div class="leftSide">
                 <img src="svg/SiliconLogo.svg" alt="Silicon logo">
@@ -49,7 +36,7 @@
                 
     
                 <!-- Meny knapp -->
-                <div class="navButton-container">
+                <div class="navButton-container" onclick=openNavbarSide()>
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                     <span class="navButton"></span>
@@ -60,6 +47,25 @@
                     <span class=''>Sign in / up</span>
                 </button>
             </div>
+
+
+
+            <aside id="aside" class="hidden">
+                <nav class="navBar-side">
+                    <!-- Meny knapp -->
+                    <div class="navButton-container" onclick=closeNavbarSide()>
+                        <span class="closeButton">X</span>
+                        <!-- <span class="navButton"></span> -->
+                    </div>
+                    <ul>
+                        <li><a href="#" onclick=closeNavbarSide()>Home</a></li>
+                        <li><a href="#AppFeatures" onclick=closeNavbarSide()>Features</a></li>
+                        <li><a href="#FAQ" onclick=closeNavbarSide()>FAQ</a></li>
+                        <li><a href="#Contact" onclick=closeNavbarSide()>Contact</a></li>
+                        <li><a href="./grid-layout/index.html" onclick=closeNavbarSide()>Grid Layout</a></li>
+                    </ul>
+                </nav>
+            </aside>
         </nav>
         <!-- Money management (page 1) -->
         <div class="manageMoney-container grid-template">

@@ -75,20 +75,57 @@ body {
 }
 
 aside {
-  position: relative;
-}
-aside .navBar-side {
-  display: block;
+  position: absolute;
   height: 100svh;
+  min-height: 500px;
   width: 100%;
-  background-color: hsla(0, 100%, 50%, 0.459);
-  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
+  background-color: hsla(0, 0%, 18%, 0.778);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
 }
-aside .navBar-side ul li a {
+aside .navButton-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0.75rem;
+  cursor: pointer;
+  padding-inline: 3rem;
+}
+aside .navButton-container span {
   color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+aside ul {
+  list-style: none;
+  padding: 1rem;
+}
+aside ul li {
+  padding-block: 2rem;
+  text-align: center;
+}
+aside ul li a {
+  padding-inline: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+}
+@media (min-width: 768px) {
+  aside {
+    max-width: 400px;
+  }
+}
+@media (min-width: 1280px) {
+  aside {
+    display: none;
+  }
 }
 
 .first-page-bg {
@@ -107,7 +144,7 @@ aside .navBar-side ul li a {
   width: 100%;
   height: 6rem;
   max-width: 860px;
-  padding-inline: 1.18rem;
+  position: relative;
 }
 .first-page-bg .topNavBar .leftSide {
   display: flex;
@@ -1248,6 +1285,10 @@ footer p {
   --text-paragraph: #75777D;
   --text-navbar: #DDDDDF;
   --logo-icon-bg-color: #ffffff00;
+}
+
+.hidden {
+  display: none;
 }
 
 .hover:hover {
