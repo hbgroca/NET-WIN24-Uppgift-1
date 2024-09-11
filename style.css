@@ -25,6 +25,30 @@
   --logo-icon-bg-color: #FFFFFF;
 }
 
+* {
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-duration: 0.2s;
+}
+* a {
+  text-decoration: none;
+}
+* p {
+  color: var(--text-paragraph);
+}
+* h1,
+* h2,
+* h3 {
+  color: var(--text-header);
+}
+* button:focus-visible,
+* a:focus-visible {
+  outline: 2px solid var(--button-color);
+  outline-offset: 2px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -40,27 +64,14 @@ body {
   padding-inline: 1.18rem;
 }
 
-* {
-  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition-duration: 0.2s;
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-* a {
-  text-decoration: none;
-}
-* p {
-  color: var(--text-paragraph);
-}
-* h1 {
-  color: var(--text-header);
-}
-* h2 {
-  color: var(--text-header);
-}
-* h3 {
-  color: var(--text-header);
+
+.flex-col {
+  flex-direction: column;
 }
 
 .first-page-bg {
@@ -105,7 +116,7 @@ body {
   color: var(--text-navbar);
 }
 .first-page-bg .topNavBar .leftSide img:hover {
-  animation: spinn 1s infinite;
+  animation: spinn 1s;
 }
 .first-page-bg .topNavBar .rightSide {
   display: flex;
@@ -685,9 +696,9 @@ body {
   color: var(--button-discovery-text-color);
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-btn-container .faqBtnExpanded {
-  transform: rotateZ(0deg);
+  transform: rotateZ(180deg);
   background-color: #1b3b9c;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.31);
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.337);
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-btn-container .faqBtnExpanded .faq-btn-text {
   color: white;
@@ -1020,7 +1031,7 @@ footer p {
   }
   .first-page-bg {
     min-height: 760px;
-    max-height: 1000px;
+    max-height: 1280px;
   }
   .first-page-bg .topNavBar {
     max-width: 1440px;
@@ -1146,19 +1157,20 @@ footer p {
   }
   .faq-contact-section .faq-title {
     grid-column: 1/1;
-    grid-row: 1/2;
+    grid-row: 1/1;
   }
   .faq-contact-section .faq-container {
-    grid-column: 2/3;
+    grid-column: 2/2;
     grid-row: 1/3;
     min-width: 800px;
   }
   .faq-contact-section .contact-container {
     grid-column: 1/1;
-    grid-row: 2/3;
+    grid-row: 2/2;
   }
   .subscribe-container {
     flex-direction: row;
+    justify-content: center;
     gap: 4rem;
     padding-inline: 8rem;
     padding-block: 5rem;
@@ -1182,14 +1194,14 @@ footer p {
   }
   .subscribe-container .subscribe-input-container {
     display: flex;
-    justify-content: space-between;
-    width: 472px;
+    justify-content: end;
     margin: 0;
   }
   .subscribe-container .subscribe-input-container img {
     margin-left: 2rem;
   }
   .subscribe-container .subscribe-input-container input {
+    width: 275px;
     padding-block: 1.5rem;
     padding-inline: 2rem;
   }

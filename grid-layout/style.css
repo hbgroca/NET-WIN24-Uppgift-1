@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/* Importera font från fonts.google.com */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  --background-color: #FFFFFF;
+  --background-color-fade: #f4f1fe;
+  --background-color-alt: #F3F6FF;
+  --background-color-subscribe: #F3F6FF;
+  --background-color-review: #F3F6FF;
+  --background-color-faq: #ffffff;
+  --button-border-color: hsla(0, 0%, 100%, 0.15);
+  --button-color: #6366F1;
+  --button-nav-color: #3E4265;
+  --button-discovery-color: #FFFFFF;
+  --button-discovery-text-color: #33354D;
+  --button-circle: rgb(225, 227, 235);
+  --button-circle-expanded: rgb(99, 102, 241);
+  --button-toggle-bg: #9397AD;
+  --button-faq-bg: #F3F6FF;
+  --text-header: #131022;
+  --text-paragraph: #585C7B;
+  --text-navbar: #33354D;
+  --logo-icon-color: #FFFFFF;
+  --logo-icon-bg-color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont;
+  background-color: --background-color;
+  transition-duration: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body a {
+  text-decoration: none;
+}
+body p {
+  color: var(--text-paragraph);
+}
+body h1 {
+  color: var(--text-header);
+  font-weight: 900;
+}
+body h2 {
+  color: var(--text-header);
+}
+body h3 {
+  color: var(--text-header);
+}
+
+.wrapper {
+  min-height: 100svh;
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(1440px - 20rem);
+  width: 100%;
+  height: 4rem;
+}
+.navbar .leftSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.navbar .leftSide h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-header);
+}
+.navbar .leftSide .navBarLinks {
+  padding-inline-start: 1.9rem;
+  display: none;
+  gap: 1.2rem;
+}
+.navbar .leftSide .navBarLinks p {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-navbar);
+}
+.navbar .rightSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+.navbar .rightSide .darkModeText {
+  display: none;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem;
+  color: var(--text-paragraph);
+}
+.navbar .rightSide .toggleSwitch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  border: none;
+  background-color: transparent;
+}
+.navbar .rightSide .toggleSwitch .toggleSwitch-bg {
+  width: 2.875rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--button-toggle-bg);
+  box-shadow: 0px 3px 5px 0px rgba(26, 33, 225, 0.426);
+}
+.navbar .rightSide .toggleSwitch .toggleSwitch-bg-dark {
+  background-color: var(--button-toggle-bg-dark);
+}
+.navbar .rightSide .toggleSwitch .toggleSwitch-dot {
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 100%;
+  top: 0.1875rem;
+  left: 0.281rem;
+  background-color: white;
+}
+.navbar .rightSide .toggleSwitch .toggleSwitch-dot-dark {
+  left: 1.53125rem;
+}
+.navbar .rightSide .navButton-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.navbar .rightSide .navButton-container .navButton {
+  background-color: var(--button-nav-color);
+  width: 1.375rem;
+  height: 0.15rem;
+}
+.navbar .rightSide .signInButton {
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 8.75rem;
+  height: 2.25rem;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+}
+
+.page1 {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100%;
+  max-height: 1280px;
+  height: calc(100svh - 4rem);
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-areas: "header" "header" "text" "links" "discover-btn";
+}
+.page1 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: header;
+  width: 100%;
+  background-color: yellow;
+}
+.page1 .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: text;
+  background-color: rgb(255, 0, 157);
+}
+.page1 .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: links;
+  background-color: rgb(43, 0, 255);
+}
+.page1 .discover-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: discover-btn;
+  background-color: rgb(0, 255, 4);
+}
+.page1 .phone-img {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: phone-img;
+  background-color: rgb(23, 52, 81);
+}
+
+.logo-section {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100vw;
+  max-height: 1280px;
+  height: 30vh;
+  background-color: #6366F1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.page2 {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 1fr 4fr;
+  grid-template-areas: "header" "features";
+}
+.page2 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: header;
+  width: 100%;
+  background-color: yellow;
+}
+.page2 .Features-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: features;
+  width: 100%;
+  background-color: rgb(26, 197, 7);
+}
+.page2 .Phone-img-box {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: phone;
+  width: 100%;
+  background-color: rgb(197, 7, 175);
+}
+
+.page3 {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 1fr 4fr 1fr;
+  grid-template-areas: "header" "phone" "text";
+}
+.page3 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: header;
+  width: 100%;
+  background-color: rgb(0, 213, 255);
+}
+.page3 .phone-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: phone;
+  width: 100%;
+  background-color: rgb(255, 153, 0);
+}
+.page3 .text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid-area: text;
+  width: 100%;
+  background-color: rgb(4, 255, 0);
+}
+
+.transfer-features {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100vw;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  height: 100vh;
+  display: none;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "box1 box2" "box3 box4";
+}
+.transfer-features div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.transfer-features .box1 {
+  grid-area: box1;
+  background-color: yellow;
+}
+.transfer-features .box2 {
+  grid-area: box2;
+  background-color: rgb(26, 197, 7);
+}
+.transfer-features .box3 {
+  grid-area: box3;
+  background-color: rgb(197, 7, 175);
+}
+.transfer-features .box4 {
+  grid-area: box4;
+  background-color: rgb(7, 188, 197);
+}
+
+.review-section {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100vw;
+  max-height: 1280px;
+  height: 50vh;
+  background-color: #63f1e0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.page4 {
+  margin-bottom: 3rem;
+  max-width: calc(1440px - 20rem);
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: 2fr 5fr 1fr;
+  grid-template-areas: "header" "faq" "contact";
+}
+.page4 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.page4 .header {
+  grid-area: header;
+  background-color: rgb(0, 213, 255);
+}
+.page4 .faq-box {
+  grid-area: faq;
+  background-color: rgb(38, 255, 0);
+}
+.page4 .contact-btn-box {
+  grid-area: contact;
+  background-color: rgb(255, 85, 0);
+}
+
+.subscribe {
+  width: 100vw;
+  height: 30vh;
+  max-width: calc(1440px - 20rem);
+}
+.subscribe .subscribe-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: chocolate;
+}
+
+footer {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .navbar .rightSide .darkModeText {
+    display: flex;
+  }
+  .navbar .signInButton {
+    display: flex;
+  }
+  .page1 {
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "header header" "header header" "text phone-img" "links phone-img" "discover-btn phone-img";
+  }
+  .page1 .phone-img {
+    display: flex;
+  }
+  .page2 {
+    grid-auto-rows: 1fr 3fr;
+    grid-template-areas: "header" "features";
+  }
+  .page4 {
+    grid-auto-rows: 2fr 4fr 2fr;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar .leftSide .navBarLinks {
+    display: flex;
+  }
+  .navbar .rightSide .darkModeText {
+    display: flex;
+  }
+  .navbar .rightSide .navButton-container {
+    display: none;
+  }
+  .navbar .rightSide .signInButton {
+    display: flex;
+  }
+  .navbar .signInButton {
+    display: flex;
+  }
+  .page1 {
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "header phone-img" "header phone-img" "text phone-img" "links phone-img" "discover-btn phone-img" "discover-btn phone-img";
+  }
+  .page1 .phone-img {
+    display: flex;
+  }
+  .logo-section {
+    display: flex;
+  }
+  .page2 {
+    grid-auto-rows: 1fr 3fr;
+    grid-template-areas: "phone header" "phone features";
+  }
+  .page2 .Phone-img-box {
+    display: flex;
+  }
+  .transfer-features {
+    display: grid;
+  }
+  .review-section {
+    display: flex;
+  }
+  .page4 {
+    grid-auto-columns: 40% 60%;
+    grid-auto-rows: 2fr 4fr 2fr;
+    grid-template-areas: "header faq" "contact faq" "contact faq";
+  }
+}/*# sourceMappingURL=style.css.map */

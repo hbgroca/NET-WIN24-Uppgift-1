@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIN24 HTML/CSS Inlämningsuppgift 1</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body" class="bright">
@@ -20,6 +20,7 @@
                     <a class="hover" href="#AppFeatures"><p>Features</p></a>
                     <a class="hover" href="#FAQ"><p>FAQ</p></a>
                     <a class="hover" href="#Contact"><p>Contact</p></a>
+                    <a class="hover" href="./grid-layout/index.html"><p>Grid Layout</p></a>
                 </div>
             </div>
             <!-- Höger sida -->
@@ -29,7 +30,7 @@
                 <!-- Toggle knapp -->
                 <button class="toggleSwitch" onclick="changeTheme()">
                     <div id="toggleSwitch-bg" class="toggleSwitch-bg">
-                    <span id="toggleSwitch-dot" class="toggleSwitch-dot" ></span>
+                    <span id="toggleSwitch-dot" class="toggleSwitch-dot"></span>
                     </div>
                 </button>
                 
@@ -42,12 +43,13 @@
                 </div>
                 <!-- Sign in knapp -->
                 <button class='signInButton'>
-                    <img src="svg/Subtract.svg" alt="" />
+                    <img src="svg/Subtract.svg" alt="Button to sign in or register an new account"/>
                     <span class=''>Sign in / up</span>
                 </button>
             </div>
         </nav>
-        <!-- Money management sidan (1) -->
+
+        <!-- Money management (page 1) -->
         <div class="manageMoney-container grid-template">
             <div class="manageMoney-header">
                 <h2>Manage All Your Money in One App</h2>
@@ -74,8 +76,8 @@
                 
             </div>
             <div class="manageMoney-phones">
-                <img class="manageMoney-phones-md" src="svg/iPhonesSideBySide-md.svg" alt="Error">
-                <img class="manageMoney-phones-lg" src="svg/iPhonesSideBySide-lg2.svg" alt="Error">
+                <img class="manageMoney-phones-md" src="svg/iPhonesSideBySide-md.svg" alt="Image of two iPhones beside each other">
+                <img class="manageMoney-phones-lg" src="svg/iPhonesSideBySide-lg2.svg" alt="Image of two iPhones beside each other">
             </div>
         </div>
     </section>
@@ -107,7 +109,7 @@
      <!-- App Features -->
      <section id="AppFeatures" class="appFeatures">
         <div class="phoneSide">
-            <img src="svg/appFeaturesPhone.svg" alt="Bild på en telefon">
+            <img src="svg/appFeaturesPhone.svg" alt="Picture of an iPhone">
         </div>
         <div class="restSide">
             <div class="headerAndText">
@@ -117,7 +119,7 @@
             <div class="features">
                 <div class="feature">
                     <div class="img-container">
-                        <img src="svg/payments.svg" alt="Easy Payments">
+                        <img src="svg/payments.svg" alt="Easy Payments logo">
                     </div>
                     <div>
                         <h3>Easy Payments</h3>
@@ -126,7 +128,7 @@
                 </div>
                 <div class="feature">
                     <div class="img-container">
-                        <img src="svg/statistics.svg" alt="Cost Statistics">
+                        <img src="svg/statistics.svg" alt="Cost Statistics logo">
                     </div>
                     <div>
                         <h3>Cost Statistics</h3>
@@ -135,7 +137,7 @@
                 </div>
                 <div class="feature">
                     <div class="img-container">
-                        <img src="svg/cashback.svg" alt="Regular Cashbacks">
+                        <img src="svg/cashback.svg" alt="Regular Cashbacks logo">
                     </div>
                     
                     <div>
@@ -145,7 +147,7 @@
                 </div>
                 <div class="feature">
                     <div class="img-container">
-                        <img src="svg/security.svg" alt="Data Sucurity">
+                        <img src="svg/security.svg" alt="Data Sucurity logo">
                     </div>
                     <div>
                         <h3>Data Sucurity</h3>
@@ -154,7 +156,7 @@
                 </div>
                 <div class="feature">
                     <div class="img-container">
-                        <img src="svg/support.svg" alt="Support 24/7">
+                        <img src="svg/support.svg" alt="Support 24/7 logo">
                     </div>
                     <div>
                         <h3>Support 24/7</h3>
@@ -163,7 +165,7 @@
                 </div>
                 <div class="feature">
                     <div class="img-container">
-                        <img src="svg/happy.svg" alt="Top Standards">  
+                        <img src="svg/happy.svg" alt="Top Standards logo">  
                     </div>
                     <div>
                         <h3>Top Standards</h3>
@@ -184,7 +186,7 @@
                 <h2>How does it work?</h2>
                 <div class="image">
                     <img class="frame" src="svg/iPhone-sm-frame.svg" alt="">
-                    <img class="overlay" src="svg/iPhone-sm-screen.svg" alt="">
+                    <img class="overlay" src="svg/iPhone-sm-screen.svg" alt="Photo of an iPhone">
                 </div>
                 <h3>Transfers to people from your contact list</h3>
                 <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
@@ -194,7 +196,7 @@
                 <h2>How does it work?</h2>
                 <div class="image">
                     <img class="frame" src="svg/iPhone-md-frame.svg" alt="">
-                    <img class="overlay" src="svg/iPhone-md-screens.svg" alt="">
+                    <img class="overlay" src="svg/iPhone-md-screens.svg" alt="Photo of an iPhone">
                 </div>
                 <h3>Step 3. Transfers to people from your contact list</h3>
                 <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
@@ -205,7 +207,7 @@
             <div class="hdiw-lg">
                 <h2>How does it work?</h2>
                 <div class="image">
-                    <img src="svg/iPhone-lg-screens.svg" alt="">
+                    <img src="svg/iPhone-lg-screens.svg" alt="Photo of an iPhone">
                 </div>
                 <h3>Latest transaction history</h3>
                 <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
