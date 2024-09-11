@@ -1,30 +1,8 @@
 @charset "UTF-8";
 /* Importera font från fonts.google.com */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-:root {
-  font-size: 62.5%;
-  --background-color: #FFFFFF;
-  --background-color-fade: #f4f1fe;
-  --background-color-alt: #F3F6FF;
-  --background-color-subscribe: #F3F6FF;
-  --background-color-review: #F3F6FF;
-  --background-color-faq: #ffffff;
-  --button-border-color: #E2E5F1;
-  --button-color: #6366F1;
-  --button-nav-color: #3E4265;
-  --button-discovery-color: #FFFFFF;
-  --button-discovery-text-color: #33354D;
-  --button-circle: rgb(225, 227, 235);
-  --button-circle-expanded: rgb(99, 102, 241);
-  --button-toggle-bg: #9397AD;
-  --button-faq-bg: #F3F6FF;
-  --text-header: #131022;
-  --text-paragraph: #585C7B;
-  --text-navbar: #33354D;
-  --logo-icon-color: #FFFFFF;
-  --logo-icon-bg-color: #FFFFFF;
-}
-
+@import url(./css/colors.css);
+@import url(./css/animations.css);
 * {
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont;
   margin: 0;
@@ -139,7 +117,7 @@ aside ul li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 0.25rem;
+  margin: 0.5rem 0.75rem;
   gap: 0.75rem;
 }
 .first-page-bg .topNavBar .leftSide h1 {
@@ -861,7 +839,7 @@ aside ul li a {
   margin-inline: 1.18rem;
   margin-top: 3rem;
   border-radius: 1rem;
-  max-width: 860px;
+  max-width: 800px;
 }
 .subscribe-container .subscribe-notification-container {
   display: flex;
@@ -1275,28 +1253,6 @@ footer p {
     padding-inline: 2rem;
   }
 }
-.dark {
-  --background-color: #0B0F19;
-  --background-color-fade: #161225;
-  --background-color-alt: hsl(223, 25%, 13%);
-  --background-color-subscribe: #151822;
-  --background-color-review: #1E222B;
-  --background-color-faq: #ffffff04;
-  --button-border-color: #42426D;
-  --button-color: #6366F1;
-  --button-nav-color: #3E4265;
-  --button-discovery-color: hsla(0, 0%, 100%, 0.05);
-  --button-discovery-text-color: #ffffff;
-  --button-circle: rgb(225, 227, 235);
-  --button-circle-expanded: rgb(99, 102, 241);
-  --button-toggle-bg: #6366F1;
-  --button-faq-bg: #ffffff04;
-  --text-header: #FFFFFF;
-  --text-paragraph: #75777D;
-  --text-navbar: #DDDDDF;
-  --logo-icon-bg-color: #ffffff00;
-}
-
 .hidden {
   display: none;
 }
@@ -1304,35 +1260,4 @@ footer p {
 .hover:hover {
   scale: 1.05;
   cursor: pointer;
-}
-
-@keyframes spinn {
-  100% {
-    rotate: 360deg;
-  }
-  50% {
-    scale: 1.07;
-  }
-}
-@keyframes jump {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
-}
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-.animate-jump {
-  animation: bounce 1s infinite;
 }/*# sourceMappingURL=style.css.map */

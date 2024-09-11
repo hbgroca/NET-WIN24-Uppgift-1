@@ -1,0 +1,58 @@
+:root{
+    /* Manipulera font storleken till 10px för enkelhets skull. */
+    /* Yes, jag vet att detta kan påverka utseendet på vissa äldre webläsare. Men det underlättade återskapandet av denna sidan. :) */
+
+    font-size: 62.5%; 
+
+    /* Deklarerade variabler CSS (Bright) */
+    --background-color: #FFFFFF;
+    --background-color-fade: #f4f1fe;
+    --background-color-alt: #F3F6FF;
+    --background-color-subscribe: #F3F6FF;
+    --background-color-review: #F3F6FF;
+    --background-color-faq: #ffffff;
+
+    --button-border-color: #E2E5F1;
+    --button-color: #6366F1;
+    --button-nav-color: #3E4265;
+    --button-discovery-color: #FFFFFF;
+    --button-discovery-text-color: #33354D;
+    --button-circle: rgb(225, 227, 235);
+    --button-circle-expanded: rgb(99, 102, 241);
+    --button-toggle-bg: #9397AD;
+    --button-faq-bg: #F3F6FF;
+
+    --text-header: #131022;
+    --text-paragraph: #585C7B;
+    --text-navbar: #33354D;
+
+    --logo-icon-color: #FFFFFF;
+    --logo-icon-bg-color: #FFFFFF;
+}
+
+/* Dark mode färg palette */
+.dark{
+    /* Deklarerade variabler (Dark) */
+    --background-color: #0B0F19;
+    --background-color-fade: #161225;
+    --background-color-alt: hsl(223, 25%, 13%);
+    --background-color-subscribe: #151822;
+    --background-color-review: #1E222B;
+    --background-color-faq: #ffffff04;
+
+    --button-border-color: #42426D;
+    --button-color: #6366F1;
+    --button-nav-color: #3E4265;
+    --button-discovery-color: hsla(0, 0%, 100%, 0.05);
+    --button-discovery-text-color: #ffffff;
+    --button-circle: rgb(225, 227, 235);
+    --button-circle-expanded: rgb(99, 102, 241);
+    --button-toggle-bg: #6366F1;
+    --button-faq-bg: #ffffff04;
+
+    --text-header: #FFFFFF;
+    --text-paragraph: #75777D;
+    --text-navbar: #DDDDDF;
+
+    --logo-icon-bg-color: #ffffff00;
+}
