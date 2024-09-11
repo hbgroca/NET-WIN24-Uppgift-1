@@ -60,20 +60,6 @@ body {
   width: 100%;
 }
 
-.p-outerFrame {
-  padding-inline: 1.18rem;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
 aside {
   position: absolute;
   height: 100svh;
@@ -90,10 +76,10 @@ aside {
 }
 aside .navButton-container {
   display: flex;
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  width: 100%;
   padding: 0.75rem;
   cursor: pointer;
   padding-inline: 3rem;
@@ -129,16 +115,18 @@ aside ul li a {
 }
 
 .first-page-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
   width: 100%;
   height: 100svh;
   background: linear-gradient(transparent, var(--background-color-fade));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 3rem;
 }
 .first-page-bg .topNavBar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -149,8 +137,8 @@ aside ul li a {
 .first-page-bg .topNavBar .leftSide {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 0.5rem 0.25rem;
   gap: 0.75rem;
 }
@@ -175,6 +163,7 @@ aside ul li a {
 .first-page-bg .topNavBar .rightSide {
   display: flex;
   flex-direction: row;
+  justify-content: baseline;
   align-items: center;
   margin: 0rem 0rem;
   gap: 1rem;
@@ -293,8 +282,9 @@ aside ul li a {
 }
 .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-discover-btn {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-discover-btn button {
   width: 4.4rem;
@@ -337,12 +327,12 @@ aside ul li a {
 }
 .logoSection .logo {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: var(--logo-icon-bg-color);
   border: 1px solid var(--button-border-color);
   border-radius: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 15.85rem;
   height: 9.54rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.141);
@@ -357,6 +347,7 @@ aside ul li a {
 .appFeatures {
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
   align-items: center;
   padding: 1.18rem;
   max-width: 800px;
@@ -368,6 +359,8 @@ aside ul li a {
 .appFeatures .headerAndText {
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
   gap: 2rem;
   text-align: center;
 }
@@ -381,9 +374,10 @@ aside ul li a {
 }
 .appFeatures .features {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .appFeatures .features h3 {
@@ -411,11 +405,12 @@ aside ul li a {
 }
 
 .howDoesItWork {
-  width: 100%;
-  background-color: var(--background-color-alt);
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-color-alt);
 }
 .howDoesItWork .hdiw-bg {
   display: flex;
@@ -461,11 +456,13 @@ aside ul li a {
   border-radius: 4rem;
 }
 .howDoesItWork .hdiw-bg .hdiw-md {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-inline: 1.18rem;
   margin-block-end: 6rem;
   display: none;
-  flex-direction: column;
-  align-items: center;
 }
 .howDoesItWork .hdiw-bg .hdiw-md p {
   font-size: 1.6rem;
@@ -496,10 +493,12 @@ aside ul li a {
   scale: 1.01;
 }
 .howDoesItWork .hdiw-bg .hdiw-lg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-inline: 1.18rem;
   display: none;
-  flex-direction: column;
-  align-items: center;
 }
 .howDoesItWork .hdiw-bg .hdiw-lg p {
   font-size: 1.6rem;
@@ -531,14 +530,14 @@ aside ul li a {
 }
 
 .features-demo {
-  margin-block: 8rem;
-  padding: 1.18rem;
-  max-width: 1080px;
   display: none;
-  grid-template-columns: 1fr 1fr;
   width: 100%;
+  max-width: 1080px;
   height: -moz-fit-content;
   height: fit-content;
+  margin-block: 8rem;
+  padding: 1.18rem;
+  grid-template-columns: 1fr 1fr;
 }
 .features-demo h2 {
   font-size: 2.8rem;
@@ -550,10 +549,11 @@ aside ul li a {
   font-weight: normal;
 }
 .features-demo button {
-  cursor: pointer;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 1rem;
   width: 14rem;
   height: 3.6rem;
@@ -566,6 +566,7 @@ aside ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: baseline;
   gap: 4rem;
 }
 .features-demo .topLeft .text-container .text-wrapper {
@@ -592,6 +593,7 @@ aside ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: baseline;
   gap: 4rem;
 }
 .features-demo .lowerRight .image-containers {
@@ -638,10 +640,11 @@ aside ul li a {
   gap: 3rem;
 }
 .reviews-section-bg .reviews-section .reviews-card-section .reviews-card {
-  background-color: var(--background-color-alt);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--background-color-alt);
   padding: 2rem;
   padding-top: 5rem;
   box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.212);
@@ -730,10 +733,11 @@ aside ul li a {
   position: relative;
 }
 .faq-contact-section .faq-container .faq-questions-container .faq .faq-question-btn-container .faq-btn {
-  transform: rotateZ(180deg);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  transform: rotateZ(180deg);
   width: 3.6rem;
   height: 3.6rem;
   padding: 2rem;
@@ -782,8 +786,9 @@ aside ul li a {
 }
 .faq-contact-section .contact-container {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-top: 3rem;
   width: 100%;
 }
@@ -823,11 +828,11 @@ aside ul li a {
   margin-top: 1.5rem;
 }
 .faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText {
-  margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
 }
 .faq-contact-section .contact-container .contract-boxes .box-1 .contact-contactText p {
   color: var(--button-color);
@@ -850,17 +855,18 @@ aside ul li a {
 .subscribe-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
   background-color: var(--background-color-subscribe);
   margin-inline: 1.18rem;
   margin-top: 3rem;
   border-radius: 1rem;
-  max-width: 1280px;
+  max-width: 860px;
 }
 .subscribe-container .subscribe-notification-container {
   display: flex;
-  justify-items: center;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
@@ -911,11 +917,11 @@ aside ul li a {
 }
 
 footer {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 footer p {
   font-size: 1.6rem;
@@ -998,6 +1004,7 @@ footer p {
   .faq-contact-section .faq-container {
     display: flex;
     flex-direction: column;
+    justify-content: baseline;
     align-items: center;
     margin-block: 3rem;
   }
@@ -1121,6 +1128,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: baseline;
   }
   .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-text-top {
     margin-top: 0rem;
@@ -1224,8 +1232,10 @@ footer p {
     grid-row: 2/2;
   }
   .subscribe-container {
+    display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 4rem;
     padding-inline: 8rem;
     padding-block: 5rem;

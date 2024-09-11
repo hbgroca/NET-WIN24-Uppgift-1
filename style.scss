@@ -1,12 +1,21 @@
 /* Importera font från fonts.google.com */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+// Mixins (Interpolation)
+// https://sass-lang.com/documentation/interpolation/
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 // Deklarerade variabler SCSS
 $padding-outer:1.18rem;
 
 :root{
     // Manipulera font storleken till 10px för enkelhets skull.
-    font-size: 62.5%; // Yes, jag vet att detta kan påverka utseendet på vissa äldre webläsare. Men det underlättade återskapandet av denna sidan.
+    font-size: 62.5%; // Yes, jag vet att detta kan påverka utseendet på vissa äldre webläsare. Men det underlättade återskapandet av denna sidan. :)
 
     // Deklarerade variabler CSS (Bright)
     --background-color: #FFFFFF;
@@ -68,19 +77,6 @@ body{
     width: 100%;
 }
 
-.p-outerFrame{
-    padding-inline: $padding-outer;
-}
-
-// Utility klasser
-.flex-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.flex-col{
-    flex-direction: column;
-}
 
 // Navbar side
 aside{
@@ -135,6 +131,7 @@ aside{
 
 // Navbar and first page section
 .first-page-bg{
+    @include flex-center(column, baseline);
     width: 100%;
     height: 100svh;
     background: linear-gradient(transparent, var(--background-color-fade));
@@ -822,7 +819,7 @@ aside{
     margin-top: 3rem;
     border-radius: 1rem;
 
-    max-width: 1280px;
+    max-width: 860px;
 
     .subscribe-notification-container{
         @include flex-center();
@@ -1333,13 +1330,7 @@ footer{
     display: none;
 }
 
-// Mixins 
-@mixin flex-center($direction: row, $justify: center, $align: center) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
+
 
 // psuedo
 .hover:hover{
