@@ -16,7 +16,7 @@ $padding-outer:1.18rem;
     --background-color-review: #F3F6FF;
     --background-color-faq: #ffffff;
 
-    --button-border-color: hsla(0, 0%, 100%, 0.15);
+    --button-border-color: #E2E5F1;
     --button-color: #6366F1;
     --button-nav-color: #3E4265;
     --button-discovery-color: #FFFFFF;
@@ -83,6 +83,29 @@ body{
 }
 .flex-col{
     flex-direction: column;
+}
+
+// Navbar side
+aside{
+    position: relative;
+    .navBar-side{
+        display: block;
+        height: 100svh;
+        width: 100%;
+        background-color: hsla(0, 100%, 50%, 0.459);
+        // filter: blur(15px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        ul{
+            li{
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 // Navbar and first page section
@@ -824,7 +847,6 @@ body{
 }
 
 
-
 // Subscribe section
 .subscribe-container{
     display: flex;
@@ -863,33 +885,32 @@ body{
         border: 1px solid var(--button-border-color);
         border-radius: 0.5rem;
         background-color: white;
+        overflow: hidden;
         .subscribe-input-box{
             display: flex;
 
             img{
                 width: 1.8rem;
-                margin-left: 1rem;
+                margin-left: 1em;
                 border-top-left-radius: 0.5rem;
                 border-bottom-left-radius: 0.5rem;
             }
             input{
                 border: none;
                 font-size: 1.6rem;
-                padding: 1rem;
+                padding: 1em;
                 display: block;
                 min-width: minmax(150px, 1fr);
             }
-            
         }
         button{
             cursor: pointer;
             border: none;
             background-color: var(--button-color);
-            font-size: 1.6rem;
+            font-size: 1.6em;
             font-weight: 500;
             color: white;
-            padding: 1rem;
-           
+            padding: 1rem;  
         }
     }
 }

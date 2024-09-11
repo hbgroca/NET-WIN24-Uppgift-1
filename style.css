@@ -9,7 +9,7 @@
   --background-color-subscribe: #F3F6FF;
   --background-color-review: #F3F6FF;
   --background-color-faq: #ffffff;
-  --button-border-color: hsla(0, 0%, 100%, 0.15);
+  --button-border-color: #E2E5F1;
   --button-color: #6366F1;
   --button-nav-color: #3E4265;
   --button-discovery-color: #FFFFFF;
@@ -72,6 +72,23 @@ body {
 
 .flex-col {
   flex-direction: column;
+}
+
+aside {
+  position: relative;
+}
+aside .navBar-side {
+  display: block;
+  height: 100svh;
+  width: 100%;
+  background-color: hsla(0, 100%, 50%, 0.459);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+aside .navBar-side ul li a {
+  color: white;
 }
 
 .first-page-bg {
@@ -828,20 +845,21 @@ body {
   border: 1px solid var(--button-border-color);
   border-radius: 0.5rem;
   background-color: white;
+  overflow: hidden;
 }
 .subscribe-container .subscribe-input-container .subscribe-input-box {
   display: flex;
 }
 .subscribe-container .subscribe-input-container .subscribe-input-box img {
   width: 1.8rem;
-  margin-left: 1rem;
+  margin-left: 1em;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 .subscribe-container .subscribe-input-container .subscribe-input-box input {
   border: none;
   font-size: 1.6rem;
-  padding: 1rem;
+  padding: 1em;
   display: block;
   min-width: minmax(150px, 1fr);
 }
@@ -849,7 +867,7 @@ body {
   cursor: pointer;
   border: none;
   background-color: var(--button-color);
-  font-size: 1.6rem;
+  font-size: 1.6em;
   font-weight: 500;
   color: white;
   padding: 1rem;
