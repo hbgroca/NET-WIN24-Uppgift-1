@@ -6,7 +6,9 @@
     <title>WIN24 HTML/CSS Inlämningsuppgift 1</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <meta >
+    <meta name="description" content="Inlämningsuppgift 1 för WIN24 Klassen. Uppgift: Skapa Silicon figma designen i HTML och CSS">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
 </head>
 <body id="body" class="bright">
     <!-- Top navbar samt första sidan -->
@@ -95,8 +97,9 @@
                 
             </div>
             <div class="manageMoney-phones">
-                <img class="manageMoney-phones-md" src="svg/iPhonesSideBySide-md.svg" alt="Image of two iPhones beside each other">
-                <img class="manageMoney-phones-lg" src="svg/iPhonesSideBySide-lg2.svg" alt="Image of two iPhones beside each other">
+                <div class="manageMoney-phone-img"></div>
+                <!-- <img class="manageMoney-phones-md" src="svg/iPhonesSideBySide-md.svg" alt="Image of two iPhones beside each other">
+                <img class="manageMoney-phones-lg" src="svg/iPhonesSideBySide-lg2.svg" alt="Image of two iPhones beside each other"> -->
             </div>
         </div>
     </section>
@@ -200,43 +203,20 @@
 
      <!-- How does it work? -->
       <section class="howDoesItWork">
-        <div class="hdiw-bg">
-            <div class="hdiw-sm">
-                <h2>How does it work?</h2>
-                <div class="image">
-                    <img class="frame" src="svg/iPhone-sm-frame.svg" alt="">
-                    <img class="overlay" src="svg/iPhone-sm-screen.svg" alt="Photo of an iPhone">
-                </div>
-                <h3>Transfers to people from your contact list</h3>
-                <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
-            </div> 
-
-            <div class="hdiw-md">
-                <h2>How does it work?</h2>
-                <div class="image">
-                    <img class="frame" src="svg/iPhone-md-frame.svg" alt="">
-                    <img class="overlay" src="svg/iPhone-md-screens.svg" alt="Photo of an iPhone">
-                </div>
-                <h3>Step 3. Transfers to people from your contact list</h3>
-                <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices.
-                    Pellentesque volutpat ligula est. Mattis fermentum, at nec
-                    lacus.</p>
-            </div> 
-
-            <div class="hdiw-lg">
-                <h2>How does it work?</h2>
-                <div class="image">
-                    <img src="svg/iPhone-lg-screens.svg" alt="Photo of an iPhone">
-                </div>
-                <h3>Latest transaction history</h3>
-                <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
-            </div>
+        <div class="hdiw">
+            <h2>How does it work?</h2>
+            <div class="iphone-img"><div class="iphone-frame"></div></div>
+            
+            <h3 class="mobile">Transfers to people from your contact list</h3>
+            <h3 class="tablet">Step 3. Transfers to people from your contact list</h3>
+            <h3 class="desktop">Latest transaction history</h3>
+            <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
         </div>
       </section>
 
 
     <!-- Feature demo - Desktop only / Make your money transfer simple and clear -->
-    <section class="features-demo">
+    <section class="features-demo dekstop">
         <div class="topLeft">
             <h2>Make your money transfer simple and clear</h2>
             <div class="text-container">
