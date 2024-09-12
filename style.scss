@@ -23,8 +23,10 @@ $desktop:1280px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color ease;
-    transition-duration: 0.4s;
+
+    // Transitions
+    transition: all ease;
+    transition-duration: 250ms;
     a{
         text-decoration: none;
     }
@@ -291,6 +293,9 @@ aside{
         .manageMoney-phones{
             background: transparent;
             display: none;
+            @media (min-width:$tablet){
+                display: grid;
+            }
             position: absolute;
             grid-area: phones;
            
@@ -319,15 +324,6 @@ aside{
                     background-image: url('svg/iPhonesSideBySide-lg2.svg');
                 }
             }
-            // img{
-            //     @media (min-width:768px){
-            //         src: "svg/iPhonesSideBySide-md.svg";
-            //     }
-            //     @media (min-width:1024px){
-            //         src: "svg/iPhonesSideBySide-lg2.svg";
-            //     }
-                
-            // }
         }
     }
     .grid-template{
@@ -480,9 +476,9 @@ aside{
         @media (min-width:$tablet){
             padding-inline: $padding-outer;
             p{font-size: 1.6rem; font-weight: normal; max-width: 47rem; }
-            h2{font-size: 3.35rem; font-weight: 900; margin-top: 5rem; padding-block: 2rem; max-width: 50rem;}
-            h3{font-size: 2.27rem; font-weight: 900; padding-block: 2rem; max-width: 50rem;}
-            margin-block-end: 6rem;
+            h2{font-size: 3.35rem; font-weight: 900; margin-top: 5rem; padding-block: 3rem; max-width: 50rem;}
+            h3{font-size: 2.27rem; font-weight: 900; padding-block: 3rem; max-width: 50rem;}
+            margin-block-end: 4rem;
 
             .iphone-img{
                 background-image: url("svg/iPhone-md-screens.svg");
@@ -963,6 +959,7 @@ footer{
     .p-outerFrame{
         padding-inline: 2.0rem;
     }
+
     // Navbar och första sidan
     .first-page-bg{
         min-height: 650px;
@@ -1005,12 +1002,6 @@ footer{
                     display: flex;
                 }
                 
-            }
-            .manageMoney-phones{
-                display: grid;
-                .manageMoney-phones-lg{
-                    display: none;
-                }
             }
         }
         .grid-template{
@@ -1213,20 +1204,6 @@ footer{
                     margin-bottom: 3rem;
                 }
             }
-
-            .manageMoney-phones{
-                // display: grid;
-                // border: 1px solid red;
-                // top: 3rem;
-                // height: 600px;
-                .manageMoney-phones-md{
-                    display: none;
-                }
-                .manageMoney-phones-lg{
-                    display: block;
-                }
-            }
-            
         }
         .grid-template{
             // grid-template-columns: 40%  60%;

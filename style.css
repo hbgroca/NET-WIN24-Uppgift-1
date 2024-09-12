@@ -8,8 +8,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: background-color ease;
-  transition-duration: 0.4s;
+  transition: all ease;
+  transition-duration: 250ms;
 }
 * a {
   text-decoration: none;
@@ -290,6 +290,11 @@ aside ul li a {
   height: 100%;
   bottom: 0;
 }
+@media (min-width: 768px) {
+  .first-page-bg .manageMoney-container .manageMoney-phones {
+    display: grid;
+  }
+}
 .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phone-img {
   background: transparent;
   position: absolute;
@@ -484,7 +489,7 @@ aside ul li a {
 @media (min-width: 768px) {
   .howDoesItWork .hdiw {
     padding-inline: 1.18rem;
-    margin-block-end: 6rem;
+    margin-block-end: 4rem;
   }
   .howDoesItWork .hdiw p {
     font-size: 1.6rem;
@@ -495,13 +500,13 @@ aside ul li a {
     font-size: 3.35rem;
     font-weight: 900;
     margin-top: 5rem;
-    padding-block: 2rem;
+    padding-block: 3rem;
     max-width: 50rem;
   }
   .howDoesItWork .hdiw h3 {
     font-size: 2.27rem;
     font-weight: 900;
-    padding-block: 2rem;
+    padding-block: 3rem;
     max-width: 50rem;
   }
   .howDoesItWork .hdiw .iphone-img {
@@ -1032,12 +1037,6 @@ footer p {
   .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-link-wrapper-md {
     display: flex;
   }
-  .first-page-bg .manageMoney-container .manageMoney-phones {
-    display: grid;
-  }
-  .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phones-lg {
-    display: none;
-  }
   .first-page-bg .grid-template {
     grid-template-columns: 40% 60%;
     grid-template-areas: "header header" "text phones" "text phones";
@@ -1221,12 +1220,6 @@ footer p {
   }
   .first-page-bg .manageMoney-container .manageMoney-text .manageMoney-discover-btn {
     margin-bottom: 3rem;
-  }
-  .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phones-md {
-    display: none;
-  }
-  .first-page-bg .manageMoney-container .manageMoney-phones .manageMoney-phones-lg {
-    display: block;
   }
   .first-page-bg .grid-template {
     grid-template-areas: "header phones" "text phones" "text phones";

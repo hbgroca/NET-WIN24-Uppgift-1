@@ -7,11 +7,11 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Inlämningsuppgift 1 för WIN24 Klassen. Uppgift: Skapa Silicon figma designen i HTML och CSS">
-    <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">
+    <!-- <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex"> -->
 </head>
 <body id="body" class="bright">
-    <!-- Top navbar samt första sidan -->
+    <!-- Navbar top och sida samt översta sektionen av sidan -->
     <section class="first-page-bg">
         <nav class="topNavBar">
             <!-- Vänster sida -->
@@ -31,7 +31,7 @@
                 <!-- DarkMode text -->
                 <p class="darkModeText">Dark Mode</p>
                 <!-- Toggle knapp -->
-                <button class="toggleSwitch" onclick="changeTheme()">
+                <button class="toggleSwitch" onclick="changeTheme()" aria-label="Dark mode toggle">
                     <div id="toggleSwitch-bg" class="toggleSwitch-bg">
                     <span id="toggleSwitch-dot" class="toggleSwitch-dot"></span>
                     </div>
@@ -39,25 +39,25 @@
                 
     
                 <!-- Meny knapp -->
-                <div class="navButton-container" onclick=openNavbarSide()>
+                <div class="navButton-container" onclick=openNavbarSide() aria-label="Open navigation menu">
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                 </div>
                 <!-- Sign in knapp -->
-                <button class='signInButton'>
+                <button class='signInButton' aria-label="Sign in">
                     <img src="svg/Subtract.svg" alt="Button to sign in or register an new account"/>
                     <span class=''>Sign in / up</span>
                 </button>
             </div>
 
 
-
+            <!-- Sido nav -->
             <aside id="aside" class="hidden">
                 <nav class="navBar-side">
                     <!-- Meny knapp -->
                     <div class="navButton-container" onclick=closeNavbarSide()>
-                        <span class="closeButton">X</span>
+                        <span class="closeButton" aria-label="Close navigation menu">X</span>
                         <!-- <span class="navButton"></span> -->
                     </div>
                     <ul>
@@ -98,8 +98,6 @@
             </div>
             <div class="manageMoney-phones">
                 <div class="manageMoney-phone-img"></div>
-                <!-- <img class="manageMoney-phones-md" src="svg/iPhonesSideBySide-md.svg" alt="Image of two iPhones beside each other">
-                <img class="manageMoney-phones-lg" src="svg/iPhonesSideBySide-lg2.svg" alt="Image of two iPhones beside each other"> -->
             </div>
         </div>
     </section>
@@ -215,7 +213,7 @@
       </section>
 
 
-    <!-- Feature demo - Desktop only / Make your money transfer simple and clear -->
+    <!-- Feature demo - Desktop only "Make your money transfer simple and clear" -->
     <section class="features-demo dekstop">
         <div class="topLeft">
             <h2>Make your money transfer simple and clear</h2>
