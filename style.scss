@@ -107,11 +107,10 @@ aside{
 }
 
 // Navbar and first page section
-.first-page-bg{
+header{
     @include flex-center(column, baseline);
     width: 100%;
-    height: 100svh;
-    background: linear-gradient(transparent, var(--background-color-fade));
+    height: 100%;
     margin-bottom: 3rem;
     .topNavBar{
         @include flex-center(row, space-between, center);
@@ -220,118 +219,168 @@ aside{
             }
         }
     }
-    
-    .manageMoney-container{
-        max-width: 820px;
-        width: 100%;
-        height: 100%;
-        padding-inline: $padding-outer;
-        position: relative;
-        .manageMoney-header{
-            display: grid;
-            place-items: center;
-            text-align: center;
-            
-            grid-area: header;
-            h2{
-                font-size: 3.41rem;
-                font-weight: 900;
-                max-width: 39rem;
-                color: var(--text-header);
+    @media (min-width:$tablet){
+        // min-height: 650px;
+        // max-height: 760px;
+        .topNavBar{
+            .leftSide{
+                margin: 0.51rem 1.5rem;
             }
-        }
-
-        .manageMoney-text{
-            display: grid;
-            place-items: center;
-            text-align: center;
-            color: var(--text-paragraph);
-            grid-area: text;
-            p{
-                font-size: 1.8rem;
-                font-weight: normal;
-                max-width: 44rem;
-            }
-            .manageMoney-link-wrapper-sm{
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .manageMoney-link-wrapper-md{
-                display: none;
-                flex-direction: row;
-                gap: 2rem;
-            }
-            .manageMoney-link-wrapper-lg{
-                display: none;
-                flex-direction: row;
-                gap: 2rem;
-            }
-            .manageMoney-discover-btn{
-                @include flex-center();
-                button{
-                    width: 4.4rem;
-                    height: 4.4rem;
-                    margin: 2rem;
-                    cursor: pointer;
-                    border: none;
-                    border-radius: 2.2rem;
-                    background-color: var(--button-discovery-color);
-                    color: var(--button-discovery-text-color);
-                    rotate: 180deg;
-                    p{
-                        position: relative;
-                        top:3px;
-                        text-align: center;
-                        font-size: 2.0rem;
-                        font-weight: 600;
-                    }
+            .rightSide {
+                .darkModeText{
+                    display: flex;
                 }
-            }
-        }
-
-        .manageMoney-phones{
-            background: transparent;
-            display: none;
-            @media (min-width:$tablet){
-                display: grid;
-            }
-            position: absolute;
-            grid-area: phones;
-           
-            width: 100%;
-            height: 100%;
-            bottom: 0;
-            .manageMoney-phone-img{
-                background: transparent;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-
-                background-size: cover;
-                background-position: top right;
-                background-repeat: no-repeat;
-            }
-            @media (min-width:768px) and (max-width:1279px){
-                .manageMoney-phone-img{
-                    background-image: url('svg/iPhonesSideBySide-md.svg');
+                .toggleSwitch{
+                    margin-right: 4.5rem;
                 }
-            }
-            @media (min-width:1280px){
-                height: 80%;
-                max-height: 936px;
-                .manageMoney-phone-img{
-                    background-image: url('svg/iPhonesSideBySide-lg2.svg');
+                .navButton-container{
+                    margin-inline: 0.0rem;
                 }
             }
         }
     }
-    .grid-template{
+    @media (min-width:$desktop){
+        .topNavBar{
+            max-width: 1440px;
+            .leftSide {
+                .navBarLinks{
+                    display: flex;
+                }
+            }
+            .rightSide {
+                .toggleSwitch{
+                    margin-right: 3.5rem;
+                }
+                .navButton-container{
+                    display: none;
+                }
+                .signInButton{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+// Page 1 - Manage money
+.manageMoney-container{
+    display: grid;
+    grid-auto-rows: minmax(0,auto);
+    grid-template-areas: 
+    "header"
+    "text";
+    
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(transparent, var(--background-color-fade));
+        z-index: -1;
+    }
+    max-width: 820px;
+    width: 100%;
+    height: calc(100svh - 60px);
+    padding-inline: $padding-outer;
+    position: relative;
+    .manageMoney-header{
         display: grid;
-        grid-auto-rows: minmax(0,auto);
-        grid-template-areas: 
-        "header"
-        "text"
+        place-items: center;
+        text-align: center;
+        
+        grid-area: header;
+        h2{
+            font-size: 3.41rem;
+            font-weight: 900;
+            max-width: 39rem;
+            color: var(--text-header);
+        }
+    }
+
+    .manageMoney-text{
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: var(--text-paragraph);
+        grid-area: text;
+        p{
+            font-size: 1.8rem;
+            font-weight: normal;
+            max-width: 44rem;
+        }
+        .manageMoney-link-wrapper-sm{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .manageMoney-link-wrapper-md{
+            display: none;
+            flex-direction: row;
+            gap: 2rem;
+        }
+        .manageMoney-link-wrapper-lg{
+            display: none;
+            flex-direction: row;
+            gap: 2rem;
+        }
+        .manageMoney-discover-btn{
+            @include flex-center();
+            button{
+                width: 4.4rem;
+                height: 4.4rem;
+                margin: 2rem;
+                cursor: pointer;
+                border: none;
+                border-radius: 2.2rem;
+                background-color: var(--button-discovery-color);
+                color: var(--button-discovery-text-color);
+                rotate: 180deg;
+                p{
+                    position: relative;
+                    top:3px;
+                    text-align: center;
+                    font-size: 2.0rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .manageMoney-phones{
+        background: transparent;
+        display: none;
+        @media (min-width:$tablet){
+            display: grid;
+        }
+        position: absolute;
+        grid-area: phones;
+        
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        .manageMoney-phone-img{
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            background-size: cover;
+            background-position: top right;
+            background-repeat: no-repeat;
+        }
+        @media (min-width:768px) and (max-width:1279px){
+            .manageMoney-phone-img{
+                background-image: url('svg/iPhonesSideBySide-md.svg');
+            }
+        }
+        @media (min-width:1280px){
+            height: 80%;
+            max-height: 936px;
+            .manageMoney-phone-img{
+                background-image: url('svg/iPhonesSideBySide-lg2.svg');
+            }
+        }
     }
 }
 
@@ -960,58 +1009,38 @@ footer{
         padding-inline: 2.0rem;
     }
 
-    // Navbar och första sidan
-    .first-page-bg{
-        min-height: 650px;
-        max-height: 760px;
-        .topNavBar{
-            .leftSide{
-                margin: 0.51rem 1.5rem;
-            }
-            .rightSide {
-                .darkModeText{
-                    display: flex;
-                }
-                .toggleSwitch{
-                    margin-right: 4.5rem;
-                }
-                .navButton-container{
-                    margin-inline: 0.0rem;
-                }
+    // Första sidan
+    .manageMoney-container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "header header"
+        "text phones"
+        "text phones";
+        
+        
+        .manageMoney-header{
+            h2{
+            font-size: 4.43rem;
+            max-width: 445px;
             }
         }
-        .manageMoney-container{
-            display: grid;
+        .manageMoney-text{
+            place-items: start;
+            text-align: start;
+            .manageMoney-text-top{
+                margin-top: 3rem;
+            }
+            .manageMoney-link-wrapper-sm{
+                display: none;
+            }
+            .manageMoney-link-wrapper-md{
+                display: flex;
+            }
             
-            .manageMoney-header{
-                h2{
-                font-size: 4.43rem;
-                max-width: 445px;
-                }
-            }
-            .manageMoney-text{
-                place-items: start;
-                text-align: start;
-                .manageMoney-text-top{
-                    margin-top: 3rem;
-                }
-                .manageMoney-link-wrapper-sm{
-                    display: none;
-                }
-                .manageMoney-link-wrapper-md{
-                    display: flex;
-                }
-                
-            }
-        }
-        .grid-template{
-            grid-template-columns: 40% 60%;
-            grid-template-areas: 
-            "header header"
-            "text phones"
-            "text phones"
         }
     }
+
 
     // App features
     .appFeatures{
@@ -1144,76 +1173,45 @@ footer{
         padding-inline: 3.5rem;
     }
 
-    // Navbar och första sidan  (OK MARGIN)
-    .first-page-bg{
-        min-height: 760px;
-        max-height: 1280px;
 
-        .topNavBar{
-            max-width: 1440px;
-            .leftSide {
-                .navBarLinks{
-                    display: flex;
+    // Manage Money section
+    .manageMoney-container{
+        grid-template-areas: 
+        "header phones"
+        "text phones"
+        "text phones";
+        // border:1px blue solid;
+        overflow: hidden;
+        max-width: 1440px;
+        .manageMoney-header{
+            place-items: center;
+            text-align: start;
+            margin-top: 15svh;
+            h2{
+                font-size: 5.43rem;
+                max-width: 100%;
                 }
-            }
-            .rightSide {
-                .darkModeText{
-                    display: flex;
-                }
-                .toggleSwitch{
-                    margin-right: 3.5rem;
-                }
-                .navButton-container{
-                    display: none;
-                }
-                .signInButton{
-                    display: flex;
-                }
-            }
         }
 
-        // Manage Money section
-        .manageMoney-container{
-            // border:1px blue solid;
-            overflow: hidden;
-            max-width: 1440px;
-            .manageMoney-header{
-                place-items: center;
-                text-align: start;
-                margin-top: 15svh;
-                h2{
-                    font-size: 5.43rem;
-                    max-width: 100%;
-                    }
+        .manageMoney-text{
+            @include flex-center(column, space-between, start);
+            .manageMoney-text-top{
+                margin-top: 8rem;
             }
 
-            .manageMoney-text{
-                @include flex-center(column, space-between, start);
-                .manageMoney-text-top{
-                    margin-top: 8rem;
-                }
-
-                .manageMoney-link-wrapper-md{
-                    display: none;
-                }
-                .manageMoney-link-wrapper-lg{
-                    display: flex;
-                }
-
-                .manageMoney-discover-btn{
-                    margin-bottom: 3rem;
-                }
+            .manageMoney-link-wrapper-md{
+                display: none;
             }
-        }
-        .grid-template{
-            // grid-template-columns: 40%  60%;
-            grid-template-areas: 
-            "header phones"
-            "text phones"
-            "text phones"
+            .manageMoney-link-wrapper-lg{
+                display: flex;
+            }
+
+            .manageMoney-discover-btn{
+                margin-bottom: 3rem;
+            }
         }
     }
-
+    
     //App features section (OK MARGIN)
     .appFeatures{
         max-width: 1440px;
