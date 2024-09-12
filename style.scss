@@ -48,11 +48,11 @@ $desktop:1280px;
 }
 
 body{
-    @include flex-center(column);
+    // @include flex-center(column);
     background-color: var(--background-color);
     padding: 0;
     margin: 0;
-    width: 100%;
+    // width: 100%;
 }
 
 // Navbar side
@@ -84,9 +84,6 @@ aside{
 
     ul{
         list-style: none;
-        // padding: 1rem;
-
-        
         li{
             padding-block: 1rem;
             text-align: center;
@@ -98,20 +95,20 @@ aside{
             }
         }
     }
-    @media (min-width:768px){
+    @media (min-width:$tablet){
         max-width: 400px;
     }
-    @media (min-width:1280px){
+    @media (min-width:$desktop){
         display: none;
     }
 }
+
 
 // Navbar and first page section
 header{
     @include flex-center(column, baseline);
     width: 100%;
     height: 100%;
-    margin-bottom: 3rem;
     .topNavBar{
         @include flex-center(row, space-between, center);
         width: 100%;
@@ -261,27 +258,28 @@ header{
         }
     }
 }
+main{
+    @include flex-center(column);
+}
 
-// Page 1 - Manage money
+//Page 1 - Manage money
+.manage-money-background-container{
+    width: 100%;
+    background: linear-gradient(transparent, var(--background-color-fade));
+    @include flex-center(column);
+}
+
 .manageMoney-container{
     display: grid;
     grid-auto-rows: minmax(0,auto);
     grid-template-areas: 
     "header"
     "text";
-    
-    &::before{
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(transparent, var(--background-color-fade));
-        z-index: -1;
-    }
+
     max-width: 820px;
     width: 100%;
     height: calc(100svh - 60px);
+    min-height: 450px;
     padding-inline: $padding-outer;
     position: relative;
     .manageMoney-header{
@@ -350,34 +348,37 @@ header{
     .manageMoney-phones{
         background: transparent;
         display: none;
-        @media (min-width:$tablet){
-            display: grid;
-        }
         position: absolute;
         grid-area: phones;
         
         width: 100%;
         height: 100%;
-        bottom: 0;
+        // bottom: 0;
         .manageMoney-phone-img{
             background: transparent;
             position: absolute;
             width: 100%;
             height: 100%;
 
-            background-size: cover;
+            // background-size:contain;
             background-position: top right;
             background-repeat: no-repeat;
+
+            overflow: visible;
         }
-        @media (min-width:768px) and (max-width:1279px){
+        @media (min-width:$tablet){
+            display: grid;
+            max-height: 711px;
+            right: 0;
             .manageMoney-phone-img{
                 background-image: url('svg/iPhonesSideBySide-md.svg');
             }
         }
-        @media (min-width:1280px){
-            height: 80%;
-            max-height: 936px;
+        @media (min-width:$desktop){
+            margin-top: 220px;
+            max-height: 1244px;
             .manageMoney-phone-img{
+                background-size:cover;
                 background-image: url('svg/iPhonesSideBySide-lg2.svg');
             }
         }
@@ -410,6 +411,7 @@ header{
     }
     @media (min-width:$tablet){
         display: flex;
+        padding-block: 4rem;
     }
     @media (min-width:$desktop){
         max-width: 1440px;
@@ -519,14 +521,14 @@ header{
         }
 
         p{font-size: 1.6rem; font-weight: normal; margin-bottom: 5rem;};
-        h2{font-size: 2.8rem; font-weight: 900; margin-top: 5rem; padding-block: 2rem;};
-        h3{font-size: 2.16rem; font-weight: 900; padding-block: 2rem; text-wrap:balance;};
+        h2{font-size: 2.8rem; font-weight: 900; padding-block: 5rem;};
+        h3{font-size: 2.16rem; font-weight: 800; padding-block: 3rem; text-wrap:balance;};
         
         @media (min-width:$tablet){
             padding-inline: $padding-outer;
             p{font-size: 1.6rem; font-weight: normal; max-width: 47rem; }
             h2{font-size: 3.35rem; font-weight: 900; margin-top: 5rem; padding-block: 3rem; max-width: 50rem;}
-            h3{font-size: 2.27rem; font-weight: 900; padding-block: 3rem; max-width: 50rem;}
+            h3{font-size: 2.27rem; font-weight: 800; padding-block: 3rem; max-width: 50rem;}
             margin-block-end: 4rem;
 
             .iphone-img{
@@ -546,11 +548,11 @@ header{
                 left: 0;
             }
         }
-        @media (min-width:1280px){
+        @media (min-width:$desktop){
 
             p{font-size: 1.6rem; font-weight: normal; margin-bottom: 8rem; max-width: 800px;}
             h2{font-size: 3.5rem; font-weight: 900; margin-top: 5rem; padding-block: 4rem; margin-block: 4rem;}
-            h3{font-size: 2.46rem; font-weight: 900; padding-block: 2rem; text-wrap:balance;  margin-block: 3rem;}
+            h3{font-size: 2.46rem; font-weight: 800; padding-block: 2rem; text-wrap:balance;  margin-block: 3rem;}
             .iphone-img{
                 background-image: url("svg/iPhone-lg-screens.svg");
                 height: 663px;
@@ -972,6 +974,7 @@ footer{
 
 
 // Media quarries.. stavning? :)
+// Mobile
 @media(max-width: $tablet){
     .mobile{
         position: relative;
@@ -1017,7 +1020,7 @@ footer{
         "header header"
         "text phones"
         "text phones";
-        
+        // max-height: 1024px;
         
         .manageMoney-header{
             h2{
@@ -1180,9 +1183,9 @@ footer{
         "header phones"
         "text phones"
         "text phones";
-        // border:1px blue solid;
         overflow: hidden;
         max-width: 1440px;
+        max-height: 2160px;
         .manageMoney-header{
             place-items: center;
             text-align: start;
