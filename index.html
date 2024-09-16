@@ -40,11 +40,11 @@
                 
     
                 <!-- Meny knapp -->
-                <div class="navButton-container" onclick=openNavbarSide() aria-label="open navigation menu." tabindex="0">
+                <button class="navButton-container" onclick=openNavbarSide() aria-label="open navigation menu." tabindex="0" aria-controls="aside">
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                     <span class="navButton"></span>
-                </div>
+                </button>
                 <!-- Sign in knapp -->
                 <button class='signInButton'>
                     <img src="svg/Subtract.svg" alt="sign in or register an new account."/>
@@ -86,16 +86,16 @@
                         banking. Save, spend & manage money in your pocket.</p>
 
                     <div class="manageMoney-links">
-                        <a class="link hover" href="http://" target="_blank" rel="noopener noreferrer">
-                            <img id="appleStore" src="svg/appstore-light.svg" alt="">
+                        <a class="link hover" href="https://www.apple.com/se/app-store/" target="_blank" rel="noopener noreferrer">
+                            <img id="appleStore" src="svg/appstore-light.svg" alt="länk till apple store.">
                         </a>
-                        <a class="link hover" href="http://" target="_blank" rel="noopener noreferrer">
-                            <img id="googleStore" src="svg/googleplay-light.svg" alt="">
+                        <a class="link hover" href="https://play.google.com/" target="_blank" rel="noopener noreferrer">
+                            <img id="googleStore" src="svg/googleplay-light.svg" alt="länk till google play store.">
                         </a>
                     </div>
                     
                     <a class="manageMoney-discover-btn animate-pulse hover" href="#AppFeatures">
-                        <button><p>^</p></button>
+                        <span><p>^</p></span>
                         <p>Discover more</p>
                     </a>
                     
@@ -236,7 +236,7 @@
                         <p>Manage payments and transactions online</p>
                     </div>
                 </div>
-                <button class="hover">Learn more -></button>
+                <button class="hover" onclick="buttonPressed('Learn more')">Learn more -></button>
             </div>
                 
             <div class="topRight">
@@ -260,7 +260,7 @@
                         <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                     </div>
                 </div>
-                <button class="hover"> Learn more -></button>
+                <button class="hover" onclick="buttonPressed('Learn more')"> Learn more -></button>
             </div>
         </section>
 
@@ -329,10 +329,10 @@
                 <!-- FAQ Frågor -->
                 <div class="faq-questions-container">
                     <!-- Personal information ? -->
-                    <div class="faq colapsed">
+                    <div class="faq colapsed" onclick='faqExpand("faqPersonalInfo")'>
                         <p class="faq-question-text">Is any of my personal information stored in this App?</p>
                         <div class="faq-question-btn-container hover">
-                            <button id='faqPersonalInfoBtn' class="faq-btn" onclick='faqExpand("faqPersonalInfo")'>
+                            <button id='faqPersonalInfoBtn' class="faq-btn">
                                 <p class="faq-btn-text">^</p>
                             </button>
                         </div>
@@ -356,10 +356,10 @@
                         Dignissim amet adipiscing massa integer.</p>
                     </div>
                     <!-- What formats ? -->
-                    <div class="faq colapsed">
+                    <div class="faq colapsed" onclick='faqExpand("faqFormatsInfo")'>
                         <p class="faq-question-text">What formats can I download my transaction history in?</p>
                         <div class="faq-question-btn-container hover">
-                            <button id='faqFormatsInfoBtn' class="faq-btn" onclick='faqExpand("faqFormatsInfo")'>
+                            <button id='faqFormatsInfoBtn' class="faq-btn" >
                                 <p class="faq-btn-text">^</p>
                             </button>
                         </div>
@@ -383,10 +383,10 @@
                             Dignissim amet adipiscing massa integer.</p>
                     </div>
                     <!-- Can I schedule future transfers?  -->
-                    <div class="faq colapsed">
+                    <div class="faq colapsed" onclick='faqExpand("faqScheduleInfo")'>
                         <p class="faq-question-text">Can I schedule future transfers?</p>
                         <div class="faq-question-btn-container hover">
-                            <button id='faqScheduleInfoBtn' class="faq-btn" onclick='faqExpand("faqScheduleInfo")'>
+                            <button id='faqScheduleInfoBtn' class="faq-btn" >
                                 <p class="faq-btn-text">^</p>
                             </button>
                         </div>
@@ -410,10 +410,10 @@
                             Dignissim amet adipiscing massa integer.</p>
                     </div>
                     <!-- When can I use Banking App services?  -->
-                    <div class="faq colapsed">
+                    <div class="faq colapsed" onclick='faqExpand("faqBankingServicesInfo")'>
                         <p class="faq-question-text">When can I use Banking App services?</p>
                         <div class="faq-question-btn-container hover">
-                            <button id='faqBankingServicesInfoBtn' class="faq-btn" onclick='faqExpand("faqBankingServicesInfo")'>
+                            <button id='faqBankingServicesInfoBtn' class="faq-btn" >
                                 <p class="faq-btn-text">^</p>
                             </button>
                         </div>
@@ -437,10 +437,10 @@
                             Dignissim amet adipiscing massa integer.</p>
                     </div>
                     <!-- Password create?  -->
-                    <div class="faq colapsed">
+                    <div class="faq colapsed" onclick='faqExpand("faqCreatePasswordInfo")'>
                         <p class="faq-question-text">Can I create my own password that is easy for me to remember?</p>
                         <div class="faq-question-btn-container hover">
-                            <button id='faqCreatePasswordInfoBtn' class="faq-btn" onclick='faqExpand("faqCreatePasswordInfo")'>
+                            <button id='faqCreatePasswordInfoBtn' class="faq-btn" >
                                 <p class="faq-btn-text">^</p>
                             </button>
                         </div>
@@ -464,10 +464,10 @@
                             Dignissim amet adipiscing massa integer.</p>
                     </div>
                     <!-- Password lost ? -->
-                    <div class="faq colapsed">
+                    <div class="faq colapsed" onclick='faqExpand("faqPasswordInfo")'>
                         <p class="faq-question-text">What happens if I forget or lose my password?</p>
                         <div class="faq-question-btn-container hover">
-                            <button id='faqPasswordInfoBtn' class="faq-btn" onclick='faqExpand("faqPasswordInfo")'>
+                            <button id='faqPasswordInfoBtn' class="faq-btn" >
                                 <p class="faq-btn-text">^</p>
                             </button>
                         </div>
@@ -495,7 +495,7 @@
 
             <!-- Contact section -->
             <div id="Contact" class="contact-container">
-                <button class="contact-button">Contact us now</button>
+                <button class="contact-button" onclick="buttonPressed('Contact us now.')">Contact us now</button>
                 <div class="contract-boxes">
                     <div class="contact-box box-1 hover">
                         <img src="svg/phone.svg" alt="contact by phone icon">
@@ -530,9 +530,9 @@
             <form class="subscribe-input-container">
                 <div class="input-wrapper">
                     <i class="far fa-envelope"></i>
-                    <input type="email" placeholder="Your email">
+                    <input type="email" placeholder="Your email" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
+                <button type="submit" class="btn btn-primary" onclick="buttonPressed('Subscribe')">Subscribe</button>
             </form>
             
 

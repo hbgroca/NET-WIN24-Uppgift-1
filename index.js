@@ -1,9 +1,9 @@
 let darkMode = false;
 
 function faqExpand(faqQuestion){
-  console.log(faqQuestion);
-  const faqClassList = document.getElementById(faqQuestion);
-  const faqClass = document.getElementById(faqQuestion + "Btn").parentElement.parentElement;
+    console.log(faqQuestion);
+    const faqClassList = document.getElementById(faqQuestion);
+    const faqClass = document.getElementById(faqQuestion + "Btn").parentElement.parentElement;
     const faqBtn = document.getElementById(faqQuestion + "Btn");
     if(faqBtn.classList == "faq-btn faqBtnExpanded"){
         faqClassList.classList = "faqColapsed";
@@ -46,4 +46,8 @@ function closeNavbarSide(){
 
 function openNavbarSide(){
     document.getElementById("aside").classList = "";
+}
+
+function buttonPressed(input){
+    window.alert(`Du har klickat på ${input}`)
 }
