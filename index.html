@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Inlämningsuppgift 1 för WIN24 Klassen. Uppgift: Skapa Silicon figma designen i HTML och CSS">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
     <!-- <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex"> -->
 </head>
@@ -31,7 +32,7 @@
                 <!-- DarkMode text -->
                 <p class="darkModeText">Dark Mode</p>
                 <!-- Toggle knapp -->
-                <button class="toggleSwitch" onclick="changeTheme()" aria-label="Dark mode toggle">
+                <button class="toggleSwitch" onclick="changeTheme()" aria-label="toggle between bright and dark mode.">
                     <div id="toggleSwitch-bg" class="toggleSwitch-bg">
                     <span id="toggleSwitch-dot" class="toggleSwitch-dot"></span>
                     </div>
@@ -39,14 +40,14 @@
                 
     
                 <!-- Meny knapp -->
-                <div class="navButton-container" onclick=openNavbarSide() aria-label="Open navigation menu">
+                <div class="navButton-container" onclick=openNavbarSide() aria-label="open navigation menu." tabindex="0">
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                 </div>
                 <!-- Sign in knapp -->
-                <button class='signInButton' aria-label="Sign in">
-                    <img src="svg/Subtract.svg" alt="Button to sign in or register an new account"/>
+                <button class='signInButton'>
+                    <img src="svg/Subtract.svg" alt="sign in or register an new account."/>
                     <span class=''>Sign in / up</span>
                 </button>
             </div>
@@ -57,7 +58,7 @@
                 <nav class="navBar-side">
                     <!-- Meny knapp -->
                     <div class="navButton-container" onclick=closeNavbarSide()>
-                        <span class="closeButton" aria-label="Close navigation menu">X</span>
+                        <span class="closeButton" aria-label="Close navigation menu.">X</span>
                         <!-- <span class="navButton"></span> -->
                     </div>
                     <ul>
@@ -74,27 +75,25 @@
     </header>
 
     <main>
-        <!-- Money management (page 1) -->
+        <!--HERO / Money management (page 1) -->
         <div class="manage-money-background-container">
-            <div class="manageMoney-container">
+            <div class="manageMoney">
                 <div class="manageMoney-header">
                     <h2>Manage All Your Money in One App</h2>
                 </div>
                 <div class="manageMoney-text">
                     <p class="manageMoney-text-top">We offer you a new generation of the mobile
                         banking. Save, spend & manage money in your pocket.</p>
-                    <div class="manageMoney-link-wrapper-sm" id="manageMoney-link-wrapper-sm">
-                        <img id="appleLink-sm" class="hover" src="svg/linkAppleStore.svg" alt="AppleStore länk">
-                        <img id="googleLink-sm" class="hover" src="svg/linkGoogle.svg" alt="Google Store länk">
+
+                    <div class="manageMoney-links">
+                        <a class="link hover" href="http://" target="_blank" rel="noopener noreferrer">
+                            <img id="appleStore" src="svg/appstore-light.svg" alt="">
+                        </a>
+                        <a class="link hover" href="http://" target="_blank" rel="noopener noreferrer">
+                            <img id="googleStore" src="svg/googleplay-light.svg" alt="">
+                        </a>
                     </div>
-                    <div class="manageMoney-link-wrapper-md" id="manageMoney-link-wrapper-md">
-                        <img id="appleLink-md" class="hover" src="svg/linkAppleStore-md.svg" alt="AppleStore länk"></a>
-                        <img id="googleLink-sm" class="hover" src="svg/linkGoogleStore-md.svg" alt="Google Store länk"></a>
-                    </div>
-                    <div class="manageMoney-link-wrapper-lg" id="manageMoney-link-wrapper-lg">
-                        <img id="appleLink-lg" class="hover" src="svg/linkAppleStore-lg-bright.svg" alt="AppleStore länk"></a>
-                        <img id="googleLink-lg" class="hover" src="svg/linkGoogle-lg-Bright.svg" alt="Google Store länk"></a>
-                    </div>
+                    
                     <a class="manageMoney-discover-btn animate-pulse hover" href="#AppFeatures">
                         <button><p>^</p></button>
                         <p>Discover more</p>
@@ -134,7 +133,7 @@
         <!-- App Features -->
         <section id="AppFeatures" class="appFeatures">
             <div class="phoneSide">
-                <img src="svg/appFeaturesPhone.svg" alt="Picture of an iPhone">
+                <img src="svg/appFeaturesPhone.svg" alt="">
             </div>
             <div class="restSide">
                 <div class="headerAndText">
@@ -144,7 +143,7 @@
                 <div class="features">
                     <div class="feature">
                         <div class="img-container">
-                            <img src="svg/payments.svg" alt="Easy Payments logo">
+                            <img src="svg/payments.svg" alt="">
                         </div>
                         <div>
                             <h3>Easy Payments</h3>
@@ -153,7 +152,7 @@
                     </div>
                     <div class="feature">
                         <div class="img-container">
-                            <img src="svg/statistics.svg" alt="Cost Statistics logo">
+                            <img src="svg/statistics.svg" alt="">
                         </div>
                         <div>
                             <h3>Cost Statistics</h3>
@@ -162,7 +161,7 @@
                     </div>
                     <div class="feature">
                         <div class="img-container">
-                            <img src="svg/cashback.svg" alt="Regular Cashbacks logo">
+                            <img src="svg/cashback.svg" alt="">
                         </div>
                         
                         <div>
@@ -172,7 +171,7 @@
                     </div>
                     <div class="feature">
                         <div class="img-container">
-                            <img src="svg/security.svg" alt="Data Sucurity logo">
+                            <img src="svg/security.svg" alt="">
                         </div>
                         <div>
                             <h3>Data Sucurity</h3>
@@ -181,7 +180,7 @@
                     </div>
                     <div class="feature">
                         <div class="img-container">
-                            <img src="svg/support.svg" alt="Support 24/7 logo">
+                            <img src="svg/support.svg" alt="">
                         </div>
                         <div>
                             <h3>Support 24/7</h3>
@@ -190,7 +189,7 @@
                     </div>
                     <div class="feature">
                         <div class="img-container">
-                            <img src="svg/happy.svg" alt="Top Standards logo">  
+                            <img src="svg/happy.svg" alt="">  
                         </div>
                         <div>
                             <h3>Top Standards</h3>
@@ -200,15 +199,16 @@
         
                 </div>
             </div>
-            
-            
         </section>
+
 
         <!-- How does it work? -->
         <section class="howDoesItWork">
             <div class="hdiw">
                 <h2>How does it work?</h2>
-                <div class="iphone-img"><div class="iphone-frame"></div></div>
+                <div class="iphone-img">
+                    <div class="iphone-frame"></div>
+                </div>
                 
                 <h3 class="mobile">Transfers to people from your contact list</h3>
                 <h3 class="tablet">Step 3. Transfers to people from your contact list</h3>
@@ -224,22 +224,21 @@
                 <h2>Make your money transfer simple and clear</h2>
                 <div class="text-container">
                     <div class="text-wrapper">
-                        <img src="svg/bx-check-circle.svg" alt="Checkmark icon">
+                        <img src="svg/bx-check-circle.svg" alt="">
                         <p>Banking transactions are free for you</p>
                     </div>
                     <div class="text-wrapper">
-                        <img src="svg/bx-check-circle.svg" alt="Checkmark icon">
+                        <img src="svg/bx-check-circle.svg" alt="">
                         <p>No monthly cash commission</p>
                     </div>
                     <div class="text-wrapper">
-                        <img src="svg/bx-check-circle.svg" alt="Checkmark icon">
+                        <img src="svg/bx-check-circle.svg" alt="">
                         <p>Manage payments and transactions online</p>
                     </div>
                 </div>
                 <button class="hover">Learn more -></button>
             </div>
                 
-
             <div class="topRight">
                 <img src="svg/features-demo-top-right.svg" alt="">
             </div>
@@ -252,12 +251,12 @@
                 <h2>Receive payment from international bank details</h2>
                 <div class="image-containers">
                     <div class="img-container">
-                        <div class="img-bg"><img src="svg/payments.svg" alt="Easy Payments"></div>
+                        <div class="img-bg"><img src="svg/payments.svg" alt="showing the easy payments screen on an phone."></div>
                         
                         <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
                     </div>
                     <div class="img-container">
-                        <div class="img-bg"><img src="svg/cashback.svg" alt="Regular Cashbacks"></div>
+                        <div class="img-bg"><img src="svg/cashback.svg" alt="showing the regular cashback screen on an phone."></div>
                         <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
                     </div>
                 </div>
@@ -276,18 +275,18 @@
                 
                 <div class="reviews-card-section">
                     <div class="reviews-card hover" >
-                        <img class="reviews-card-quotes" src="svg/quotes.svg" alt="Betygs ikon">
+                        <img class="reviews-card-quotes" src="svg/quotes.svg" alt="">
                         <div class="reviews-card-stars">
-                            <img src="svg/star.svg" alt="Blinka">
-                            <img src="svg/star.svg" alt="Blinka">
-                            <img src="svg/star.svg" alt="Lilla">
-                            <img src="svg/star.svg" alt="Stjärna">
-                            <img src="svg/star_empty.svg" alt="Stjärna">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star_empty.svg" alt="showing an 4-star review">
                         </div>
                         <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
                         <br>
                         <div class="reviews-card-user">
-                            <img src="svg/fanny.svg" alt="Användare ikon">
+                            <img src="svg/fanny.svg" alt="users animated avtar.">
                             <div>
                                 <h3>Fannie Summers</h3>
                                 <p>Designer</p>
@@ -295,18 +294,18 @@
                         </div>
                     </div>
                     <div class="reviews-card hover">
-                        <img class="reviews-card-quotes" src="svg/quotes.svg" alt="Betygs ikon">
+                        <img class="reviews-card-quotes" src="svg/quotes.svg" alt="">
                         <div class="reviews-card-stars">
-                            <img src="svg/star.svg" alt="Blinka">
-                            <img src="svg/star.svg" alt="Blinka">
-                            <img src="svg/star.svg" alt="Lilla">
-                            <img src="svg/star.svg" alt="Stjärna">
                             <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="">
+                            <img src="svg/star.svg" alt="showing an 4-star review">
                         </div>
                         <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
                         <br>
                         <div class="reviews-card-user">
-                            <img src="svg/alberto.svg" alt="Användare ikon">
+                            <img src="svg/alberto.svg" alt="users animated avtar.">
                             <div>
                                 <h3>Albert Flores</h3>
                                 <p>Developer</p>
@@ -338,7 +337,7 @@
                             </button>
                         </div>
                     </div>
-                    <div id='faqPersonalInfo' class="faqColapsed ">
+                    <div id='faqPersonalInfo' class="faqColapsed">
                         <p>Nunc duis id aenean gravida tincidunt eu, tempor
                         ullamcorper. Viverra aliquam arcu, viverra et,
                         cursus. Aliquet pretium cursus adipiscing gravida
@@ -499,7 +498,7 @@
                 <button class="contact-button">Contact us now</button>
                 <div class="contract-boxes">
                     <div class="contact-box box-1 hover">
-                        <img src="svg/phone.svg" alt="Telefon ikon">
+                        <img src="svg/phone.svg" alt="contact by phone icon">
                         <p>Still have questions?</p>
                         <a href="tel:+46793473854" class="contact-contactText">
                             <p >Contact us </p>
@@ -507,7 +506,7 @@
                         </a>
                     </div>
                     <div class="contact-box box-1 box-2 hover">
-                        <img src="svg/chat.svg" alt="Chat ikon">
+                        <img src="svg/chat.svg" alt="contact by chat icon">
                         <p>Don't like phone calls?</p>
                         <a href="mailto:hbgroca@gmail.com" class="contact-contactText">
                             <p >Contact us </p>
@@ -523,18 +522,19 @@
         <!-- Subscribe -->
         <section class="subscribe-container">
             <div class="subscribe-notification-container">
-                <img src="svg/notification-icon-1.svg" alt="Notifikations Ikon">
+                <img src="svg/notification-icon-1.svg" alt="subscription notification logo">
                 <h2 id="sm">Subscribe to our newsletter</h2>
                 <h2 id="lg">Subscribe to our newsletter to stay informed about latest updates</h2>
             </div>
-            
-            <div class="subscribe-input-container">
-                <div class="subscribe-input-box">
-                    <img src="svg/mail-svgrepo-com-gray.svg" alt="Mail ikon">
+
+            <form class="subscribe-input-container">
+                <div class="input-wrapper">
+                    <i class="far fa-envelope"></i>
                     <input type="email" placeholder="Your email">
                 </div>
-                <button>Subscribe</button>
-            </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            
 
         </section>
     </main>

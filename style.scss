@@ -27,6 +27,7 @@ $desktop:1280px;
     // Transitions
     transition: all ease;
     transition-duration: 250ms;
+
     a{
         text-decoration: none;
     }
@@ -52,7 +53,6 @@ body{
     background-color: var(--background-color);
     padding: 0;
     margin: 0;
-    // width: 100%;
 }
 
 // Navbar side
@@ -264,12 +264,12 @@ main{
 
 //Page 1 - Manage money
 .manage-money-background-container{
+    @include flex-center(column);
     width: 100%;
     background: linear-gradient(transparent, var(--background-color-fade));
-    @include flex-center(column);
 }
 
-.manageMoney-container{
+.manageMoney{
     display: grid;
     grid-auto-rows: minmax(0,auto);
     grid-template-areas: 
@@ -282,7 +282,7 @@ main{
     min-height: 450px;
     padding-inline: $padding-outer;
     position: relative;
-    .manageMoney-header{
+    &-header{
         display: grid;
         place-items: center;
         text-align: center;
@@ -295,8 +295,7 @@ main{
             color: var(--text-header);
         }
     }
-
-    .manageMoney-text{
+    &-text{
         display: grid;
         place-items: center;
         text-align: center;
@@ -307,21 +306,51 @@ main{
             font-weight: normal;
             max-width: 44rem;
         }
-        .manageMoney-link-wrapper-sm{
+
+        .manageMoney-links{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             gap: 1rem;
+            .link{
+                height: 51px;
+                width: 100%;
+                max-width: 367px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem;
+                
+                background-color: var(--link-bg-clr);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.8rem 1.6rem;
+                    color: var(--link-text-clr);
+                    fill: var(--link-text-clr);
+                    stroke: var(--link-text-clr);
+                }
+            }
+            @media (min-width:$tablet){
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 2rem;
+                .link{
+                    width: 139px;
+                    height: 45px;
+                }
+            }
+            @media (min-width:$desktop){
+                .link{
+                    width: 180px;
+                    height: 52px;
+                }
+            }
+            
         }
-        .manageMoney-link-wrapper-md{
-            display: none;
-            flex-direction: row;
-            gap: 2rem;
-        }
-        .manageMoney-link-wrapper-lg{
-            display: none;
-            flex-direction: row;
-            gap: 2rem;
-        }
+
         .manageMoney-discover-btn{
             @include flex-center();
             button{
@@ -344,8 +373,7 @@ main{
             }
         }
     }
-
-    .manageMoney-phones{
+    &-phones{
         background: transparent;
         display: none;
         position: absolute;
@@ -384,6 +412,7 @@ main{
         }
     }
 }
+
 
 //Logo section - Tablet and Desktop only - 
 .logoSection{
@@ -570,9 +599,6 @@ main{
 .features-demo{
     
     display: none;
-    @media (min-width:$desktop){
-        display: grid;
-    }
 
     width: 100%;
     max-width: 1080px;
@@ -653,7 +679,9 @@ main{
         }
     }
     
-    
+    @media (min-width:$desktop){
+        display: grid;
+    }
 }
 
 // Reviews - Desktop only - 
@@ -661,9 +689,7 @@ main{
     width: 100%;
     background-color: var(--background-color-subscribe);
     display: none;
-    @media (min-width:$desktop){
-        display: flex;
-    }
+    
     justify-content: center;
     padding-block: 8rem;
 
@@ -714,6 +740,10 @@ main{
                 }
             }
         }
+    }
+
+    @media (min-width:$desktop){
+        display: flex;
     }
 }
 
@@ -925,29 +955,32 @@ main{
             animation: jump 1s infinite;
         }
     }
+
     .subscribe-input-container{
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         margin: 2rem;
-        border: 1px solid var(--button-border-color);
-        border-radius: 0.5rem;
-        background-color: white;
-        overflow: hidden;
-        .subscribe-input-box{
+        .input-wrapper {
             display: flex;
-
-            img{
-                width: 1.8rem;
-                margin-left: 1em;
-                border-top-left-radius: 0.5rem;
-                border-bottom-left-radius: 0.5rem;
-            }
-            input{
-                border: none;
-                font-size: 1.6rem;
-                padding: 1em;
-                display: block;
-                min-width: minmax(150px, 1fr);
-            }
+            justify-content: center;
+            position: relative;
+        }
+        input[type="email"] {
+            padding: 15px 15px 15px 45px;
+            border: 1px solid var(--text-paragraph);
+            font-size: 16px;
+            width: 300px;
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+        }
+        i{
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-paragraph);
+            font-size: 1.5rem;
         }
         button{
             cursor: pointer;
@@ -957,6 +990,9 @@ main{
             font-weight: 500;
             color: white;
             padding: 1em;  
+
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
         }
     }
 }
@@ -1013,7 +1049,7 @@ footer{
     }
 
     // Första sidan
-    .manageMoney-container{
+    .manageMoney{
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-areas: 
@@ -1022,25 +1058,18 @@ footer{
         "text phones";
         // max-height: 1024px;
         
-        .manageMoney-header{
+        &-header{
             h2{
             font-size: 4.43rem;
             max-width: 445px;
             }
         }
-        .manageMoney-text{
+        &-text{
             place-items: start;
             text-align: start;
             .manageMoney-text-top{
                 margin-top: 3rem;
             }
-            .manageMoney-link-wrapper-sm{
-                display: none;
-            }
-            .manageMoney-link-wrapper-md{
-                display: flex;
-            }
-            
         }
     }
 
@@ -1178,7 +1207,7 @@ footer{
 
 
     // Manage Money section
-    .manageMoney-container{
+    .manageMoney{
         grid-template-areas: 
         "header phones"
         "text phones"
@@ -1186,7 +1215,7 @@ footer{
         overflow: hidden;
         max-width: 1440px;
         max-height: 2160px;
-        .manageMoney-header{
+        &-header{
             place-items: center;
             text-align: start;
             margin-top: 15svh;
@@ -1196,19 +1225,11 @@ footer{
                 }
         }
 
-        .manageMoney-text{
+        &-text{
             @include flex-center(column, space-between, start);
             .manageMoney-text-top{
                 margin-top: 8rem;
             }
-
-            .manageMoney-link-wrapper-md{
-                display: none;
-            }
-            .manageMoney-link-wrapper-lg{
-                display: flex;
-            }
-
             .manageMoney-discover-btn{
                 margin-bottom: 3rem;
             }

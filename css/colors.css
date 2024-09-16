@@ -13,7 +13,7 @@
     --background-color-faq: #ffffff;
 
     --button-border-color: #E2E5F1;
-    --button-color: #6366F1;
+    --button-color: #585bf1;
     --button-nav-color: #3E4265;
     --button-discovery-color: #FFFFFF;
     --button-discovery-text-color: #33354D;
@@ -28,6 +28,8 @@
 
     --logo-icon-color: #FFFFFF;
     --logo-icon-bg-color: #FFFFFF;
+    
+    --link-bg-clr:#131022;
 }
 
 /* Dark mode färg palette */
@@ -41,7 +43,7 @@
     --background-color-faq: #ffffff04;
 
     --button-border-color: #42426D;
-    --button-color: #6366F1;
+    --button-color: #585bf1;
     --button-nav-color: #FFF;
     --button-discovery-color: hsla(0, 0%, 100%, 0.05);
     --button-discovery-text-color: #ffffff;
@@ -51,8 +53,10 @@
     --button-faq-bg: #ffffff04;
 
     --text-header: #FFFFFF;
-    --text-paragraph: #75777D;
+    --text-paragraph: #9b9da5;
     --text-navbar: #DDDDDF;
 
     --logo-icon-bg-color: #ffffff00;
+
+    --link-bg-clr:#EFF2FC;
 }
