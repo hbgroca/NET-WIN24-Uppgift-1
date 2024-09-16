@@ -315,7 +315,7 @@ main{
             justify-content: center;
             align-items: center;
             width: 100%;
-            gap: 1rem;
+            gap: 2rem;
             .link{
                 height: 51px;
                 width: 100%;
@@ -1017,6 +1017,10 @@ footer{
         font-weight: 300;
         color: var(--text-paragraph);
     }
+    @media (min-width:$tablet){
+        flex-direction: row;
+        gap: 0.5rem;
+    }
 }
 
 
@@ -1051,10 +1055,6 @@ footer{
         position: absolute;
         opacity: 0;
     }
-    .p-outerFrame{
-        padding-inline: 3.5rem;
-    }
-
     .p-outerFrame{
         padding-inline: 2.0rem;
     }
@@ -1192,11 +1192,6 @@ footer{
         }
     }
 
-    // Footer med credits (OK MARGIN)
-    footer{
-        flex-direction: row;
-        gap: 0.5rem;
-    }
 }
 
 //Desktop

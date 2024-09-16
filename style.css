@@ -297,7 +297,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
 }
 .manageMoney-text .manageMoney-links .link {
   height: 51px;
@@ -1056,6 +1056,12 @@ footer p {
   font-weight: 300;
   color: var(--text-paragraph);
 }
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
 
 @media (max-width: 768px) {
   .mobile {
@@ -1083,9 +1089,6 @@ footer p {
   .desktop {
     position: absolute;
     opacity: 0;
-  }
-  .p-outerFrame {
-    padding-inline: 3.5rem;
   }
   .p-outerFrame {
     padding-inline: 2rem;
@@ -1214,10 +1217,6 @@ footer p {
   .subscribe-container .subscribe-input-container button {
     padding-block: 1.5rem;
     padding-inline: 2rem;
-  }
-  footer {
-    flex-direction: row;
-    gap: 0.5rem;
   }
 }
 @media (min-width: 1280px) {
