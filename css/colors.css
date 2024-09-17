@@ -25,6 +25,7 @@
     --text-header: #131022;
     --text-paragraph: #585C7B;
     --text-navbar: #33354D;
+    --text-navbar-active: #656565;
 
     --logo-icon-color: #FFFFFF;
     --logo-icon-bg-color: #FFFFFF;
@@ -55,8 +56,10 @@
     --text-header: #FFFFFF;
     --text-paragraph: #9b9da5;
     --text-navbar: #DDDDDF;
+    --text-navbar-active: #7779f9;
 
     --logo-icon-bg-color: #ffffff00;
 
     --link-bg-clr:#EFF2FC;
 }
+

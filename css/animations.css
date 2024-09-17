@@ -8,6 +8,17 @@
     }
 }
 
+@keyframes side-menu-open{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Animeringar (Lånat från TailWind) */
 @keyframes jump {
     0%, 100% {

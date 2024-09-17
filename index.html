@@ -11,8 +11,8 @@
     <!-- <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex"> -->
 </head>
-<body id="body" class="bright">
-    <header>
+<body id="body" class="">
+    <header aria-label="Silcon Logo">
         <!-- Navbar upptill och sida -->
         <nav class="topNavBar">
             <!-- Vänster sida -->
@@ -20,11 +20,11 @@
                 <img src="svg/SiliconLogo.svg" alt="Silicon logo">
                 <h1>Silicon</h1>
                 <div class="navBarLinks">
-                    <a class="hover" href="#"><p>Home</p></a>
-                    <a class="hover" href="#AppFeatures"><p>Features</p></a>
-                    <a class="hover" href="#FAQ"><p>FAQ</p></a>
-                    <a class="hover" href="#Contact"><p>Contact</p></a>
-                    <a class="hover" href="./grid-layout/index.html"><p>Grid Layout</p></a>
+                    <a class="hover active" href="#">Home</a>
+                    <a class="hover" href="#AppFeatures">Features</a>
+                    <a class="hover" href="#FAQ">FAQ</a>
+                    <a class="hover" href="#Contact">Contact</a>
+                    <a class="hover" href="./grid-layout/index.html">Grid Layout</a>
                 </div>
             </div>
             <!-- Höger sida -->
@@ -40,7 +40,7 @@
                 
     
                 <!-- Meny knapp -->
-                <button class="navButton-container" onclick=openNavbarSide() aria-label="open navigation menu." tabindex="0" aria-controls="aside">
+                <button class="navButton-container" onclick=NavbarSide("open") aria-label="open navigation menu." tabindex="0" aria-controls="aside">
                     <span class="navButton"></span>
                     <span class="navButton"></span>
                     <span class="navButton"></span>
@@ -56,18 +56,16 @@
             <!-- Sido navbar menu -->
             <aside id="aside" class="hidden">
                 <nav class="navBar-side">
-                    <!-- Meny knapp -->
-                    <div class="navButton-container" onclick=closeNavbarSide()>
-                        <span class="closeButton" aria-label="Close navigation menu.">X</span>
-                        <!-- <span class="navButton"></span> -->
+                    <div class="navButton-container">
+                        <button class="navButton" aria-label="Close navigation menu." onclick=NavbarSide("close")>X</button>
                     </div>
                     <ul>
-                        <li><a href="#" onclick=closeNavbarSide()>Home</a></li>
-                        <li><a href="#AppFeatures" onclick=closeNavbarSide()>Features</a></li>
-                        <li><a href="#FAQ" onclick=closeNavbarSide()>FAQ</a></li>
-                        <li><a href="#Contact" onclick=closeNavbarSide()>Contact</a></li>
-                        <li><a href="./grid-layout/index.html" onclick=closeNavbarSide()>Grid Layout</a></li>
-                        <li><a href="#" onclick=closeNavbarSide()>Sign in / up</a></li>
+                        <li><a class="active" href="#" onclick=NavbarSide("close")>Home</a></li>
+                        <li><a href="#AppFeatures" onclick=NavbarSide("close")>Features</a></li>
+                        <li><a href="#FAQ" onclick=NavbarSide("close")>FAQ</a></li>
+                        <li><a href="#Contact" onclick=NavbarSide("close")>Contact</a></li>
+                        <li><a href="./grid-layout/index.html" onclick=NavbarSide("close")>Grid Layout</a></li>
+                        <li><a href="#" onclick=NavbarSide("close")>Sign in / up</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -500,7 +498,7 @@
                     <div class="contact-box box-1 hover">
                         <img src="svg/phone.svg" alt="contact by phone icon">
                         <p>Still have questions?</p>
-                        <a href="tel:+46793473854" class="contact-contactText">
+                        <a href="tel:+4670123456" class="contact-contactText">
                             <p >Contact us </p>
                             <span>-></span>
                         </a>
@@ -508,7 +506,7 @@
                     <div class="contact-box box-1 box-2 hover">
                         <img src="svg/chat.svg" alt="contact by chat icon">
                         <p>Don't like phone calls?</p>
-                        <a href="mailto:hbgroca@gmail.com" class="contact-contactText">
+                        <a href="mailto:maila@gmail.com" class="contact-contactText">
                             <p >Contact us </p>
                             <span>-></span>
                         </a>
