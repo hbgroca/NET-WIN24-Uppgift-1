@@ -182,7 +182,7 @@ header .topNavBar .rightSide .signInButton {
 }
 @media (min-width: 1280px) {
   header .topNavBar {
-    max-width: 1440px;
+    max-width: 1320px;
   }
   header .topNavBar .leftSide .navBarLinks {
     display: flex;
@@ -262,6 +262,7 @@ aside ul li .active {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-height: 1150px;
   background: linear-gradient(transparent, var(--background-color-fade));
 }
 
@@ -425,7 +426,7 @@ aside ul li .active {
   .manageMoney {
     grid-template-areas: "header phones" "text phones" "text phones";
     overflow: hidden;
-    max-width: 1440px;
+    max-width: 1320px;
     max-height: 2160px;
   }
   .manageMoney-header {
@@ -485,7 +486,7 @@ aside ul li .active {
 }
 @media (min-width: 1280px) {
   .logoSection {
-    max-width: 1440px;
+    max-width: 1320px;
     padding-block: 8rem;
   }
   .logoSection .logo {
@@ -570,7 +571,7 @@ aside ul li .active {
 }
 @media (min-width: 1280px) {
   .appFeatures {
-    max-width: 1440px;
+    max-width: 1320px;
     flex-direction: row;
     margin-block: 6rem;
   }
@@ -1171,7 +1172,7 @@ aside ul li .active {
 @media (min-width: 1280px) {
   .faq-contact-section {
     margin-block: 6rem;
-    max-width: 1440px;
+    max-width: 1320px;
     display: grid;
     gap: 3rem;
     grid-template-columns: 30% 1fr;
@@ -1316,7 +1317,7 @@ aside ul li .active {
     padding-inline: 8rem;
     padding-block: 5rem;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1320px;
   }
   .subscribe-container .subscribe-notification-container {
     width: 50%;

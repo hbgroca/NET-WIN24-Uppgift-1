@@ -202,7 +202,7 @@ header{
     }
     @media (min-width:$desktop){
         .topNavBar{
-            max-width: 1440px;
+            max-width: 1320px;
             .leftSide {
                 .navBarLinks{
                     display: flex;
@@ -285,6 +285,7 @@ aside{
 .manage-money-background-container{
     @include flex-center(column);
     width: 100%;
+    max-height: 1150px;
     background: linear-gradient(transparent, var(--background-color-fade));
 }
 
@@ -459,7 +460,7 @@ aside{
         "text phones"
         "text phones";
         overflow: hidden;
-        max-width: 1440px;
+        max-width: 1320px;
         max-height: 2160px;
         &-header{
             place-items: center;
@@ -512,7 +513,7 @@ aside{
         padding-block: 4rem;
     }
     @media (min-width:$desktop){
-        max-width: 1440px;
+        max-width: 1320px;
         padding-block: 8rem;
     
         .logo{
@@ -593,7 +594,7 @@ aside{
         }
     }
     @media (min-width:$desktop){
-        max-width: 1440px;
+        max-width: 1320px;
         flex-direction: row;
         margin-block: 6rem;
         .phoneSide{
@@ -1134,7 +1135,7 @@ aside{
     }
     @media (min-width:$desktop){
         margin-block: 6rem;
-        max-width: 1440px;
+        max-width: 1320px;
         display: grid;
         gap: 3rem;
         grid-template-columns: 30% 1fr;
@@ -1271,7 +1272,7 @@ aside{
         padding-inline: 8rem;
         padding-block: 5rem;
         width: 100%;
-        max-width: 1440px;
+        max-width: 1320px;
         .subscribe-notification-container{
             width: 50%;
             padding: 0rem;
