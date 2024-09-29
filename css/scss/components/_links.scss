@@ -1,0 +1,23 @@
+a {
+    display: inline-block;
+    @include text;
+    font-size: 1em;
+    line-height: 1.6;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover{
+        text-decoration: underline;
+    }
+    // &[target="_blank"] {
+    //     &::after{
+    //         content: '\274F';
+
+    //         display: inline-block;
+    //         font-size: 0.8em;
+    //         vertical-align: middle;
+    //         margin-left: 0.3em;
+    //         margin-top: -0.9em;
+    //     }
+    // }
+}

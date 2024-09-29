@@ -1,0 +1,9 @@
+.wrapper {
+    display: grid;
+    min-height: 100svh;
+    grid-template-rows: auto 1fr auto;
+
+    // @include desktop{
+    //     grid-template-rows: auto  1fr auto;
+    // }
+}

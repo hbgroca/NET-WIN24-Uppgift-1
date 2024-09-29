@@ -1,0 +1,42 @@
+@include typography-colors(
+    // H1
+    --clr-text-heading,
+    // H2
+    --clr-text-heading,
+    // H3
+    --clr-text-heading,
+    // H4
+    --clr-text-heading,
+    // H5
+    --clr-text-heading,
+    // H6
+    --clr-text-heading,
+    // DIV
+   --clr-text,
+    // SPAN
+   --clr-text,
+    // P
+   --clr-text
+);
+
+@include theme-typography(
+    'dark',
+    // H1
+    --clr-text-heading,
+    // H2
+    --clr-text-heading,
+    // H3
+    --clr-text-heading,
+    // H4
+    --clr-text-heading,
+    // H5
+    --clr-text-heading,
+    // H6
+    --clr-text-heading,
+    // DIV
+    --clr-text,
+    // SPAN
+    --clr-text,
+    // P
+    --clr-text
+);

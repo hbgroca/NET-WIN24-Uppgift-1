@@ -1,0 +1,97 @@
+.faq{
+    margin-block: 5rem;
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-rows: auto 1fr auto;
+    grid-template-areas: 
+    "text"
+    "faqs"
+    "contact";
+
+    place-items: center;
+
+    &-text{
+        @include flex-col-center;
+        grid-area: text;
+        gap: 1rem;
+        text-align: center;
+        max-width: 415px;
+        h4{
+            font-weight: 900;
+        }
+        p{
+            font-size: 1.125rem;
+        }
+        @include tablet{
+            h4{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    &-faqs{
+        grid-area: faqs;
+    }
+
+    &-contact{
+        grid-area: contact;
+    }
+
+    @include desktopLg{
+        grid-auto-columns: 40% 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "text faqs"
+        "contact faqs"
+        ". faqs";
+        
+        &-text{
+            text-align: start;
+            justify-content: flex-start;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.contact{
+    margin-block: 3rem;
+    @include flex-row-center;
+    gap: 2rem;
+
+    &-btn{
+        display: block;
+    }
+    &-phone, &-mail{
+        display: none;
+        min-width: 343px;
+        width: 100%;
+    }
+
+    @include tabletLg{
+        justify-content: flex-start;
+        &-btn{
+            display: none;
+        }
+        &-phone{
+            display: grid;
+            a{
+                color: var(--clr-primary);
+            }
+        }
+        &-mail{
+            display: grid;
+            a{
+                color: #22C55E;
+            }
+        }
+    }
+    @include desktopLg{
+        align-items: flex-start;
+        &-phone, &-mail{
+            min-width: 196px;
+        }
+    }
+}

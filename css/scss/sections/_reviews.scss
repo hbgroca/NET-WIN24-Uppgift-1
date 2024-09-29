@@ -1,0 +1,33 @@
+.reviews{
+    display: none;
+    background-color: var(--clr-bg-alt);
+    width: 100%;
+    padding-block: 6rem;
+
+    @include desktop{
+        display: flex;
+        flex-direction: column
+    }
+}
+.reviews-container{
+    @include flex-col-center;
+    gap: 2rem;
+
+    @media (min-width:1280px){
+        @include flex-row-center;
+    }
+}
+.reviews-header{
+    // align-self: flex-start;
+    &-text{
+        font-size: 36px;
+        padding: 3rem 0;
+    }
+    @include desktopLg{
+        align-self: flex-start;
+        &-text{
+            font-size: 40px;
+            padding: 0;
+        }
+    }
+}

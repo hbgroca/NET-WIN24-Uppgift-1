@@ -1,0 +1,48 @@
+.btn-primary{
+    @include button-clr(var(--clr-btn-bg), var(--clr-btn-text), transparent, var(--clr-btn-bg), transparent, var(--clr-btn-border));
+}
+
+.btn-rounded{
+    @include button-clr(
+        // Background
+        var(--clr-rounded-btn-bg), 
+        // Text color
+        var(--clr-rounded-btn-text), 
+        // Hover background clr
+        var(--clr-primary), 
+        // Hover text color
+        #FFFFFF,
+        );
+}
+
+@include theme-buttons(
+    'dark',
+    //BTN Primary
+    (var(--clr-primary), 
+    var(--clr-btn-text), 
+    transparent, 
+    var(--clr-primary), 
+    var(--clr-primary)),
+
+    //BTN Rounded
+    (var(--clr-rounded-btn-bg), 
+    var(--clr-rounded-btn-text), 
+    var(--clr-primary), 
+    #000),
+);
+
+
+
+
+.btn-hamburger{
+    background-color: var(--clr-rounded-btn-text);
+
+    &:hover, &:active{
+        background-color: var(--clr-rounded-btn-text);
+    }
+}
+
+@include hamburger-color(--clr-rounded-btn-text);
+
+@include theme-hamburger('dark', --clr-btn-text);
+

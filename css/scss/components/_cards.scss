@@ -1,0 +1,80 @@
+
+.card-sponsor{
+    width: 160px;
+    height: 98px;
+    border: 1px solid var(--clr-gray-300);
+    border-radius: .5rem;
+
+    @include flex-col-center;
+
+    background-color: transparent;
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6){
+        display: none;
+    }
+
+    @media (min-width:710px){
+        &:nth-child(4){
+            display: flex;
+        }
+    }
+    @media (min-width:992px){
+        width: 182px;
+        &:nth-child(5){
+            display: flex;
+        }
+    }
+    @media (min-width:1300px){
+        width: 192px;
+        &:nth-child(6){
+            display: flex;
+        }
+    }
+}
+
+
+.card-review{
+    @include flex-col-middle-left;
+    background-color: var(--clr-card-review);
+    padding: 3rem 1.5rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.212);
+    height: 360px;
+    max-width: 450px;
+    min-width: 415px;
+    gap: 1rem;
+    
+    border-radius: .5rem;
+    position: relative;
+    font-size: 1.125rem;
+    &-quotes{
+        position: absolute;
+        width: 5rem;
+        top: -28px;
+        left: 8px;
+    }
+    &-user{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        h3{
+            font-size: 1.0rem;
+        }
+        p{font-size: 0.875rem;}
+    }
+}
+
+
+.card-contact{
+    cursor: pointer;
+    display: grid;
+    gap: 1.25rem;
+    background-color: transparent;
+    border: 1px solid var(--clr-btn-border);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    // min-width: 343px;
+    width: 100%;
+}

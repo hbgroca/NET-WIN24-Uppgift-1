@@ -1,0 +1,109 @@
+@mixin button-clr(
+    $bg-color, 
+    $txt-color, 
+    $hover-bg-clr, 
+    $hover-txt-clr, 
+    $border-clr: null, 
+    $border-hover-clr: null)
+    {
+    background-color: $bg-color;
+    color: $txt-color;
+    border-color: if($border-clr, $border-clr, $bg-color);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:hover{
+        background-color: $hover-bg-clr;
+        color: $hover-txt-clr;
+        border-color: if($border-hover-clr, $border-hover-clr, $bg-color);
+    }
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+    &::after, &::before{
+        background-color: transparent;
+    }
+}
+
+@mixin theme-buttons($bg-color, $btn-primary-colors, $btn-rounded-colors){
+    .bg-#{$bg-color}{
+        .btn-primary{
+            @include button-clr($btn-primary-colors...);
+        }
+        .btn-rounded{
+            @include button-clr($btn-rounded-colors...);
+        }
+    }
+}
+
+
+// Typography
+@mixin typography-colors($h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color, $div-color, $span-color, $p-color){
+    h1{
+        color: var($h1-color)
+    }
+    h2{
+        color: var($h2-color)
+    }
+    h3{
+        color: var($h3-color)
+    }
+    h4{
+        color: var($h4-color)
+    }
+    h5{
+        color: var($h5-color)
+    }
+    h6{
+        color: var($h6-color)
+    }
+    div{
+        color: var($div-color)
+    }
+    span{
+        color: var($span-color)
+    }
+    p{
+        color: var($p-color)
+    }
+}
+
+@mixin theme-typography($bg-color, $h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color, $div-color, $span-color, $p-color){
+    .bg-#{$bg-color}{
+        @include typography-colors($h1-color, $h2-color, $h3-color, $h4-color, $h5-color, $h6-color, $div-color, $span-color, $p-color);
+    }
+}
+
+// Links
+@mixin link-color($link-color){
+    a{
+        color: var($link-color)
+    }
+    a:hover{
+        color: var(--clr-primary)
+    }
+}
+
+@mixin theme-link($bg-color, $link-color){
+    .bg-#{$bg-color}{
+        @include link-color($link-color);
+    }
+}
+
+
+// Hamburger Button
+@mixin hamburger-color($hamburger-color){
+    .btn-hamburger, .btn-hamburger::after, .btn-hamburger::before{
+        background-color: var($hamburger-color);
+    }
+    .btn-hamburger:hover, .btn-hamburger:hover::after, .btn-hamburger:hover::before{
+        background-color: var(--clr-primary);
+    }
+}
+
+@mixin theme-hamburger($bg-color, $hamburger-color){
+    .bg-#{$bg-color}{
+        @include hamburger-color($hamburger-color);
+    }
+}

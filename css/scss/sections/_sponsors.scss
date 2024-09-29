@@ -1,0 +1,15 @@
+.sponsors{
+    display: none;
+    margin-block: 3rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include tablet{
+        display: flex;
+    }
+    @include desktop{
+        padding-block: 4rem;
+        justify-content: space-between;
+    }
+}

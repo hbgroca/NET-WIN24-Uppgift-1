@@ -1,542 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIN24 HTML/CSS Inlämningsuppgift 1</title>
+    <title>WIN24 HTML/CSS Inlämningsuppgift 1 v2</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Inlämningsuppgift 1 för WIN24 Klassen. Uppgift: Skapa Silicon figma designen i HTML och CSS">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
-    <!-- <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex"> -->
+    <meta name="description" content="Inlämningsuppgift 1 för WIN24 Klassen. Uppgift: Skapa Silicon figma designen i HTML och CSS">
 </head>
-<body id="body" class="">
-    <header aria-label="Silcon Logo">
-        <!-- Navbar upptill och sida -->
-        <nav class="topNavBar">
-            <!-- Vänster sida -->
-            <div class="leftSide">
-                <img src="svg/SiliconLogo.svg" alt="Silicon logo">
-                <h1>Silicon</h1>
-                <div class="navBarLinks">
-                    <a class="hover active" href="#">Home</a>
-                    <a class="hover" href="#AppFeatures">Features</a>
-                    <a class="hover" href="#FAQ">FAQ</a>
-                    <a class="hover" href="#Contact">Contact</a>
-                    <a class="hover" href="./grid-layout/index.html">Grid Layout</a>
+<body class="wrapper">
+    <!-- Top och Side Navbar -->
+    <header id="Hem">
+        <nav class="navbar container">
+            <div class="navbar-left">
+                <div class="flex flex-row-middle gap-4">
+                    <img class="hover-spinn" src="./images/svg/SiliconLogo.svg" alt="">
+                    <h5>Silicon</h5>
+                </div>
+                <div class="navbar-links">
+                    <a href="#Hem">Hem</a>
+                    <a href="#Funktioner">Funktioner</a>
+                    <a href="#Info">Info</a>
+                    <a href="#Kontakt">Kontakt</a>
                 </div>
             </div>
-            <!-- Höger sida -->
-            <div class="rightSide">
-                <!-- DarkMode text -->
-                <p class="darkModeText">Dark Mode</p>
-                <!-- Toggle knapp -->
-                <button class="toggleSwitch" onclick="changeTheme()" aria-label="toggle between bright and dark mode.">
-                    <div id="toggleSwitch-bg" class="toggleSwitch-bg">
-                    <span id="toggleSwitch-dot" class="toggleSwitch-dot"></span>
-                    </div>
+            <div class="navbar-right">
+                <div class="flex gap-4">
+                    <p class="text-darkmode">Mörkt läge</p>
+                    <button id="btn-toggle-dm" class="btn-toggle shadow-lg"></button>
+                </div>
+                <button class="btn-hamburger-area" tabindex="0" aria-controls="btns-aside" aria-label="Open or close navigation menu.">
+                    <span class="btn-hamburger" tabindex="-1"></span>
                 </button>
-                
-    
-                <!-- Meny knapp -->
-                <button class="navButton-container" onclick=NavbarSide("open") aria-label="open navigation menu." tabindex="1" aria-controls="aside">
-                    <span class="navButton"></span>
-                    <span class="navButton"></span>
-                    <span class="navButton"></span>
-                </button>
-                <!-- Sign in knapp -->
-                <button class='signInButton'>
-                    <img src="svg/Subtract.svg" alt="sign in or register an new account."/>
-                    <span class=''>Sign in / up</span>
-                </button>
+                <button class="btn-sm btn-primary btn-signIn"><i class="fa-regular fa-user"></i> Logga in</button>
             </div>
-
-
-            <!-- Sido navbar menu -->
-            <aside id="aside" class="hidden">
-                <nav class="navBar-side">
-                    <div class="navButton-container">
-                        <button class="navButton" aria-label="Close navigation menu." onclick=NavbarSide("close")>X</button>
-                    </div>
-                    <ul>
-                        <li><a class="active" href="#" onclick=NavbarSide("close")>Home</a></li>
-                        <li><a href="#AppFeatures" onclick=NavbarSide("close")>Features</a></li>
-                        <li><a href="#FAQ" onclick=NavbarSide("close")>FAQ</a></li>
-                        <li><a href="#Contact" onclick=NavbarSide("close")>Contact</a></li>
-                        <li><a href="./grid-layout/index.html" onclick=NavbarSide("close")>Grid Layout</a></li>
-                        <li><a href="#" onclick=NavbarSide("close")>Sign in / up</a></li>
-                    </ul>
-                </nav>
-            </aside>
         </nav>
+        <aside class="container">
+            <nav id="nav-aside" class="navbar-side">
+                <div class="navbar-side-links">
+                    <a href="#Hem">Hem</a>
+                    <a href="#Funktioner">Funktioner</a>
+                    <a href="#Info">Info</a>
+                    <a href="#Kontakt">Kontakt</a>
+                    <a href="#">Logga in</a>
+                </div>
+            </nav>
+        </aside>
     </header>
-
+    
+    <!-- Sektioner -->
     <main>
-        <!--HERO / Money management (page 1) -->
-        <div class="manage-money-background-container">
-            <div class="manageMoney">
-                <div class="manageMoney-header">
-                    <h2>Manage All Your Money in One App</h2>
+        <!-- Hero sektion -->
+        <section class="hero-bg">
+            <div class="hero container">
+                <div class="hero-header">
+                    <h1 class="hero-header-text">Hantera Alla Dina Pengar i En App</h1>
                 </div>
-                <div class="manageMoney-text">
-                    <p class="manageMoney-text-top">We offer you a new generation of the mobile
-                        banking. Save, spend & manage money in your pocket.</p>
 
-                    <div class="manageMoney-links">
-                        <a class="link hover" href="https://www.apple.com/se/app-store/" target="_blank" rel="noopener noreferrer">
-                            <img id="appleStore" src="svg/appstore-light.svg" alt="länk till apple store.">
+                <div class="hero-info">
+                    <p class="hero-info-text">Vi erbjuder dig en ny generation av mobilbank Spara, spendera och hantera pengar i din ficka.</p>
+                    <div class="hero-info-links">
+                        <a href="#" class="btn-store">
+                            <img id="appleStore" src="./images/svg/hero/appstore-light.svg" alt="">
                         </a>
-                        <a class="link hover" href="https://play.google.com/" target="_blank" rel="noopener noreferrer">
-                            <img id="googleStore" src="svg/googleplay-light.svg" alt="länk till google play store.">
+                        <a href="#" class="btn-store">
+                            <img id="googleStore" src="./images/svg/hero/googleplay-light.svg" alt="">
                         </a>
                     </div>
-                    
-                    <a class="manageMoney-discover-btn animate-pulse hover" href="#AppFeatures">
-                        <span><p>^</p></span>
-                        <p>Discover more</p>
+
+                    <a class="hero-info-btn animate-pulse" href="#Funktioner">
+                        <button class="btn-rounded btn-rounded-md shadow-md" tabindex="-1"></button>
+                        <p>Upptäck mer</p>
                     </a>
-                    
                 </div>
-                <div class="manageMoney-phones">
-                    <div class="manageMoney-phone-img"></div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Logo section -Tablet and Desktop only -->
-        <section class="logoSection">
-            <div class="logo hover">
-                <img src="svg/logoipsum.svg" alt="Logoipsum logo">
-            </div>
-            <div class="logo hover">
-                <img src="svg/logoipsum-1.svg" alt="Logoipsum logo">
-            </div>
-            <div class="logo hover">
-                <img src="svg/logoipsum-2.svg" alt="Logoipsum logo">
-            </div>
-            <div class="logo hover">
-                <img src="svg/logoipsum-3.svg" alt="Logoipsum logo">
-            </div>
-            <div class="logo logo4 hover">
-                <img src="svg/logoipsum-4.svg" alt="Logoipsum logo">
-            </div>
-            <div class="logo logo5 hover">
-                <img src="svg/logoipsum-5.svg" alt="Logoipsum logo">
-            </div>
-        </section>
-
-        <!-- App Features -->
-        <section id="AppFeatures" class="appFeatures">
-            <div class="phoneSide">
-                <img src="svg/appFeaturesPhone.svg" alt="">
-            </div>
-            <div class="restSide">
-                <div class="headerAndText">
-                    <h2>App Features</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
-                </div>
-                <div class="features">
-                    <div class="feature">
-                        <div class="img-container">
-                            <img src="svg/payments.svg" alt="">
-                        </div>
-                        <div>
-                            <h3>Easy Payments</h3>
-                            <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
-                        </div>
+                <div class="hero-phones">
+                    <div>
+                        <span class="img-left"></span>
+                        <span class="img-right"></span>
                     </div>
-                    <div class="feature">
-                        <div class="img-container">
-                            <img src="svg/statistics.svg" alt="">
-                        </div>
-                        <div>
-                            <h3>Cost Statistics</h3>
-                            <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="img-container">
-                            <img src="svg/cashback.svg" alt="">
-                        </div>
-                        
-                        <div>
-                            <h3>Regular Cashbacks</h3>
-                            <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="img-container">
-                            <img src="svg/security.svg" alt="">
-                        </div>
-                        <div>
-                            <h3>Data Sucurity</h3>
-                            <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non. </p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="img-container">
-                            <img src="svg/support.svg" alt="">
-                        </div>
-                        <div>
-                            <h3>Support 24/7</h3>
-                            <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="img-container">
-                            <img src="svg/happy.svg" alt="">  
-                        </div>
-                        <div>
-                            <h3>Top Standards</h3>
-                            <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-
-        <!-- How does it work? -->
-        <section class="howDoesItWork">
-            <div class="hdiw">
-                <h2>How does it work?</h2>
-                <div class="iphone-img">
-                    <div class="iphone-frame"></div>
                 </div>
                 
-                <h3 class="mobile">Transfers to people from your contact list</h3>
-                <h3 class="tablet">Step 3. Transfers to people from your contact list</h3>
-                <h3 class="desktop">Latest transaction history</h3>
-                <p>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
             </div>
         </section>
 
-        <!-- Feature demo - Desktop only "Make your money transfer simple and clear" -->
-        <section class="features-demo">
-            <div class="topLeft">
-                <h2>Make your money transfer simple and clear</h2>
-                <div class="text-container">
-                    <div class="text-wrapper">
-                        <img src="svg/bx-check-circle.svg" alt="">
-                        <p>Banking transactions are free for you</p>
-                    </div>
-                    <div class="text-wrapper">
-                        <img src="svg/bx-check-circle.svg" alt="">
-                        <p>No monthly cash commission</p>
-                    </div>
-                    <div class="text-wrapper">
-                        <img src="svg/bx-check-circle.svg" alt="">
-                        <p>Manage payments and transactions online</p>
-                    </div>
-                </div>
-                <button class="hover" onclick="buttonPressed('Learn more')">Learn more -></button>
-            </div>
-                
-            <div class="topRight">
-                <img src="svg/features-demo-top-right.svg" alt="">
-            </div>
+        <!-- Sponsor sektion -->
+        <section class="sponsors container">
+            <div class="card-sponsor hover-zoom"><img src="./images/svg/logoipsum.svg" alt=""></div>
+            <div class="card-sponsor hover-zoom"><img src="./images/svg/logoipsum-1.svg" alt=""></div>
+            <div class="card-sponsor hover-zoom"><img src="./images/svg/logoipsum-2.svg" alt=""></div>
+            <div class="card-sponsor hover-zoom"><img src="./images/svg/logoipsum-3.svg" alt=""></div>
+            <div class="card-sponsor hover-zoom"><img src="./images/svg/logoipsum-4.svg" alt=""></div>
+            <div class="card-sponsor hover-zoom"><img src="./images/svg/logoipsum-5.svg" alt=""></div>
+        </section>
 
-            <div class="lowerLeft">
-                <img src="svg/features-demo-lower-left.svg" alt="">
-            </div>
-
-            <div class="lowerRight">
-                <h2>Receive payment from international bank details</h2>
-                <div class="image-containers">
-                    <div class="img-container">
-                        <div class="img-bg"><img src="svg/payments.svg" alt="showing the easy payments screen on an phone."></div>
-                        
-                        <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
-                    </div>
-                    <div class="img-container">
-                        <div class="img-bg"><img src="svg/cashback.svg" alt="showing the regular cashback screen on an phone."></div>
-                        <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
-                    </div>
+        <!-- Program egenskaper -->
+         <section id="Funktioner" class="appfeatures container">
+            <div class="appfeatures-img"></div>
+            <div class="appfeatures-wrapper">
+                <div class="appfeatures-text">
+                    <h3>App Egenskaper</h3>
+                    <p>Vår app ger dig full kontroll över din ekonomi. Du kan enkelt hålla koll på alla dina bankkonton på ett och samma ställe. Smidiga betalningar och överföringar sker direkt via appen, oavsett vilken bank du använder. Den är skapad för att göra din ekonomihantering enklare och säkrare.</p>
                 </div>
-                <button class="hover" onclick="buttonPressed('Learn more')"> Learn more -></button>
+                <div class="appfeatures-container">
+                    <div class="appfeatures-egenskaper">
+                        <div class="features-icon"><img src="./images/svg/payments.svg" alt=""></div>
+                        <div>
+                            <h5>Lätt att betala</h5>
+                            <p>Betala snabbt och smidigt med några enkla tryck direkt från appen.</p>
+                        </div>
+                    </div>
+                    <div class="appfeatures-egenskaper">
+                        <div class="features-icon"><img src="./images/svg/security.svg" alt=""></div>
+                        <div>
+                            <h5>Hög säkerhet</h5>
+                            <p>Få tillgång till detaljerad statistik om din ekonomi helt utan kostnad.</p>
+                        </div>
+                    </div>
+                    <div class="appfeatures-egenskaper">
+                        <div class="features-icon"><img src="./images/svg/statistics.svg" alt=""></div>
+                        <div>
+                            <h5>Kostnads statistik</h5>
+                            <p>Njut av regelbundna insikter och utdelningar som hjälper dig spara mer.</p>
+                        </div>
+                    </div>
+                    <div class="appfeatures-egenskaper">
+                        <div class="features-icon"><img src="./images/svg/support.svg" alt=""></div>
+                        <div>
+                            <h5>Support 24/7</h5>
+                            <p>Din säkerhet är vår prioritet – vi använder den senaste tekniken för att skydda dina uppgifter.</p>
+                        </div>
+                    </div>
+                    <div class="appfeatures-egenskaper">
+                        <div class="features-icon"><img src="./images/svg/cashback.svg" alt=""></div>
+                        <div>
+                            <h5>Regelbundna utdelningar</h5>
+                            <p>Vår kundsupport är tillgänglig dygnet runt för att hjälpa dig med alla frågor.</p>
+                        </div>
+                    </div>
+                    <div class="appfeatures-egenskaper">
+                        <div class="features-icon"><img src="./images/svg/happy.svg" alt=""></div>
+                        <div>
+                            <h5>Högsta betyg</h5>
+                            <p>Vår app har fått toppbetyg från användare tack vare sin enkelhet och pålitlighet.</p>
+                        </div>
+                    </div>
+            </div>
+            </div>
+         </section>
+
+        <!-- Slider sektion -->
+        <section id="Info" class="slider">
+            <div class="slider-container container">
+                <h2 class="slider-container-header">Hur fungerar det?</h2>
+                <div class="slider-img-container">
+                    <button class="slider-img-container-img-1" onclick="sliderPressed('1')"></button>
+                    <button class="slider-img-container-img-2" onclick="sliderPressed('2')"></button>
+                    <button class="slider-img-container-img-3" onclick="sliderPressed('3')"></button>
+                    <span class="slider-img-container-frame"></span>
+                </div>
+                <div class="slider-container-text">
+                    <h5>Överföringar till personer från din kontaktlista</h5>
+                    <p>Med vår app kan du enkelt överföra pengar direkt till personer i din telefonlista. Du slipper skriva in kontonummer manuellt välj bara en kontakt och skicka pengar på några sekunder. Smidigt, snabbt och säkert!</p>
+                </div>
             </div>
         </section>
 
-        <!-- Reviews - Desktop only --> 
-        <section class="reviews-section-bg">
-            <div class="reviews-section">
+        <!-- Egenskaper sekton -->
+         <section class="container features">
+            <div class="features-container">
+                <h2>Överför dina pengar snabbt och smidigt</h2>
                 <div>
-                    <h2>Clients are</h2>
-                    <h2>Loving Our App</h2>
+                    <div class="flex gap-4">
+                        <img src="./images/svg/bx-check-circle.svg" alt="">
+                        <p>Kostnadsfria överföringar</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <img src="./images/svg/bx-check-circle.svg" alt="">
+                        <p>Inga dolda månadskostnader eller avgifter</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <img src="./images/svg/bx-check-circle.svg" alt="">
+                        <p>Hantera betalningar och överföringar online</p>
+                    </div>
                 </div>
-                
-                <div class="reviews-card-section">
-                    <div class="reviews-card hover" >
-                        <img class="reviews-card-quotes" src="svg/quotes.svg" alt="">
-                        <div class="reviews-card-stars">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star_empty.svg" alt="showing an 4-star review">
+                <button class="btn-primary btn-md">Läs mer -></button>
+            </div>
+            <div class="features-container">
+                <img class="features-container-img" src="./images/svg/features-demo-top-right.svg" alt="">
+            </div>
+            <div class="features-container">
+                <img class="features-container-img" src="./images/svg/features-demo-lower-left.svg" alt="">
+            </div>
+            <div class="features-container">
+                <h2>Ta emot betalningar från alla internationella banker</h2>
+                <div class="flex flex-row-middle gap-18">
+                    <div class="flex flex-col gap-8">
+                        <div class="features-icon"><img src="./images/svg/payments.svg"></div>
+                        <p>Hantera dina betalningar online. Du sköter lätt dina betalningar och överföringar direkt i våran app.</p>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <div class="features-icon"><img src="./images/svg/cashback.svg"></div>
+                        <p>Med hjälp av våra AI verktyg så kan du spara tusenlappar varje månad. Gör en beräkning redan nu.</p>
+                    </div>
+                </div>
+                <button class="btn-primary btn-md">Läs mer -></button>
+            </div>
+         </section>
+
+        <!-- Recensioner sektion -->
+        <section class="reviews">
+            <div class="container reviews-container">
+                <div class="reviews-header">
+                    <h2 class="reviews-header-text">Användarna älskar våran app</h2>
+                </div>
+                <div class="flex gap-8">
+                    <div class="card-review">
+                        <img class="card-review-quotes" src="./images/svg/quotes.svg" alt="">
+    
+                        <div class="card-review-stars ">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star_empty.svg" alt="showing an 4-star review">
                         </div>
-                        <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
-                        <br>
-                        <div class="reviews-card-user">
-                            <img src="svg/fanny.svg" alt="users animated avtar.">
+                        
+                        <p>Du kan kategorisera inkomster och utgifter, och se hur pengarna används. Med ett smidigt gränssnitt kan du skapa budgetar och följa upp dina ekonomiska mål. Appen erbjuder även automatisk synkronisering med banken och ger rapporter för bättre planering och sparande.</p>
+    
+                        <div class="card-review-user">
+                            <img src="./images/svg/fanny.svg" alt="users animated avtar.">
                             <div>
-                                <h3>Fannie Summers</h3>
-                                <p>Designer</p>
+                                <h3>Casandra Ling</h3>
+                                <p>Arbetssökande</p>
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-card hover">
-                        <img class="reviews-card-quotes" src="svg/quotes.svg" alt="">
-                        <div class="reviews-card-stars">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="">
-                            <img src="svg/star.svg" alt="showing an 4-star review">
+    
+                    <div class="card-review">
+                        <img class="card-review-quotes" src="./images/svg/quotes.svg" alt="">
+    
+                        <div class="card-review-stars ">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="">
+                            <img src="./images/svg/star.svg" alt="showing an 5-star review">
                         </div>
-                        <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
-                        <br>
-                        <div class="reviews-card-user">
-                            <img src="svg/alberto.svg" alt="users animated avtar.">
+                        
+                        <p>Denna app hjälper dig att hantera hushållets ekonomi på ett smidigt sätt. Du kan enkelt följa inkomster, utgifter och budgetmål. Appen erbjuder bankkoppling för automatiska transaktioner och ger dig en tydlig överblick över dina pengar. Perfekt för att planera och spara inför framtiden.</p>
+    
+                        <div class="card-review-user">
+                            <img src="./images/svg/alberto.svg" alt="users animated avtar.">
                             <div>
-                                <h3>Albert Flores</h3>
-                                <p>Developer</p>
+                                <h3>Max Nilsson</h3>
+                                <p>Gynekolog</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- FAQ and Contact section -->
-        <section  class="faq-contact-section">
-            <div class="faq-title">
-                <h2 class="">Any questions? Check out the FAQs</h2>
-                <p class="">Still have unanswered questions and need to get in touch?</p>
+        <!-- FAQ sektion -->
+        <section class="faq container">
+            <div class="faq-text">
+                <h4>Några frågor? Hitta svaren i FAQs nedan</h4>
+                <p>Har du några obesvarade frågor eller vill komma i kontakt med oss?</p>
             </div>
-            <!-- FAQ section -->
-            <div id="FAQ" class="faq-container">
+            <div id="FAQ" class="faq-faqs">
+                <div id="faq-faqs-1" class="faq-faqs-1 card-faq" onclick='faqExpand("1")'>
+                    <div class="question">
+                        <h6>Lagrar appen någon av mina personuppgifter?</h6>
+                        <button class="btn-rounded-md btn-rounded"></button>
+                    </div>
+                    <div class="answer">
+                        <p>Din säkerhet är vår högsta prioritet. Vi lagrar endast den information som krävs för att tillhandahålla våra tjänster, och all data krypteras för att skydda din integritet.</p>
+                    </div>
+                </div>
+                <div id="faq-faqs-2" class="faq-faqs-2 card-faq" onclick='faqExpand("2")'>
+                    <div class="question">
+                        <h6>Vilka format kan jag ladda ner min transaktionshistorik i?</h6>
+                        <button class="btn-rounded-md btn-rounded"></button>
+                    </div>
+                    <div class="answer">
+                        <p>Du kan ladda ner din transaktionshistorik i flera format, inklusive PDF och Excel, så att du kan hantera dina data på det sätt som passar dig bäst.</p>
+                    </div>
+                </div>
+                <div id="faq-faqs-3" class="faq-faqs-3 card-faq" onclick='faqExpand("3")'>
+                    <div class="question">
+                        <h6>Kan jag schemalägga framtida överföringar?</h6>
+                        <button class="btn-rounded-md btn-rounded"></button>
+                    </div>
+                    <div class="answer">
+                        <p>Ja, du kan enkelt schemalägga framtida överföringar i appen. Välj datum och belopp, så sköter appen resten!</p>
+                    </div>
+                </div>
+                <div id="faq-faqs-4" class="faq-faqs-4 card-faq" onclick='faqExpand("4")'>
+                    <div class="question">
+                        <h6>När kan jag använda tjänsterna i Bankappen?</h6>
+                        <button class="btn-rounded-md btn-rounded"></button>
+                    </div>
+                    <div class="answer">
+                        <p>Tjänsterna i appen är tillgängliga dygnet runt, så du kan hålla koll på din ekonomi och göra transaktioner när som helst, var som helst.</p>
+                    </div>
+                </div>
+                <div id="faq-faqs-5" class="faq-faqs-5 card-faq" onclick='faqExpand("5")'>
+                    <div class="question">
+                        <h6>Kan jag skapa ett eget lösenord som är lätt för mig att komma ihåg?</h6>
+                        <button class="btn-rounded-md btn-rounded"></button>
+                    </div>
+                    <div class="answer">
+                        <p>Absolut! När du registrerar dig kan du välja ett lösenord som är säkert men samtidigt lätt för dig att komma ihåg.</p>
+                    </div>
+                </div>
+                <div id="faq-faqs-6" class="faq-faqs-6 card-faq" onclick='faqExpand("6")'>
+                    <div class="question">
+                        <h6>Vad händer om jag glömmer eller tappar bort mitt lösenord?</h6>
+                        <button class="btn-rounded-md btn-rounded"></button>
+                    </div>
+                    <div class="answer">
+                        <p>Om du glömmer eller tappar bort ditt lösenord kan du enkelt återställa det genom att följa stegen i appen. Du kommer att få ett e-postmeddelande med instruktioner för att skapa ett nytt lösenord.</p>
+                    </div>
+                </div>
                 
-                <!-- FAQ Frågor -->
-                <div class="faq-questions-container">
-                    <!-- Personal information ? -->
-                    <div class="faq colapsed" onclick='faqExpand("faqPersonalInfo")'>
-                        <p class="faq-question-text">Is any of my personal information stored in this App?</p>
-                        <div class="faq-question-btn-container hover">
-                            <button id='faqPersonalInfoBtn' class="faq-btn">
-                                <p class="faq-btn-text">^</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div id='faqPersonalInfo' class="faqColapsed">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                        ullamcorper. Viverra aliquam arcu, viverra et,
-                        cursus. Aliquet pretium cursus adipiscing gravida
-                        et consequat lobortis arcu velit. Nibh pharetra
-                        fermentum duis accumsan lectus non. Massa
-                        cursus molestie lorem scelerisque pellentesque.
-                        Nisi, enim, arcu purus gravida adipiscing euismod
-                        montes, duis egestas. Vehicula eu etiam quam
-                        tristique tincidunt suspendisse ut consequat.</p>
-                        <br>
-                        <p>Ornare senectus fusce dignissim ut. Integer
-                        consequat in eu tortor, faucibus et lacinia
-                        posuere. Turpis sit viverra lorem suspendisse
-                        lacus aliquam auctor vulputate. Quis egestas
-                        aliquam nunc purus lacus, elit leo elit facilisi.
-                        Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                    <!-- What formats ? -->
-                    <div class="faq colapsed" onclick='faqExpand("faqFormatsInfo")'>
-                        <p class="faq-question-text">What formats can I download my transaction history in?</p>
-                        <div class="faq-question-btn-container hover">
-                            <button id='faqFormatsInfoBtn' class="faq-btn" >
-                                <p class="faq-btn-text">^</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div id='faqFormatsInfo' class="faqColapsed b-bottom">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                            ullamcorper. Viverra aliquam arcu, viverra et,
-                            cursus. Aliquet pretium cursus adipiscing gravida
-                            et consequat lobortis arcu velit. Nibh pharetra
-                            fermentum duis accumsan lectus non. Massa
-                            cursus molestie lorem scelerisque pellentesque.
-                            Nisi, enim, arcu purus gravida adipiscing euismod
-                            montes, duis egestas. Vehicula eu etiam quam
-                            tristique tincidunt suspendisse ut consequat.</p>
-                            <br>
-                        <p>Ornare senectus fusce dignissim ut. Integer
-                            consequat in eu tortor, faucibus et lacinia
-                            posuere. Turpis sit viverra lorem suspendisse
-                            lacus aliquam auctor vulputate. Quis egestas
-                            aliquam nunc purus lacus, elit leo elit facilisi.
-                            Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                    <!-- Can I schedule future transfers?  -->
-                    <div class="faq colapsed" onclick='faqExpand("faqScheduleInfo")'>
-                        <p class="faq-question-text">Can I schedule future transfers?</p>
-                        <div class="faq-question-btn-container hover">
-                            <button id='faqScheduleInfoBtn' class="faq-btn" >
-                                <p class="faq-btn-text">^</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div id='faqScheduleInfo' class="faqColapsed b-bottom">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                            ullamcorper. Viverra aliquam arcu, viverra et,
-                            cursus. Aliquet pretium cursus adipiscing gravida
-                            et consequat lobortis arcu velit. Nibh pharetra
-                            fermentum duis accumsan lectus non. Massa
-                            cursus molestie lorem scelerisque pellentesque.
-                            Nisi, enim, arcu purus gravida adipiscing euismod
-                            montes, duis egestas. Vehicula eu etiam quam
-                            tristique tincidunt suspendisse ut consequat.</p>
-                            <br>
-                        <p>Ornare senectus fusce dignissim ut. Integer
-                            consequat in eu tortor, faucibus et lacinia
-                            posuere. Turpis sit viverra lorem suspendisse
-                            lacus aliquam auctor vulputate. Quis egestas
-                            aliquam nunc purus lacus, elit leo elit facilisi.
-                            Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                    <!-- When can I use Banking App services?  -->
-                    <div class="faq colapsed" onclick='faqExpand("faqBankingServicesInfo")'>
-                        <p class="faq-question-text">When can I use Banking App services?</p>
-                        <div class="faq-question-btn-container hover">
-                            <button id='faqBankingServicesInfoBtn' class="faq-btn" >
-                                <p class="faq-btn-text">^</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div id='faqBankingServicesInfo' class="faqColapsed b-bottom">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                            ullamcorper. Viverra aliquam arcu, viverra et,
-                            cursus. Aliquet pretium cursus adipiscing gravida
-                            et consequat lobortis arcu velit. Nibh pharetra
-                            fermentum duis accumsan lectus non. Massa
-                            cursus molestie lorem scelerisque pellentesque.
-                            Nisi, enim, arcu purus gravida adipiscing euismod
-                            montes, duis egestas. Vehicula eu etiam quam
-                            tristique tincidunt suspendisse ut consequat.</p>
-                            <br>
-                        <p>Ornare senectus fusce dignissim ut. Integer
-                            consequat in eu tortor, faucibus et lacinia
-                            posuere. Turpis sit viverra lorem suspendisse
-                            lacus aliquam auctor vulputate. Quis egestas
-                            aliquam nunc purus lacus, elit leo elit facilisi.
-                            Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                    <!-- Password create?  -->
-                    <div class="faq colapsed" onclick='faqExpand("faqCreatePasswordInfo")'>
-                        <p class="faq-question-text">Can I create my own password that is easy for me to remember?</p>
-                        <div class="faq-question-btn-container hover">
-                            <button id='faqCreatePasswordInfoBtn' class="faq-btn" >
-                                <p class="faq-btn-text">^</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div id='faqCreatePasswordInfo' class="faqColapsed b-bottom">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                            ullamcorper. Viverra aliquam arcu, viverra et,
-                            cursus. Aliquet pretium cursus adipiscing gravida
-                            et consequat lobortis arcu velit. Nibh pharetra
-                            fermentum duis accumsan lectus non. Massa
-                            cursus molestie lorem scelerisque pellentesque.
-                            Nisi, enim, arcu purus gravida adipiscing euismod
-                            montes, duis egestas. Vehicula eu etiam quam
-                            tristique tincidunt suspendisse ut consequat.</p>
-                            <br>
-                        <p>Ornare senectus fusce dignissim ut. Integer
-                            consequat in eu tortor, faucibus et lacinia
-                            posuere. Turpis sit viverra lorem suspendisse
-                            lacus aliquam auctor vulputate. Quis egestas
-                            aliquam nunc purus lacus, elit leo elit facilisi.
-                            Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                    <!-- Password lost ? -->
-                    <div class="faq colapsed" onclick='faqExpand("faqPasswordInfo")'>
-                        <p class="faq-question-text">What happens if I forget or lose my password?</p>
-                        <div class="faq-question-btn-container hover">
-                            <button id='faqPasswordInfoBtn' class="faq-btn" >
-                                <p class="faq-btn-text">^</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div id='faqPasswordInfo' class="faqColapsed">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor
-                            ullamcorper. Viverra aliquam arcu, viverra et,
-                            cursus. Aliquet pretium cursus adipiscing gravida
-                            et consequat lobortis arcu velit. Nibh pharetra
-                            fermentum duis accumsan lectus non. Massa
-                            cursus molestie lorem scelerisque pellentesque.
-                            Nisi, enim, arcu purus gravida adipiscing euismod
-                            montes, duis egestas. Vehicula eu etiam quam
-                            tristique tincidunt suspendisse ut consequat.</p>
-                            <br>
-                        <p>Ornare senectus fusce dignissim ut. Integer
-                            consequat in eu tortor, faucibus et lacinia
-                            posuere. Turpis sit viverra lorem suspendisse
-                            lacus aliquam auctor vulputate. Quis egestas
-                            aliquam nunc purus lacus, elit leo elit facilisi.
-                            Dignissim amet adipiscing massa integer.</p>
-                    </div>
-                </div>
             </div>
-
-            <!-- Contact section -->
-            <div id="Contact" class="contact-container">
-                <button class="contact-button" onclick="buttonPressed('Contact us now.')">Contact us now</button>
-                <div class="contract-boxes">
-                    <div class="contact-box box-1 hover">
-                        <img src="svg/phone.svg" alt="contact by phone icon">
-                        <p>Still have questions?</p>
-                        <a href="tel:+4670123456" class="contact-contactText">
-                            <p >Contact us </p>
-                            <span>-></span>
-                        </a>
-                    </div>
-                    <div class="contact-box box-1 box-2 hover">
-                        <img src="svg/chat.svg" alt="contact by chat icon">
-                        <p>Don't like phone calls?</p>
-                        <a href="mailto:maila@gmail.com" class="contact-contactText">
-                            <p >Contact us </p>
-                            <span>-></span>
-                        </a>
-                    </div>
-                    
+            <div id="Kontakt" class="contact">
+                <div class="contact-phone card-contact ">
+                    <img src="./images/svg/phone.svg" alt="">
+                    <p>Någon fråga?</p>
+                    <a href="#" class="hover-zoom">Contact us -></a>
                 </div>
+                <div class="contact-mail card-contact ">
+                    <img src="./images/svg/chat.svg" alt="">
+                    <p>Vill du inte ringa?</p>
+                    <a href="#" class="hover-zoom">Contact us -></a>
+                </div>
+                <a href="#" class="contact-btn btn-md btn-primary">Kontakta oss</a>
             </div>
         </section>
 
-        <!-- Subscribe -->
-        <section class="subscribe-container">
-            <div class="subscribe-notification-container">
-                <img src="svg/notification-icon-1.svg" alt="subscription notification logo">
-                <h2 id="sm">Subscribe to our newsletter</h2>
-                <h2 id="lg">Subscribe to our newsletter to stay informed about latest updates</h2>
+        <!-- Prenemerera sektion -->
+        <section class="subscribe container">
+            <div class="subscribe-text">
+                <img class="animate-jump" src="./images/svg/notification-icon-1.svg" alt="Notifikations ikon">
+                <h5 class="subscribe-text-mobile">Prenumerera på vårat nyhetsbrev</h5>
+                <h5 class="subscribe-text-desktop">Prenumerera på vårat nyhetsbrev för att få dom senaste händelserna</h5>
             </div>
-
-            <form class="subscribe-input-container">
-                <div class="input-wrapper">
+            <form class="form-subscribe" action="">
+                <div class="form-subscribe-wrapper">
                     <i class="far fa-envelope"></i>
-                    <input type="email" placeholder="Your email" required>
+                    <input id="email-input" type="email" placeholder="Din epost" required>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="buttonPressed('Subscribe')">Subscribe</button>
+                <input type="submit" value="Prenumerera">
             </form>
-            
 
         </section>
     </main>
 
-    <!-- Footer med credits -->
-    <footer class="">
+    <footer>
         <p>© 2024 Silicon. All rights reserved.</p>
         <p>Credit MadrasThemes</p>
     </footer>
 
-    <p style="padding: 4px; font-style: italic;">Re-made by R.Carlsson</p>
-    <script src="index.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

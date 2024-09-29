@@ -1,0 +1,17 @@
+a{
+    &:hover, &:active{
+        color: var(--clr-primary);
+    }
+}
+
+
+@include link-color(
+    // A
+    --clr-gray-800,
+);
+
+@include theme-link(
+    'dark',
+    // A
+    --clr-btn-text,
+);

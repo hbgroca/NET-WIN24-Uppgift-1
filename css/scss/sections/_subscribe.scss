@@ -1,0 +1,64 @@
+.subscribe{
+    @include flex-col-middle-center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+
+    max-width: 390px;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    background-color: var(--clr-bg-alt);
+    border-radius: 0.5rem;
+    gap: 1rem;
+
+    &-text{
+        flex: 1;
+        display: flex;
+        color: black;
+        gap: 1rem;
+        align-items: center;
+        max-width: 280px;
+        &-desktop{
+            display: none;
+        }
+    }
+
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 710px;
+    }
+    @include desktop{
+        max-width: 1296px;
+        &-text{
+            align-items: center;
+            max-width: 435px;
+            &-mobile{
+                display: none;
+            }
+            &-desktop{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.form-subscribe{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.subscribe-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    .input-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}

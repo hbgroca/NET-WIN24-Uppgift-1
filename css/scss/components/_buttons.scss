@@ -1,0 +1,250 @@
+.btn-sm{
+    @include btn;
+    padding-inline: 1.5rem;
+    padding-block: 0.5625rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.btn-md{
+    @include btn;
+    padding-inline: 1.75rem;
+    padding-block: 0.6875rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.6;
+    
+}
+.btn-lg{
+    @include btn;
+    padding-inline: 2rem;
+    padding-block: 0.8125rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn-square{
+    @include btn;
+    border-radius: 0;
+}
+
+
+
+// Rounded buttons
+.btn-rounded{
+    border: none;
+    @include btn-circle;
+    position: relative;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1.25em;
+    &:hover{
+        border: none;
+    }
+    &::after{
+        content: '>';
+        position: absolute;
+        rotate: 90deg;
+    }
+}
+
+.btn-rounded-sm{
+    @include btn-circle;
+    padding: 1.125rem;
+    font-size: 1.25em;
+    width: 36px;
+    height: 36px;
+
+    &::after{
+        top: 3px;
+        left: 12px;
+    }
+}
+.btn-rounded-md{
+    @include btn-circle;
+    cursor: pointer;
+    padding: 1.375rem;
+    border-radius: 50%;
+    font-size: 1.5em;
+    width: 44px;
+    height: 44px;
+
+    &::after{
+        top: 6px;
+        left: 16px;
+    }
+}
+.btn-rounded-lg{
+    @include btn-circle;
+    cursor: pointer;
+    padding: 1.625rem;
+    border-radius: 50%;
+    font-size: 2.0em;
+    width: 52px;
+    height: 52px;
+
+    &::after{
+        top: 2px;
+        left: 18px;
+    }
+}
+
+// Hamburger menu button
+.btn-hamburger-area{
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 99;
+    height: 30px;
+    width: 30px;
+    @include desktop{
+        display: none;
+    }
+    &:hover .btn-hamburger {
+        background-color: var(--clr-primary);
+        &::after, &::before{
+            background-color: var(--clr-primary);
+        }
+    }
+}
+.btn-hamburger{
+    position: absolute;
+    transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 22px;
+    height: 2px;
+    top: 14px;
+    left: 4px;
+    &::after, &::before{
+        transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 22px;
+        height: 2px;
+        background-color: transparent;
+    }
+    &::before{
+        top: 8px;
+    }
+    &-active{
+        transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
+        rotate: 45deg;
+        width: 26px;
+        left: 2px;
+        &::after, &::before{
+            transition: width 500ms ease-in,height 500ms ease-in,rotate 500ms ease-in, top 500ms ease-in, left 500ms ease-in, color 250ms;
+            top: 0px;
+            left: 0px;
+            width: 26px;
+            height: 2px;
+            rotate: -90deg;
+        }
+        &::before{
+            rotate: 90deg;
+        }
+    }
+}
+
+// Toggle dark mode button
+.btn-toggle{
+    cursor: pointer;
+    position: relative;
+    border: none;
+    border-radius: 12px;
+    width: 46px;
+    height: 24px;
+    background-color: var(--clr-gray-500);
+    
+    &::before{
+        content: '';
+        position:absolute;
+        top: 0px;
+        left: 4px;
+        // left: 24px;
+        background-color: var(--clr-primary);
+        width: 16px;
+        height: 18px;
+        border-radius: 50%;
+        z-index: 9;
+
+        opacity: 0;
+        // transition: all 200ms;
+    }
+
+    &::after{
+        content: '';
+        position:absolute;
+        top: 3px;
+        left: 4px;
+        // left: 24px;
+        background-color: white;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all 500ms ease-in-out;
+        // transition-delay: 200ms;
+    }
+    &-active{
+        background-color: var(--clr-primary);
+        &::before{
+            content: '';
+            position:absolute;
+            top: 0px;
+            left: 18px;
+            // left: 24px;
+            background-color: var(--clr-primary);
+            width: 16px;
+            height: 18px;
+            border-radius: 50%;
+            z-index: 9;
+            transition: all 1500ms ease-out;
+            transition-delay: 750ms;
+            opacity: 1;
+        }
+        &::after{
+            left:23px;
+            transition: all 500ms ease-out;
+        }
+    }
+}
+
+// Hero app store and android store
+.btn-store{
+    height: 51px;
+    width: 100%;
+    max-width: 367px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    
+    background-color: var(--clr-hero-link-bg);
+    img{
+        width: 100%;
+        height: 100%;
+        padding: 0.4rem 0rem;
+    }
+    
+    @include tabletLg{
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        width: 139px;
+        height: 45px;
+        img{
+            padding: 0.4rem 1rem;
+        }
+    }
+    @include desktop{
+        width: 180px;
+        height: 52px;
+        img{
+            padding: 0.4rem 1.5rem;
+        }
+    }
+}

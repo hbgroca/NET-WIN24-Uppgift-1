@@ -1,0 +1,77 @@
+.appfeatures{
+    display: grid;
+    padding-bottom: 4rem;
+    place-items: center;
+    text-align: center;
+
+    &-img{
+        display: none;
+        background: url(../images/svg/appFeaturesPhone.svg);
+        height: 684px;
+        width: 348px;
+        object-fit:  cover;
+    }
+
+    &-wrapper{
+        @include flex-col-center;
+    }
+
+    &-text{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-block: 3rem;
+        text-align: center;
+        max-width: 700px;
+        h3{
+            font-weight: 900;
+        }
+        p{
+            font-size: 1.125rem;
+        }
+    }
+    &-container{
+        display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 2rem;
+    }
+    &-egenskaper{
+        max-width: 400px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1.5rem;
+        text-align: start;
+        p{
+            padding-top: 1rem;
+        }
+    }
+
+    @include tablet{
+        gap: 3rem;
+        &-container{
+            grid-template-columns: 1fr 1fr;
+        }
+        &-text{
+            h3{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.125rem;
+            }
+        }
+    }
+    @include desktopLg{
+        grid-template-columns: auto 1fr;
+        &-wrapper{
+            align-items: flex-start;
+        }
+        &-img{
+            display: block;
+        }
+        &-text{
+            padding-top: 0;
+            text-align: start;
+        }
+    }
+}
