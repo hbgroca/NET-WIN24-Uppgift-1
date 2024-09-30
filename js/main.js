@@ -81,3 +81,11 @@ function sliderPressed(selected){
         imgCont.nextElementSibling.lastElementChild.textContent = 'Med vår app kan du göra snabba överföringar och få full koll på din transaktionshistorik. Hantera dina betalningar med bara några klick och se detaljerad information om tidigare transaktioner för att alltid ha din ekonomi under kontroll.';
     }
 }
+
+// Pop-up
+function ContactPressed(){
+    document.querySelector('.contact-pop-up').classList.toggle('pop-up-active');
+}
+function LoginPressed(){
+    document.querySelector('.login-pop-up').classList.toggle('pop-up-active');
+}

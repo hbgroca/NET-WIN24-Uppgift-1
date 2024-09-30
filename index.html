@@ -32,7 +32,26 @@
                 <button class="btn-hamburger-area" tabindex="0" aria-controls="btns-aside" aria-label="Öppna och stäng navigation menu.">
                     <span class="btn-hamburger" tabindex="-1" aria-hidden="true"></span>
                 </button>
-                <button class="btn-sm btn-primary btn-signIn" aria-label="Logga in på ditt konto."><img src="./images/svg/navbar/Sign-in.svg" alt="" aria-hidden="true"> Logga in</button>
+                <button class="btn-sm btn-primary btn-signIn" aria-label="Logga in på ditt konto." onclick="LoginPressed()"><img src="./images/svg/navbar/Sign-in.svg" alt="" aria-hidden="true"> Logga in</button>
+                <div class="login-pop-up">
+                    <button id="close" class="btn-primary btn-sm" onclick="LoginPressed()">X</button>
+                    <h4>Logga in</h4>
+                    <form action="">
+                        <div>
+                            <p>Användarnamn </p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>Lösenord</p>
+                            <input type="password">
+                        </div>
+                        <div>
+                            <button class="btn-primary btn-sm">Skapa konto</button>
+                            <input type="submit" value="Logga in" class="btn-primary btn-sm">
+                        </div>
+                   </form>
+                    
+                </div>
             </div>
         </nav>
         <aside class="container">
@@ -42,7 +61,7 @@
                     <a href="#Funktioner" aria-label="Gå till appens funktioner.">Funktioner</a>
                     <a href="#Info" aria-label="Gå till mer information om appen.">Info</a>
                     <a href="#Kontakt" aria-label="Gå till kontakter.">Kontakt</a>
-                    <a href="#" aria-label="Logga in på ditt konto.">Logga in</a>
+                    <a href="#" aria-label="Logga in på ditt konto." onclick="LoginPressed()">Logga in</a>
                 </div>
             </nav>
         </aside>
@@ -220,7 +239,7 @@
     
                         <div class="card-review-stars ">
                             <img src="./images/svg/reviews/star.svg" alt="" aria-hidden="true">
-                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/reviews/star.svg" alt="" aria-hidden="true">
                             <img src="./images/svg/reviews/star.svg" alt="" aria-hidden="true">
                             <img src="./images/svg/reviews/star.svg" alt="" aria-hidden="true">
                             <img src="./images/svg/reviews/star_empty.svg" alt="4-sjärnig recension.">
@@ -330,14 +349,29 @@
                 <div class="contact-phone card-contact ">
                     <img src="./images/svg/contact/phone.svg" alt="">
                     <p>Någon fråga?</p>
-                    <a href="#" class="hover-zoom">Kontakta oss -></a>
+                    <a href="tel:04213456" class="hover-zoom">Kontakta oss -> 042-123456</a>
                 </div>
                 <div class="contact-mail card-contact ">
                     <img src="./images/svg/contact/chat.svg" alt="">
                     <p>Vill du inte ringa?</p>
-                    <a href="#" class="hover-zoom">Kontakta oss -></a>
+                    <a href="mailto:info@silicon.se" class="hover-zoom">Kontakta oss -> info@silicon.se</a>
                 </div>
-                <a href="#" class="contact-btn btn-md btn-primary">Kontakta oss</a>
+                <!-- <b href="#" class="contact-btn btn-md btn-primary">Kontakta oss</a> -->
+                <button class="contact-btn btn-md btn-primary" onclick="ContactPressed()">Kontakta oss</button>
+
+                <div class="contact-pop-up">
+                    <button class="btn-primary btn-sm" onclick="ContactPressed()">X</button>
+                    <h4>Kontakta oss</h4>
+                   
+                    <div class="contact-alternatives">
+                        <img src="./images/svg/contact/phone.svg" alt="">
+                        <a href="tel:042123456" class="hover-zoom">042-123456</a>
+                    </div>
+                    <div class="contact-alternatives">
+                        <img src="./images/svg/contact/chat.svg" alt="">
+                        <a href="mailto:info@silicon.se" class="hover-zoom">info@silicon.se</a>
+                    </div>
+                </div>
             </div>
         </section>
 
