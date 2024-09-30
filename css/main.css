@@ -1885,7 +1885,7 @@ footer {
 }
 .appfeatures-img {
   display: none;
-  background: url(../images/svg/appFeaturesPhone.svg);
+  background: url(../images/svg/features/appFeaturesPhone.svg);
   height: 684px;
   width: 348px;
   -o-object-fit: cover;
