@@ -1188,7 +1188,7 @@ a:hover {
 
 .text-darkmode {
   display: none;
-  color: var(--clr-gray-700);
+  color: var(--clr-hero-link-bg) !important;
   opacity: 0.3;
 }
 @media (min-width: 640px) {

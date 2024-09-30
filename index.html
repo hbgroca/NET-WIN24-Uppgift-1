@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIN24 HTML/CSS Inlämningsuppgift 1 v2</title>
+    <title>Silicon - WIN24 HTML/CSS Inlämningsuppgift 1</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
@@ -11,39 +11,39 @@
 </head>
 <body class="wrapper">
     <!-- Top och Side Navbar -->
-    <header id="Hem">
+    <header id="Hem" aria-label="Välkomen till Silicon. Här hittar du världens bästa bank och ekonomi app.">
         <nav class="navbar container">
             <div class="navbar-left">
                 <div class="flex flex-row-middle gap-4">
-                    <img class="hover-spinn" src="./images/svg/SiliconLogo.svg" alt="">
+                    <img class="hover-spinn" src="./images/svg/SiliconLogo.svg" alt="Silicon logo ikon.">
                     <h5>Silicon</h5>
                 </div>
                 <div class="navbar-links">
-                    <a href="#Hem">Hem</a>
-                    <a href="#Funktioner">Funktioner</a>
-                    <a href="#Info">Info</a>
-                    <a href="#Kontakt">Kontakt</a>
+                    <a href="#Hem" aria-label="Gå till överst på sidan.">Hem</a>
+                    <a href="#Funktioner" aria-label="Gå till appens funktioner.">Funktioner</a>
+                    <a href="#Info" aria-label="Gå till mer information om appen.">Info</a>
+                    <a href="#Kontakt" aria-label="Gå till kontakter.">Kontakt</a>
                 </div>
             </div>
             <div class="navbar-right">
                 <div class="flex gap-4">
-                    <p class="text-darkmode">Mörkt läge</p>
-                    <button id="btn-toggle-dm" class="btn-toggle shadow-lg"></button>
+                    <p class="text-darkmode" aria-hidden="true">Mörkt läge</p>
+                    <button id="btn-toggle-dm" class="btn-toggle shadow-lg" aria-label="Växla mellan ljus eller mörkt tema."></button>
                 </div>
-                <button class="btn-hamburger-area" tabindex="0" aria-controls="btns-aside" aria-label="Open or close navigation menu.">
+                <button class="btn-hamburger-area" tabindex="0" aria-controls="btns-aside" aria-label="Öppna och stäng navigation menu.">
                     <span class="btn-hamburger" tabindex="-1"></span>
                 </button>
-                <button class="btn-sm btn-primary btn-signIn"><i class="fa-regular fa-user"></i> Logga in</button>
+                <button class="btn-sm btn-primary btn-signIn" aria-label="Logga in på ditt konto."><i class="fa-regular fa-user"></i> Logga in</button>
             </div>
         </nav>
         <aside class="container">
             <nav id="nav-aside" class="navbar-side">
                 <div class="navbar-side-links">
-                    <a href="#Hem">Hem</a>
-                    <a href="#Funktioner">Funktioner</a>
-                    <a href="#Info">Info</a>
-                    <a href="#Kontakt">Kontakt</a>
-                    <a href="#">Logga in</a>
+                    <a href="#Hem" aria-label="Gå till överst på sidan.">Hem</a>
+                    <a href="#Funktioner" aria-label="Gå till appens funktioner.">Funktioner</a>
+                    <a href="#Info" aria-label="Gå till mer information om appen.">Info</a>
+                    <a href="#Kontakt" aria-label="Gå till kontakter.">Kontakt</a>
+                    <a href="#" aria-label="Logga in på ditt konto.">Logga in</a>
                 </div>
             </nav>
         </aside>
@@ -61,16 +61,16 @@
                 <div class="hero-info">
                     <p class="hero-info-text">Vi erbjuder dig en ny generation av mobilbank Spara, spendera och hantera pengar i din ficka.</p>
                     <div class="hero-info-links">
-                        <a href="#" class="btn-store">
-                            <img id="appleStore" src="./images/svg/hero/appstore-light.svg" alt="">
+                        <a href="#" class="btn-store" aria-label="Länk till apple store">
+                            <img id="appleStore" src="./images/svg/hero/appstore-light.svg" alt="Ikon med länk till apple store">
                         </a>
-                        <a href="#" class="btn-store">
-                            <img id="googleStore" src="./images/svg/hero/googleplay-light.svg" alt="">
+                        <a href="#" class="btn-store" aria-label="Länk till google play store">
+                            <img id="googleStore" src="./images/svg/hero/googleplay-light.svg" alt="Ikon med länk till google play store">
                         </a>
                     </div>
 
-                    <a class="hero-info-btn animate-pulse" href="#Funktioner">
-                        <button class="btn-rounded btn-rounded-md shadow-md" tabindex="-1"></button>
+                    <a class="hero-info-btn animate-pulse" href="#Funktioner" aria-label="Gå vidare till funktioner.">
+                        <button class="btn-rounded btn-rounded-md shadow-md" tabindex="-1" aria-hidden="true"></button>
                         <p>Upptäck mer</p>
                     </a>
                 </div>
@@ -155,10 +155,10 @@
             <div class="slider-container container">
                 <h2 class="slider-container-header">Hur fungerar det?</h2>
                 <div class="slider-img-container">
-                    <button class="slider-img-container-img-1" onclick="sliderPressed('1')"></button>
-                    <button class="slider-img-container-img-2" onclick="sliderPressed('2')"></button>
-                    <button class="slider-img-container-img-3" onclick="sliderPressed('3')"></button>
-                    <span class="slider-img-container-frame"></span>
+                    <button class="slider-img-container-img-1" onclick="sliderPressed('1')" aria-label="Tryck för mer information kring transaktionshistorik."></button>
+                    <button class="slider-img-container-img-2" onclick="sliderPressed('2')" aria-label="Tryck för mer information kring överföringar."></button>
+                    <button class="slider-img-container-img-3" onclick="sliderPressed('3')" aria-label="Tryck för mer information."></button>
+                    <span class="slider-img-container-frame" aria-hidden="true"></span>
                 </div>
                 <div class="slider-container-text">
                     <h5>Överföringar till personer från din kontaktlista</h5>
@@ -197,11 +197,11 @@
                 <h2>Ta emot betalningar från alla internationella banker</h2>
                 <div class="flex flex-row-middle gap-18">
                     <div class="flex flex-col gap-8">
-                        <div class="features-icon"><img src="./images/svg/payments.svg"></div>
+                        <div class="features-icon"><img src="./images/svg/payments.svg" alt=""></div>
                         <p>Hantera dina betalningar online. Du sköter lätt dina betalningar och överföringar direkt i våran app.</p>
                     </div>
                     <div class="flex flex-col gap-8">
-                        <div class="features-icon"><img src="./images/svg/cashback.svg"></div>
+                        <div class="features-icon"><img src="./images/svg/cashback.svg" alt=""></div>
                         <p>Med hjälp av våra AI verktyg så kan du spara tusenlappar varje månad. Gör en beräkning redan nu.</p>
                     </div>
                 </div>
@@ -220,17 +220,17 @@
                         <img class="card-review-quotes" src="./images/svg/quotes.svg" alt="">
     
                         <div class="card-review-stars ">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star_empty.svg" alt="showing an 4-star review">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star_empty.svg" alt="4-sjärnig recension.">
                         </div>
                         
                         <p>Du kan kategorisera inkomster och utgifter, och se hur pengarna används. Med ett smidigt gränssnitt kan du skapa budgetar och följa upp dina ekonomiska mål. Appen erbjuder även automatisk synkronisering med banken och ger rapporter för bättre planering och sparande.</p>
     
                         <div class="card-review-user">
-                            <img src="./images/svg/fanny.svg" alt="users animated avtar.">
+                            <img src="./images/svg/fanny.svg" alt="Användarens avatar.">
                             <div>
                                 <h3>Casandra Ling</h3>
                                 <p>Arbetssökande</p>
@@ -242,17 +242,17 @@
                         <img class="card-review-quotes" src="./images/svg/quotes.svg" alt="">
     
                         <div class="card-review-stars ">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="">
-                            <img src="./images/svg/star.svg" alt="showing an 5-star review">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="" aria-hidden="true">
+                            <img src="./images/svg/star.svg" alt="5-sjärnig recension.">
                         </div>
                         
                         <p>Denna app hjälper dig att hantera hushållets ekonomi på ett smidigt sätt. Du kan enkelt följa inkomster, utgifter och budgetmål. Appen erbjuder bankkoppling för automatiska transaktioner och ger dig en tydlig överblick över dina pengar. Perfekt för att planera och spara inför framtiden.</p>
     
                         <div class="card-review-user">
-                            <img src="./images/svg/alberto.svg" alt="users animated avtar.">
+                            <img src="./images/svg/alberto.svg" alt="Användarens avatar.">
                             <div>
                                 <h3>Max Nilsson</h3>
                                 <p>Gynekolog</p>
@@ -274,7 +274,7 @@
                 <div id="faq-faqs-1" class="faq-faqs-1 card-faq" onclick='faqExpand("1")'>
                     <div class="question">
                         <h6>Lagrar appen någon av mina personuppgifter?</h6>
-                        <button class="btn-rounded-md btn-rounded"></button>
+                        <button class="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
                     </div>
                     <div class="answer">
                         <p>Din säkerhet är vår högsta prioritet. Vi lagrar endast den information som krävs för att tillhandahålla våra tjänster, och all data krypteras för att skydda din integritet.</p>
@@ -283,7 +283,7 @@
                 <div id="faq-faqs-2" class="faq-faqs-2 card-faq" onclick='faqExpand("2")'>
                     <div class="question">
                         <h6>Vilka format kan jag ladda ner min transaktionshistorik i?</h6>
-                        <button class="btn-rounded-md btn-rounded"></button>
+                        <button class="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
                     </div>
                     <div class="answer">
                         <p>Du kan ladda ner din transaktionshistorik i flera format, inklusive PDF och Excel, så att du kan hantera dina data på det sätt som passar dig bäst.</p>
@@ -292,7 +292,7 @@
                 <div id="faq-faqs-3" class="faq-faqs-3 card-faq" onclick='faqExpand("3")'>
                     <div class="question">
                         <h6>Kan jag schemalägga framtida överföringar?</h6>
-                        <button class="btn-rounded-md btn-rounded"></button>
+                        <button class="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
                     </div>
                     <div class="answer">
                         <p>Ja, du kan enkelt schemalägga framtida överföringar i appen. Välj datum och belopp, så sköter appen resten!</p>
@@ -301,7 +301,7 @@
                 <div id="faq-faqs-4" class="faq-faqs-4 card-faq" onclick='faqExpand("4")'>
                     <div class="question">
                         <h6>När kan jag använda tjänsterna i Bankappen?</h6>
-                        <button class="btn-rounded-md btn-rounded"></button>
+                        <button class="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
                     </div>
                     <div class="answer">
                         <p>Tjänsterna i appen är tillgängliga dygnet runt, så du kan hålla koll på din ekonomi och göra transaktioner när som helst, var som helst.</p>
@@ -310,7 +310,7 @@
                 <div id="faq-faqs-5" class="faq-faqs-5 card-faq" onclick='faqExpand("5")'>
                     <div class="question">
                         <h6>Kan jag skapa ett eget lösenord som är lätt för mig att komma ihåg?</h6>
-                        <button class="btn-rounded-md btn-rounded"></button>
+                        <button class="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
                     </div>
                     <div class="answer">
                         <p>Absolut! När du registrerar dig kan du välja ett lösenord som är säkert men samtidigt lätt för dig att komma ihåg.</p>
@@ -319,7 +319,7 @@
                 <div id="faq-faqs-6" class="faq-faqs-6 card-faq" onclick='faqExpand("6")'>
                     <div class="question">
                         <h6>Vad händer om jag glömmer eller tappar bort mitt lösenord?</h6>
-                        <button class="btn-rounded-md btn-rounded"></button>
+                        <button class="btn-rounded-md btn-rounded" alt="" aria-hidden="true"></button>
                     </div>
                     <div class="answer">
                         <p>Om du glömmer eller tappar bort ditt lösenord kan du enkelt återställa det genom att följa stegen i appen. Du kommer att få ett e-postmeddelande med instruktioner för att skapa ett nytt lösenord.</p>
@@ -331,12 +331,12 @@
                 <div class="contact-phone card-contact ">
                     <img src="./images/svg/phone.svg" alt="">
                     <p>Någon fråga?</p>
-                    <a href="#" class="hover-zoom">Contact us -></a>
+                    <a href="#" class="hover-zoom">Kontakta oss -></a>
                 </div>
                 <div class="contact-mail card-contact ">
                     <img src="./images/svg/chat.svg" alt="">
                     <p>Vill du inte ringa?</p>
-                    <a href="#" class="hover-zoom">Contact us -></a>
+                    <a href="#" class="hover-zoom">Kontakta oss -></a>
                 </div>
                 <a href="#" class="contact-btn btn-md btn-primary">Kontakta oss</a>
             </div>
