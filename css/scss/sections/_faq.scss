@@ -65,6 +65,7 @@
         display: block;
     }
     &-phone, &-mail{
+        text-wrap: pretty;
         display: none;
         min-width: 343px;
         width: 100%;

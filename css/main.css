@@ -2020,6 +2020,7 @@ footer {
   display: block;
 }
 .contact-phone, .contact-mail {
+  text-wrap: pretty;
   display: none;
   min-width: 343px;
   width: 100%;
