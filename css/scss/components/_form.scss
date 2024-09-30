@@ -8,6 +8,14 @@
         color: var(--clr-gray-600);
         font-size: 1.2rem;
     }
+    img{
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--clr-gray-600);
+        font-size: 1.2rem;
+    }
     input{
         border: none;
         outline: none;

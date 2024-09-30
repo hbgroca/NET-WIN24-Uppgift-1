@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="sv" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silicon - WIN24 HTML/CSS Inlämningsuppgift 1</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
     <meta name="description" content="Inlämningsuppgift 1 för WIN24 Klassen. Uppgift: Skapa Silicon figma designen i HTML och CSS">
 </head>
 <body class="wrapper">
@@ -31,7 +30,7 @@
                     <button id="btn-toggle-dm" class="btn-toggle shadow-lg" aria-label="Växla mellan ljus eller mörkt tema."></button>
                 </div>
                 <button class="btn-hamburger-area" tabindex="0" aria-controls="btns-aside" aria-label="Öppna och stäng navigation menu.">
-                    <span class="btn-hamburger" tabindex="-1"></span>
+                    <span class="btn-hamburger" tabindex="-1" aria-hidden="true"></span>
                 </button>
                 <button class="btn-sm btn-primary btn-signIn" aria-label="Logga in på ditt konto."><i class="fa-regular fa-user"></i> Logga in</button>
             </div>
@@ -351,7 +350,7 @@
             </div>
             <form class="form-subscribe" action="">
                 <div class="form-subscribe-wrapper">
-                    <i class="far fa-envelope"></i>
+                    <img src="./images/svg/subscribe/email-svgrepo-com.svg" alt="" aria-hidden="true">
                     <input id="email-input" type="email" placeholder="Din epost" required>
                 </div>
                 <input type="submit" value="Prenumerera">

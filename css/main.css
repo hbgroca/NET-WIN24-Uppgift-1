@@ -649,6 +649,14 @@ p {
   color: var(--clr-gray-600);
   font-size: 1.2rem;
 }
+.form-subscribe img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-gray-600);
+  font-size: 1.2rem;
+}
 .form-subscribe input {
   border: none;
   outline: none;
